@@ -1,0 +1,5089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Career Delulu Test · Vinsoo</title>
+
+<!-- Open Graph + Twitter Cards — for nice previews when the link is shared on iMessage, WhatsApp, Slack, X, etc. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Career Delulu Test">
+<meta property="og:description" content="How delulu is your career plan, really? A 5-minute audit. 16 archetypes. No signup.">
+<meta property="og:url" content="https://vinsoo.com/jbti">
+<meta property="og:image" content="https://vinsoo.com/jbti/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Vinsoo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Career Delulu Test">
+<meta name="twitter:description" content="How delulu is your career plan, really? A 5-minute audit. 16 archetypes. No signup.">
+<meta name="twitter:image" content="https://vinsoo.com/jbti/og.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700&family=Bagel+Fat+One&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- QR generator (tiny, SVG output) — for the scannable code on the share card -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js" defer></script>
+<!-- html2canvas — for "save as image" / native share — DOM → PNG -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+<style>
+/* ============================================
+   THE CAREER DELULU TEST — REVAMPED
+   tabloid masthead × spotify wrapped × group chat
+   ============================================ */
+:root {
+  /* base — kept the cream as a thread back to Vinsoo */
+  --paper: #FBF9F4;
+  --bg: #F5F1E6;           /* slightly more saturated newsprint cream */
+  --surface: #FFFFFF;
+
+  /* ink */
+  --ink: #0E0E10;
+  --ink-2: #2A2A30;
+  --muted: #8A8480;
+
+  /* lines */
+  --line: #E5E0D6;
+  --line-2: #D5CFC0;
+
+  /* THE BRAND ACCENTS — corporate satire edit */
+  --brat: #B8E32D;          /* acid lime — secondary action color */
+  --brat-2: #95B91D;
+  --brat-soft: #E1F18C;
+  --brat-tint: #F2FAD5;
+
+  --caution: #F7D31E;       /* HAZARD YELLOW — new dominant punch color */
+  --caution-2: #D9B70A;
+  --caution-soft: #FBEC8E;
+  --caution-tint: #FDF6CB;
+
+  --stamp: #C2271E;         /* rubber-stamp red — emphasis, warnings, stamps */
+  --stamp-2: #8A1A14;
+  --stamp-soft: #E89A91;
+
+  --highlighter: #FCEC52;   /* softer yellow for marker accents */
+  --highlighter-soft: #FFF59B;
+
+  --manila: #E8D9B3;        /* manila folder tan */
+  --manila-2: #DBCB9C;
+
+  --sky: #2EB5D9;           /* highway-signage blue — the lone cool anchor */
+  --sky-2: #1E97B8;
+  --sky-soft: #B6E2EF;
+  --sky-tint: #DCF1F8;
+
+  --post-it-manila: #EFDFB8;
+  --post-it-yellow: #FFEE93;
+  --post-it-lime: #DCEC8A;
+  --post-it-sky: #C8E8F2;
+
+  /* dark — for the conversion CTA "tonal cleanser" */
+  --midnight: #0E0E10;
+  --midnight-2: #1F1F26;
+
+  /* shadows */
+  --shadow: 0 1px 0 rgba(14,14,16,.04), 0 6px 20px -6px rgba(14,14,16,.12);
+  --shadow-lg: 0 2px 0 rgba(14,14,16,.05), 0 24px 48px -16px rgba(14,14,16,.22);
+  --shadow-card: 0 1px 2px rgba(14,14,16,.04), 0 12px 32px -12px rgba(14,14,16,.18);
+  --shadow-pink: 0 2px 0 rgba(255,61,127,.10), 0 16px 36px -12px rgba(255,61,127,.32);
+  --shadow-brat: 0 2px 0 rgba(184,227,45,.20), 0 16px 36px -12px rgba(149,185,29,.32);
+  --shadow-sticker: 2px 4px 0 rgba(14,14,16,.08), 0 8px 16px -4px rgba(14,14,16,.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Geist", system-ui, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  min-height: 100vh;
+  /* subtle dotted newsprint texture */
+  background-image:
+    radial-gradient(rgba(14,14,16,0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: 0 0;
+}
+
+/* type utilities */
+.serif    { font-family: "Fraunces", serif; letter-spacing: -0.01em; }
+.italic   { font-style: italic; }
+.mono     { font-family: "Geist Mono", monospace; letter-spacing: 0; }
+.fat      { font-family: "Bagel Fat One", "Fraunces", serif; font-weight: 400; letter-spacing: -0.01em; }
+.scrawl   { font-family: "Caveat", cursive; font-weight: 600; letter-spacing: 0; }
+
+/* ============================================
+   GLOBAL LAYOUT
+   ============================================ */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 32px 80px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.logo-mark {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--brat), var(--caution) 70%);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--ink);
+}
+
+.nav-meta {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 500;
+  background: var(--brat);
+  padding: 6px 10px 5px;
+  border-radius: 4px;
+  transform: rotate(-1.2deg);
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid var(--ink);
+  font-family: inherit;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  line-height: 1;
+  letter-spacing: -0.005em;
+  position: relative;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 3px 3px 0 var(--caution);
+}
+.btn-primary:hover {
+  transform: translate(-1px,-1px);
+  box-shadow: 5px 5px 0 var(--caution);
+}
+
+.btn-pink {
+  background: var(--caution);
+  color: white;
+  font-weight: 700;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.btn-pink:hover {
+  transform: translate(-1px,-1px);
+  box-shadow: 5px 5px 0 var(--ink);
+  background: var(--caution-2);
+}
+
+.btn-brat {
+  background: var(--brat);
+  color: var(--ink);
+  font-weight: 700;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.btn-brat:hover {
+  transform: translate(-1px,-1px);
+  box-shadow: 5px 5px 0 var(--ink);
+  background: var(--brat-2);
+}
+
+.btn-outline {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.btn-outline:hover {
+  transform: translate(-1px,-1px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-2);
+  padding: 12px 18px;
+  border: none;
+  box-shadow: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--muted);
+}
+.btn-ghost:hover {
+  color: var(--ink);
+  text-decoration-color: var(--stamp);
+}
+
+.btn-lg {
+  padding: 18px 30px;
+  font-size: 15.5px;
+}
+
+/* ============================================
+   SCREEN MANAGEMENT
+   ============================================ */
+.screen { display: none; animation: fade-in 0.4s ease-out; }
+.screen.active { display: block; }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   STICKERS / DECORATIONS (shared utility)
+   ============================================ */
+.sticker {
+  position: absolute;
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 8px 12px 7px;
+  background: var(--brat);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  box-shadow: var(--shadow-sticker);
+  white-space: nowrap;
+  z-index: 5;
+  pointer-events: none;
+}
+.sticker.pink   { background: var(--stamp); color: white; }
+.sticker.yellow { background: var(--highlighter); }
+.sticker.cream  { background: var(--paper); }
+
+.sticker-circle {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: var(--caution);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  border: 1.5px solid var(--ink);
+  box-shadow: var(--shadow-sticker);
+  z-index: 5;
+  pointer-events: none;
+  padding: 8px;
+}
+
+.tape {
+  position: absolute;
+  width: 64px;
+  height: 18px;
+  background: rgba(252,236,82,0.70);
+  border: 1px solid rgba(14,14,16,0.10);
+  box-shadow: 0 2px 4px rgba(14,14,16,0.08);
+  z-index: 6;
+  pointer-events: none;
+}
+.tape.pink { background: rgba(255,61,127,0.32); }
+
+/* ============================================
+   CORPORATE SATIRE — rubber stamps, memos
+   ============================================ */
+.stamp {
+  position: absolute;
+  font-family: "Geist Mono", monospace;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stamp);
+  border: 2.5px solid var(--stamp);
+  padding: 7px 12px 5px;
+  transform: rotate(-12deg);
+  opacity: 0.82;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 7;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.4);
+  /* faint "ink press" effect */
+  text-shadow: 0.5px 0.5px 0 rgba(194,39,30,0.3);
+}
+.stamp::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid var(--stamp);
+  pointer-events: none;
+  opacity: 0.6;
+}
+.stamp.tilt-r { transform: rotate(8deg); }
+.stamp.tilt-l { transform: rotate(-18deg); }
+.stamp.flat   { transform: rotate(-3deg); }
+
+.memo-header {
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 700;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 6px 0;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.memo-header b { color: var(--stamp); }
+.memo-header .redact {
+  background: var(--ink);
+  color: var(--ink);
+  user-select: none;
+  padding: 0 6px;
+}
+
+.compliance-bar {
+  background: var(--sky-tint);
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.compliance-bar::before {
+  content: "⚠";
+  font-size: 16px;
+  color: var(--stamp);
+  font-weight: 900;
+}
+
+/* caution tape divider — diagonal yellow/black hatched strip */
+.caution-tape {
+  height: 22px;
+  margin: 32px 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--caution) 0px,
+    var(--caution) 22px,
+    var(--ink) 22px,
+    var(--ink) 44px
+  );
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  position: relative;
+}
+.caution-tape::before,
+.caution-tape::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.caution-tape::before { left: 12px; }
+.caution-tape::after  { right: 12px; }
+.caution-tape .label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  padding: 4px 14px 3px;
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* form-label — for question screens, ".FORM JBTI-Q02 · INTERNAL" */
+.form-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 5px 10px 4px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+}
+.form-label b { color: var(--stamp); }
+.form-label .pip {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--stamp);
+  border-radius: 50%;
+}
+
+/* fake-legalese footer */
+.legalese {
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border-top: 1.5px solid var(--ink);
+  padding: 22px 4px 0;
+  margin-top: 32px;
+  max-width: 720px;
+}
+.legalese b {
+  color: var(--ink);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 9px;
+}
+.legalese .form-id {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2px 6px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-right: 6px;
+}
+
+/* org-chart parody box for archetype display */
+.org-box {
+  background: var(--manila);
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.org-box .arrow {
+  color: var(--stamp);
+  font-weight: 800;
+}
+
+/* SVG-friendly utility wrappers */
+.scribble-underline {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+}
+.scribble-underline svg {
+  position: absolute;
+  left: -4%;
+  bottom: -14%;
+  width: 108%;
+  height: 24%;
+  pointer-events: none;
+}
+.highlight-stroke {
+  display: inline;
+  background-image: linear-gradient(120deg, transparent 0%, var(--highlighter) 8%, var(--highlighter) 92%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: 0 78%;
+  padding: 0 2px;
+}
+.highlight-pink {
+  display: inline;
+  background-image: linear-gradient(120deg, transparent 0%, var(--stamp-soft) 6%, var(--stamp-soft) 94%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: 0 75%;
+  padding: 0 2px;
+}
+
+/* sparkles */
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 4;
+  width: 28px;
+  height: 28px;
+}
+.sparkle svg { width: 100%; height: 100%; display: block; }
+.sparkle.spin { animation: spin-slow 12s linear infinite; }
+.sparkle.bob  { animation: bob 3.5s ease-in-out infinite; }
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes bob {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-6px); }
+}
+
+/* ============================================
+   LANDING — TABLOID MASTHEAD
+   ============================================ */
+.hero {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 60px;
+  align-items: start;
+  min-height: 60vh;
+  padding: 24px 0 64px;
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 8px 14px 7px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.hero-eyebrow .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--brat);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50%     { transform: scale(1.4); opacity: .55; }
+}
+
+.hero h1 {
+  font-family: "Fraunces", serif;
+  font-size: 96px;
+  line-height: 0.92;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  margin-bottom: 28px;
+  position: relative;
+}
+.hero h1 .delulu {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--caution);
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+  transform: rotate(-2deg);
+  margin: 0 4px;
+  -webkit-text-stroke: 2px var(--ink);
+  text-shadow: 4px 4px 0 var(--ink);
+}
+.hero h1 .really {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Fraunces", serif;
+}
+
+.hero-sub {
+  font-size: 16.5px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+.hero-sub b { color: var(--ink); font-weight: 600; }
+
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 36px;
+  padding: 18px 22px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 var(--ink);
+  max-width: 540px;
+  position: relative;
+}
+.hero-meta::before {
+  content: "Q4 BENCHMARKS";
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  background: var(--sky);
+  color: white;
+  border: 1.5px solid var(--ink);
+  padding: 3px 8px 2px;
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  border-radius: 3px;
+}
+.hero-meta .stat {
+  flex: 1;
+}
+.hero-meta .stat-num {
+  font-family: "Bagel Fat One", serif;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.hero-meta .stat-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* Hero sample-result card — Polaroid-style */
+.hero-illus {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  padding: 32px 28px 36px;
+  box-shadow: 6px 6px 0 var(--ink);
+  transform: rotate(2.5deg);
+  position: relative;
+  margin-top: 24px;
+}
+.hero-illus::after {
+  /* tape at top */
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 96px;
+  height: 22px;
+  background: rgba(252,236,82,0.65);
+  border: 1px solid rgba(14,14,16,0.10);
+  box-shadow: 0 2px 4px rgba(14,14,16,0.08);
+}
+.hero-illus .badge {
+  position: absolute;
+  top: -10px;
+  right: -16px;
+  background: var(--brat);
+  color: var(--ink);
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1.5px solid var(--ink);
+  transform: rotate(8deg);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.hero-illus .archetype-name {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  text-align: center;
+  margin: 18px 4px 10px;
+  text-transform: uppercase;
+}
+.hero-illus .code {
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 auto 16px;
+  text-align: center;
+  background: var(--caution);
+  display: inline-block;
+  padding: 5px 11px 4px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: rotate(-1.5deg);
+}
+.hero-illus { text-align: center; }
+.hero-illus .vibe {
+  font-size: 13px;
+  color: var(--ink-2);
+  text-align: center;
+  line-height: 1.5;
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+.hero-illus .score-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1.5px dashed var(--ink);
+}
+.hero-illus .score-num {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--stamp);
+  -webkit-text-stroke: 1.5px var(--ink);
+}
+.hero-illus .score-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 700;
+  background: var(--highlighter);
+  padding: 4px 8px;
+  border: 1.5px solid var(--ink);
+  transform: rotate(-2deg);
+}
+
+/* ============================================
+   ARCHETYPE GRID — "16 archetypes, which one are you?"
+   Anonymous teaser on the landing page. No names shown
+   (those are the punchline reserved for the result page).
+   Just illustrations + small mono JBTI codes.
+   ============================================ */
+.archetypes-section {
+  max-width: 1100px;
+  margin: 56px auto 0;
+  padding: 56px 24px 24px;
+  border-top: 2px solid var(--ink);
+  position: relative;
+}
+.archetypes-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 700;
+  display: inline-block;
+  background: var(--brat);
+  padding: 7px 14px 6px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(-0.8deg);
+  margin-bottom: 22px;
+}
+.archetypes-title {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  max-width: 800px;
+}
+.archetypes-title em {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 800;
+  text-transform: none;
+  color: var(--stamp);
+}
+.archetypes-intro {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  max-width: 640px;
+  margin: 0 0 40px;
+}
+.archetypes-intro b {
+  font-weight: 700;
+  color: var(--ink);
+  font-style: normal;
+}
+
+.archetypes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.arch-card {
+  background: var(--paper);
+  padding: 6px 6px 8px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 var(--ink);
+  position: relative;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+/* Slight per-card tilt — randomized in JS for variety (corkboard feel) */
+.arch-card:hover {
+  transform: translate(-2px, -2px) rotate(0deg) !important;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.arch-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 3px;
+}
+.arch-card-code {
+  text-align: center;
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 7px;
+  padding-bottom: 2px;
+}
+.arch-card-mystery {
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.archetypes-cta-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+  padding-top: 24px;
+  border-top: 1.5px dashed var(--ink);
+}
+.archetypes-cta-line {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.2;
+  transform: rotate(-1deg);
+}
+.archetypes-cta-line .arrow { color: var(--stamp); }
+
+@media (max-width: 900px) {
+  .archetypes-section { padding: 40px 18px 16px; margin-top: 40px; }
+  .archetypes-title { font-size: 40px; }
+  .archetypes-intro { font-size: 16px; }
+  .archetypes-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .arch-card { padding: 5px 5px 6px; }
+  .arch-card-code { font-size: 10px; margin-top: 5px; }
+}
+@media (max-width: 480px) {
+  .archetypes-title { font-size: 32px; }
+}
+
+/* ============================================
+   HOW IT WORKS (expandable)
+   ============================================ */
+.how-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.4s ease;
+  opacity: 0;
+  margin-top: 0;
+  position: relative;
+}
+.how-section.open {
+  max-height: 2400px;
+  opacity: 1;
+  margin-top: 32px;
+  padding-top: 56px;
+  border-top: 2px solid var(--ink);
+}
+.how-inner {
+  max-width: 980px;
+  padding-bottom: 24px;
+  position: relative;
+}
+.how-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 18px;
+  font-weight: 700;
+  display: inline-block;
+  background: var(--brat);
+  padding: 6px 12px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: rotate(-0.8deg);
+}
+.how-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.how-title em {
+  font-style: italic;
+  color: var(--stamp);
+  font-weight: 600;
+}
+.how-intro {
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 720px;
+  margin-bottom: 44px;
+}
+.how-intro b { color: var(--ink); font-weight: 600; }
+
+.how-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 32px;
+}
+.how-card {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  padding: 26px 26px;
+  position: relative;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform .15s ease;
+}
+.how-card:nth-child(odd)  { transform: rotate(-0.5deg); }
+.how-card:nth-child(even) { transform: rotate(0.5deg); }
+.how-card:hover { transform: rotate(0) translateY(-2px); }
+
+.how-card-num {
+  font-family: "Bagel Fat One", serif;
+  font-size: 36px;
+  color: var(--brat);
+  -webkit-text-stroke: 1.5px var(--ink);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.how-card-title {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.how-card p {
+  font-size: 14.5px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.how-card p b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Wide hero card */
+.how-card-wide {
+  background: var(--brat-tint);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 32px 36px;
+  margin-top: 22px;
+  margin-bottom: 36px;
+  position: relative;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.how-card-wide::before {
+  content: "the actual point";
+  position: absolute;
+  top: -14px;
+  left: 28px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 5px 10px 4px;
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+}
+.how-card-wide .how-card-num {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+.wide-flag {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  text-transform: none;
+  padding-left: 14px;
+  border-left: 1.5px solid var(--ink);
+  transform: rotate(-1deg);
+  -webkit-text-stroke: 0;
+}
+.how-card-title-wide {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--ink);
+  margin-bottom: 18px;
+  letter-spacing: -0.015em;
+  line-height: 1.18;
+  max-width: 760px;
+}
+.how-card-wide p {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 760px;
+}
+.how-card-wide p + p { margin-top: 12px; }
+.how-card-wide p b { color: var(--ink); font-weight: 600; }
+.how-card-wide p em {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--stamp);
+}
+
+.how-foot {
+  display: flex;
+  gap: 14px;
+  padding-top: 24px;
+  border-top: 1.5px dashed var(--ink);
+  flex-wrap: wrap;
+}
+.how-foot-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 600;
+  background: var(--paper);
+  padding: 5px 10px;
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+}
+
+/* ============================================
+   QUESTION SCREENS
+   ============================================ */
+.q-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8px 0 80px;
+  position: relative;
+}
+.q-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 56px;
+  gap: 18px;
+}
+.q-progress-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.q-progress-label .count {
+  color: var(--ink);
+  font-weight: 700;
+  font-family: "Bagel Fat One", serif;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.q-progress-bar {
+  flex: 1;
+  height: 12px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.q-progress-bar .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--brat);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(255,255,255,0.25) 6px,
+    rgba(255,255,255,0.25) 12px
+  );
+  transition: width 0.4s ease;
+  border-right: 1.5px solid var(--ink);
+}
+/* Tier 2 progress fills in sky blue — signals "deeper section" */
+.q-progress-bar #q2-progress-fill {
+  background: var(--sky);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(255,255,255,0.32) 6px,
+    rgba(255,255,255,0.32) 12px
+  );
+}
+
+.q-header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.q-num {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 0.88;
+  color: var(--brat);
+  letter-spacing: -0.04em;
+  -webkit-text-stroke: 2.5px var(--ink);
+  flex-shrink: 0;
+  transform: rotate(-3deg);
+  margin-left: -8px;
+}
+
+.q-eyebrow {
+  font-family: "Caveat", cursive;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+  display: inline-block;
+  background: var(--highlighter);
+  padding: 0 8px 2px;
+  transform: rotate(-1.5deg);
+  border: 1.5px solid var(--ink);
+}
+
+.q-text {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.15;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  margin-bottom: 44px;
+  max-width: 660px;
+}
+
+.q-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.q-option {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.45;
+  width: 100%;
+  position: relative;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+/* sticky-note rotations + colors */
+.q-options .q-option:nth-child(1) { transform: rotate(-0.6deg); background: var(--post-it-sky); }
+.q-options .q-option:nth-child(2) { transform: rotate(0.4deg);  background: var(--post-it-yellow); }
+.q-options .q-option:nth-child(3) { transform: rotate(-0.4deg); background: var(--post-it-lime); }
+
+.q-option:hover {
+  transform: rotate(0) translate(-2px,-2px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.q-option.selected {
+  background: var(--ink);
+  color: var(--paper);
+  transform: rotate(0) translate(-1px,-1px);
+  box-shadow: 4px 4px 0 var(--caution);
+}
+.q-option-letter {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bagel Fat One", serif;
+  font-size: 16px;
+  color: var(--ink);
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+.q-option.selected .q-option-letter {
+  background: var(--caution);
+  color: white;
+  border-color: var(--paper);
+}
+
+.q-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 44px;
+}
+
+/* ============================================
+   DREAM JOB INTAKE (Q1)
+   ============================================ */
+.dream-input-wrap {
+  position: relative;
+  margin-bottom: 32px;
+}
+.dream-input {
+  width: 100%;
+  padding: 22px 24px;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.dream-input:focus {
+  outline: none;
+  box-shadow: 6px 6px 0 var(--sky);
+  transform: translate(-1px,-1px);
+}
+.dream-input::placeholder {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.dream-chips-label {
+  font-family: "Caveat", cursive;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+.dream-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.dream-chip {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  padding: 9px 16px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  font-family: inherit;
+  font-weight: 500;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.dream-chip:hover {
+  background: var(--brat);
+  transform: translate(-1px,-1px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.dream-chip.special {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+  font-style: italic;
+  font-family: "Fraunces", serif;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.dream-chip.special:hover {
+  background: var(--midnight-2);
+  color: var(--brat);
+}
+
+/* ============================================
+   LOADING SCREEN — kawaii spinner energy
+   ============================================ */
+.loading-wrap {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.loading-num {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 0.9;
+  color: var(--stamp);
+  margin-bottom: 12px;
+  letter-spacing: -0.04em;
+  -webkit-text-stroke: 3px var(--ink);
+  animation: wobble 1.6s ease-in-out infinite;
+}
+@keyframes wobble {
+  0%,100% { transform: rotate(-3deg); }
+  50%     { transform: rotate(3deg); }
+}
+.loading-title {
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 28px;
+  font-weight: 700;
+  background: var(--brat);
+  padding: 7px 12px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.loading-text {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--ink);
+  margin-bottom: 32px;
+  min-height: 40px;
+  transition: opacity 0.3s ease;
+  max-width: 540px;
+}
+.loading-bar {
+  width: 320px;
+  height: 12px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.loading-bar .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--brat);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 6px,
+    rgba(255,255,255,0.3) 6px,
+    rgba(255,255,255,0.3) 12px
+  );
+  width: 0%;
+  transition: width 0.4s ease;
+  border-right: 1.5px solid var(--ink);
+}
+
+/* ============================================
+   RESULT SCREEN
+   ============================================ */
+.result-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Above-the-fold result card */
+.result-hero {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 52px 52px 44px;
+  box-shadow: 8px 8px 0 var(--ink);
+  margin-bottom: 56px;
+  position: relative;
+}
+.result-hero::after {
+  /* corner tape sticker */
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: 28px;
+  width: 92px;
+  height: 24px;
+  background: rgba(255,61,127,0.30);
+  border: 1px solid rgba(14,14,16,0.12);
+  transform: rotate(8deg);
+  box-shadow: 0 2px 4px rgba(14,14,16,0.08);
+}
+.result-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--brat);
+  padding: 6px 12px 5px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  font-weight: 700;
+  border-radius: 4px;
+  transform: rotate(-1.2deg);
+}
+.result-eyebrow .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--stamp);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+/* result code as a NAME-TAG sticker */
+.result-code-wrap {
+  position: relative;
+  margin: 22px auto 0;
+  width: fit-content;
+}
+/* JBTI code — DEMOTED from 124px chunky letters to a small mono-coded stamp */
+.result-code {
+  font-family: "Geist Mono", monospace;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.32em;
+  color: var(--ink);
+  line-height: 1;
+  text-align: center;
+  background: var(--caution);
+  padding: 7px 14px 6px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  display: inline-block;
+  transform: rotate(-1.5deg);
+  position: relative;
+}
+.result-code::before {
+  content: "JBTI · ";
+  color: var(--ink-2);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+.result-code-wrap::before { content: none; }
+.result-code-wrap::after { content: none; }
+
+/* ============================================
+   ARCHETYPE ILLUSTRATION — large hero on result page
+   The chunky riso doodle that shows you "who you are."
+   Sits above the archetype name as the visual moment-of-reveal.
+   ============================================ */
+.result-illus-wrap {
+  width: fit-content;
+  max-width: 460px;
+  margin: 0 auto 28px;
+  position: relative;
+  background: var(--paper);
+  padding: 14px 14px 14px;
+  border: 2.5px solid var(--ink);
+  border-radius: 8px;
+  box-shadow: 6px 6px 0 var(--ink);
+  transform: rotate(-1deg);
+}
+.result-illus-wrap::before {
+  /* corner tape — like a polaroid pinned to a corkboard */
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(2deg);
+  width: 90px;
+  height: 22px;
+  background: var(--caution);
+  border: 1.5px solid var(--ink);
+  opacity: 0.85;
+  z-index: 2;
+}
+.result-illus {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+}
+.result-illus[hidden] { display: none; }
+.result-illus-caption {
+  text-align: center;
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 700;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1.5px dashed var(--ink);
+}
+
+/* archetype NAME — now the visual hero on the in-page result */
+.result-name {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 64px;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 4px;
+  letter-spacing: -0.005em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  padding: 0 8px;
+}
+.result-vibe {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--ink-2);
+  text-align: center;
+  max-width: 560px;
+  margin: 14px auto 44px;
+  line-height: 1.35;
+}
+
+.result-divider {
+  height: 0;
+  border-top: 1.5px dashed var(--ink);
+  margin: 0 0 40px;
+}
+
+.result-score-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 36px;
+  align-items: stretch;
+}
+.result-score {
+  text-align: center;
+  background: var(--caution);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 28px 24px 22px;
+  box-shadow: 4px 4px 0 var(--ink);
+  position: relative;
+}
+.result-score-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.result-score-sublabel {
+  font-family: "Geist Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 14px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+.result-score-num {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 144px;
+  line-height: 0.9;
+  color: var(--stamp);
+  letter-spacing: -0.04em;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 2.5px var(--ink);
+  text-shadow: 4px 4px 0 var(--ink);
+}
+.result-score-flavor {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  background: var(--highlighter);
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1.5px solid var(--ink);
+  transform: rotate(-1.5deg);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.result-tension {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 4px 4px 0 var(--ink);
+  position: relative;
+}
+.result-tension::before {
+  content: "EXECUTIVE SUMMARY";
+  position: absolute;
+  top: -14px;
+  left: 22px;
+  background: var(--sky);
+  color: var(--paper);
+  padding: 4px 10px 3px;
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+}
+.result-tension-row {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+.result-tension-row:last-of-type { margin-bottom: 0; }
+.result-tension-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  flex-shrink: 0;
+  min-width: 76px;
+}
+.result-tension-val {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.result-tension-val.dream      { color: var(--ink); }
+.result-tension-val.archetype  { color: var(--stamp); }
+.result-tension-quote {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1.5px dashed var(--ink);
+}
+
+/* result deep-read */
+.result-section {
+  margin-bottom: 56px;
+  position: relative;
+}
+
+/* ============================================
+   AXIS BREAKDOWN — like 16personalities decoder
+   Shows what each letter means + the alternative
+   ============================================ */
+.axis-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 22px;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 var(--ink);
+  overflow: hidden;
+}
+.axis-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  padding: 22px 24px;
+  border-bottom: 1.5px dashed var(--ink);
+  align-items: stretch;
+  position: relative;
+}
+.axis-row:last-child { border-bottom: none; }
+
+.axis-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 18px;
+}
+.axis-side.left  { text-align: right; }
+.axis-side.right { text-align: left; }
+
+.axis-letter {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.axis-name {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 700;
+}
+.axis-desc {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.45;
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.axis-side.is-you .axis-letter {
+  color: var(--stamp);
+  -webkit-text-stroke: 1.5px var(--ink);
+  text-shadow: 2px 2px 0 var(--ink);
+}
+.axis-side.is-you .axis-name {
+  background: var(--caution);
+  color: var(--ink);
+  padding: 2px 8px 1px;
+  border: 1.5px solid var(--ink);
+  display: inline-block;
+  align-self: center;
+  font-weight: 800;
+}
+.axis-side.is-you.left .axis-name  { align-self: flex-end; }
+.axis-side.is-you.right .axis-name { align-self: flex-start; }
+.axis-side.is-you .axis-desc {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.axis-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--muted);
+  position: relative;
+}
+.axis-vs::before,
+.axis-vs::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1.5px;
+  background: var(--ink);
+  transform: translateX(-50%);
+}
+.axis-vs::before { top: 6px; height: calc(50% - 22px); }
+.axis-vs::after  { bottom: 6px; height: calc(50% - 22px); }
+
+.axis-intro {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-top: 14px;
+  margin-bottom: 4px;
+  max-width: 640px;
+}
+.axis-intro b { color: var(--ink); font-weight: 600; }
+
+.result-section-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 16px;
+  font-weight: 700;
+  display: inline-block;
+  background: var(--brat);
+  padding: 6px 12px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: rotate(-0.6deg);
+}
+.result-section-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+.result-section-title em {
+  font-style: italic;
+  color: var(--stamp);
+}
+.result-section-body {
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.result-section-body p + p { margin-top: 14px; }
+.result-section-body b { color: var(--ink); font-weight: 600; }
+.result-section-body em {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  color: var(--stamp);
+  font-weight: 600;
+}
+
+/* callings — chunky pill grid */
+.callings-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.calling-pill {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  padding: 9px 16px;
+  font-size: 13.5px;
+  color: var(--ink);
+  font-family: inherit;
+  font-weight: 500;
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: transform .12s ease;
+}
+.calling-pill:hover { transform: translate(-1px,-1px); }
+.calling-pill .star {
+  color: var(--stamp);
+  margin-left: 4px;
+}
+
+/* gap analysis */
+.gap-card {
+  background: var(--brat-tint);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.gap-card-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1.5px dashed var(--ink);
+}
+.gap-card-row:last-of-type { border-bottom: none; padding-bottom: 0; }
+.gap-card-row:first-of-type { padding-top: 0; }
+.gap-card-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding-top: 4px;
+  font-weight: 700;
+}
+.gap-card-val {
+  font-size: 15.5px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.gap-card-val b { font-weight: 600; color: var(--ink); }
+.gap-card-val em {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--stamp);
+}
+
+/* ============================================
+   SHARE CARD — Spotify Wrapped energy
+   ============================================ */
+.share-card-wrap {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 44px;
+  margin-bottom: 56px;
+  text-align: center;
+  box-shadow: 6px 6px 0 var(--ink);
+  position: relative;
+}
+.share-card-wrap::before {
+  content: "Approved · Share Externally";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--stamp);
+  color: white;
+  padding: 5px 12px 4px;
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+}
+
+/* ============================================
+   SHARE CARD — JBTI ASSESSMENT RECEIPT
+   Most-shared asset. Redesigned as a stamped triplicate
+   document — caution-tape masthead, archetype-code stamp,
+   executive-summary ledger, fake barcode, rubber stamps.
+   Reads at thumbnail scale as "an official document," which
+   sets up the joke. Replaces the previous Spotify-Wrapped
+   gradient (which read as generic).
+   ============================================ */
+.share-card {
+  width: 380px;
+  margin: 0 auto 32px;
+  background: var(--paper);
+  border: 2.5px solid var(--ink);
+  border-radius: 6px;
+  padding: 0;
+  box-shadow: 8px 8px 0 var(--ink), 0 28px 60px -16px rgba(14,14,16,0.28);
+  position: relative;
+  text-align: left;
+  color: var(--ink);
+  overflow: visible;
+  font-family: "Geist Mono", monospace;
+  transform: rotate(-0.5deg);
+}
+
+/* caution-tape masthead strip */
+.sc-perf {
+  height: 16px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--caution) 0px, var(--caution) 14px,
+    var(--ink) 14px, var(--ink) 28px
+  );
+  border-bottom: 1.5px solid var(--ink);
+  border-radius: 4px 4px 0 0;
+}
+
+/* masthead row */
+.sc-masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 18px 9px;
+  border-bottom: 1.5px solid var(--ink);
+  background: var(--paper);
+}
+.sc-brand {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  line-height: 1;
+}
+.sc-brand .tm {
+  font-family: "Geist Mono", monospace;
+  font-style: normal;
+  font-size: 8px;
+  vertical-align: super;
+  margin-left: 2px;
+  font-weight: 700;
+}
+.sc-doc-meta {
+  font-family: "Geist Mono", monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  color: var(--ink-2);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1.35;
+}
+
+/* metadata row — File / Subject */
+.sc-meta-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 18px 7px;
+  font-family: "Geist Mono", monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  border-bottom: 1px dashed var(--ink);
+  background: var(--manila);
+}
+.sc-meta-row b {
+  color: var(--ink);
+  font-weight: 700;
+  margin-right: 3px;
+}
+
+/* archetype block — NAME is now the visual hero, JBTI code is demoted */
+.sc-code-block {
+  padding: 22px 18px 18px;
+  text-align: center;
+  border-bottom: 1px dashed var(--ink);
+  position: relative;
+}
+.sc-code-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Archetype illustration on the share card — smaller, sits between label and name */
+.sc-illus-wrap {
+  width: 160px;
+  margin: 4px auto 12px;
+  background: var(--paper);
+  padding: 4px;
+  border: 2px solid var(--ink);
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(-1.2deg);
+}
+.sc-illus {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 3px;
+}
+.sc-illus[hidden] { display: none; }
+/* THE HERO — archetype name in chunky display */
+.sc-archetype-name {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding: 0 4px;
+  word-break: break-word;
+  -webkit-text-stroke: 0;
+}
+/* The JBTI code — demoted to a small mono indicator like an article code */
+.sc-code-letters {
+  font-family: "Geist Mono", monospace;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  color: var(--ink);
+  background: var(--caution);
+  display: inline-block;
+  padding: 5px 11px 4px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: rotate(-1.5deg);
+  text-transform: none;
+  line-height: 1;
+}
+.sc-code-letters::before {
+  content: "JBTI · ";
+  color: var(--ink-2);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+/* vibe — handwritten */
+.sc-vibe {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.3;
+  color: var(--ink);
+  padding: 12px 22px 14px;
+  border-bottom: 1px dashed var(--ink);
+  text-align: center;
+}
+
+/* score panel */
+.sc-score-block {
+  padding: 16px 18px 16px;
+  text-align: center;
+  border-bottom: 1px dashed var(--ink);
+  position: relative;
+  background: var(--bg);
+}
+.sc-score-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.sc-score-sublabel {
+  font-family: "Geist Mono", monospace;
+  font-size: 7.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.sc-score-num {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 92px;
+  line-height: 0.9;
+  color: var(--stamp);
+  letter-spacing: -0.04em;
+  -webkit-text-stroke: 2.5px var(--ink);
+  text-shadow: 4px 4px 0 var(--ink);
+  display: block;
+  margin-bottom: 2px;
+}
+.sc-score-flavor {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--highlighter);
+  display: inline-block;
+  padding: 4px 12px 3px;
+  border: 1.5px solid var(--ink);
+  transform: rotate(-2deg);
+  margin-top: 4px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* executive summary ledger with dot leaders */
+.sc-ledger {
+  padding: 12px 18px 12px;
+  border-bottom: 1px dashed var(--ink);
+}
+.sc-ledger-title {
+  font-family: "Geist Mono", monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sc-ledger-title::after {
+  content: "";
+  flex: 1;
+  height: 1.5px;
+  background: var(--ink);
+}
+.sc-ledger-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.sc-ledger-row:last-child { margin-bottom: 0; }
+.sc-ledger-key {
+  font-family: "Geist Mono", monospace;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  font-size: 9px;
+  min-width: 54px;
+}
+.sc-ledger-dots {
+  flex: 1;
+  border-bottom: 1.5px dotted var(--ink-2);
+  height: 8px;
+  position: relative;
+  top: -2px;
+}
+.sc-ledger-val {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: -0.005em;
+  text-align: right;
+  max-width: 180px;
+  line-height: 1.2;
+}
+.sc-ledger-row.sc-ledger-final .sc-ledger-val {
+  background: var(--stamp);
+  color: var(--paper);
+  padding: 3px 8px 2px;
+  font-family: "Geist Mono", monospace;
+  font-style: normal;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 800;
+  border: 1px solid var(--ink);
+}
+
+/* rotated "APPROVED" stamp positioned in the score block — overlaps the bottom-right of the score area where it reads as a stamp on top of the data without covering it */
+.sc-approved-stamp {
+  position: absolute;
+  top: 56%;
+  right: 14px;
+  transform: rotate(-12deg) translateY(-50%);
+  font-family: "Geist Mono", monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--stamp);
+  border: 2.5px solid var(--stamp);
+  padding: 6px 9px 4px;
+  text-align: center;
+  line-height: 1.18;
+  opacity: 0.72;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  background: transparent;
+  z-index: 6;
+}
+.sc-approved-stamp::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1.5px solid var(--stamp);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* second smaller stamp in the top-right corner */
+.sc-corner-stamp {
+  position: absolute;
+  top: 56px;
+  right: -8px;
+  transform: rotate(8deg);
+  font-family: "Geist Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--sky-2);
+  border: 2px solid var(--sky-2);
+  padding: 5px 8px 4px;
+  text-align: center;
+  line-height: 1.18;
+  opacity: 0.78;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  background: transparent;
+  z-index: 6;
+}
+.sc-corner-stamp::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border: 1px solid var(--sky-2);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* fake barcode + URL footer */
+.sc-foot {
+  padding: 14px 18px 14px;
+  background: var(--paper);
+  border-radius: 0 0 4px 4px;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+/* QR code — real scannable code, replaces the decorative barcode */
+.sc-qr {
+  width: 64px;
+  height: 64px;
+  border: 1.5px solid var(--ink);
+  padding: 3px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sc-qr svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  shape-rendering: crispEdges;
+}
+.sc-qr-fallback {
+  /* placeholder shown if the QR library hasn't loaded yet */
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(45deg, var(--ink) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--ink) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--ink) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--ink) 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+  opacity: 0.5;
+}
+.sc-foot-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.sc-foot-text {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: "Geist Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 700;
+}
+.sc-foot-text b {
+  color: var(--ink);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+}
+.sc-foot-hash {
+  font-family: "Caveat", cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--stamp);
+  text-transform: none;
+  letter-spacing: 0;
+  transform: rotate(-1.5deg);
+  display: inline-block;
+  line-height: 1;
+  margin-top: 2px;
+}
+.sc-foot-cta {
+  font-family: "Geist Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 600;
+  margin-top: 2px;
+}
+.sc-foot-cta b { color: var(--ink); font-weight: 800; }
+
+/* ============================================
+   SHARE ACTION BAR — buttons under the share card
+   ============================================ */
+.share-action-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 380px;
+  margin: 0 auto 16px;
+}
+.share-action-bar .btn {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.share-action-bar .btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.share-action-bar .btn[data-loading="true"] {
+  pointer-events: none;
+  opacity: 0.7;
+}
+.share-action-bar .btn[data-loading="true"]::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  margin-left: 4px;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.share-secondary-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  max-width: 380px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.share-secondary-row .btn {
+  padding: 10px 14px;
+  font-size: 12px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.share-help {
+  text-align: center;
+  font-family: "Geist Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 600;
+  margin-top: 14px;
+  opacity: 0.78;
+}
+.share-help b { color: var(--ink); }
+
+@media (max-width: 900px) {
+  .share-card { width: 100%; max-width: 340px; }
+  .sc-code-letters { font-size: 10px; padding: 4px 9px 3px; }
+  .sc-score-num { font-size: 78px; }
+  .sc-archetype-name { font-size: 19px; }
+  .sc-vibe { font-size: 17px; padding: 10px 18px 12px; }
+  .sc-approved-stamp { bottom: 92px; font-size: 8px; padding: 6px 9px 5px; }
+}
+
+.share-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   CTA SECTION — the sober Vinsoo moment
+   This is intentionally tonal-cleansing.
+   ============================================ */
+.cta-section {
+  background: var(--midnight);
+  color: var(--paper);
+  border-radius: 14px;
+  padding: 52px 52px 44px;
+  margin-bottom: 32px;
+  border: 2px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--brat);
+  position: relative;
+}
+.cta-section::before {
+  content: "okay but seriously";
+  position: absolute;
+  top: -14px;
+  left: 36px;
+  background: var(--brat);
+  color: var(--ink);
+  padding: 5px 12px 4px;
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+}
+.cta-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sky);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.cta-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 42px;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin-bottom: 22px;
+}
+.cta-title em {
+  font-style: italic;
+  color: var(--brat);
+  font-weight: 600;
+}
+.cta-body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.82);
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+.cta-body b      { color: var(--paper); font-weight: 600; }
+.cta-body em     {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  color: var(--brat);
+  font-weight: 600;
+}
+.cta-bullets {
+  list-style: none;
+  margin: 24px 0;
+}
+.cta-bullets li {
+  padding: 9px 0;
+  font-size: 15px;
+  color: rgba(255,255,255,0.90);
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.cta-bullets li::before {
+  content: "✦";
+  color: var(--brat);
+  flex-shrink: 0;
+  font-size: 13px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cta-buttons .btn-brat {
+  border-color: var(--brat);
+  box-shadow: 3px 3px 0 var(--brat);
+}
+.cta-buttons .btn-brat:hover { box-shadow: 5px 5px 0 var(--brat); }
+.cta-buttons .btn-outline-dark {
+  background: transparent;
+  color: var(--paper);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  box-shadow: 3px 3px 0 rgba(255,255,255,0.2);
+}
+.cta-buttons .btn-outline-dark:hover {
+  border-color: var(--paper);
+  transform: translate(-1px,-1px);
+  box-shadow: 4px 4px 0 rgba(255,255,255,0.3);
+}
+.cta-note {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brat);
+  margin-top: 22px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ============================================
+   TIER 2 UNLOCK — FOMO version
+   ============================================ */
+.tier2-fomo {
+  background: var(--manila);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.tier2-fomo-inner {
+  padding: 48px 48px 42px;
+  position: relative;
+}
+.tier2-fomo::before {
+  /* corner banner — leaked-memo coded */
+  content: "PHASE 2 ROLLOUT";
+  position: absolute;
+  top: 22px;
+  right: -38px;
+  transform: rotate(35deg);
+  background: var(--stamp);
+  color: var(--paper);
+  padding: 6px 50px 5px;
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  box-shadow: 0 2px 4px rgba(14,14,16,0.15);
+  pointer-events: none;
+  z-index: 5;
+}
+.tier2-fomo-eyebrow {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  background: var(--brat);
+  padding: 6px 12px 5px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.tier2-fomo-eyebrow .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--stamp);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.tier2-fomo-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  color: var(--ink);
+  margin-bottom: 22px;
+  max-width: 640px;
+}
+.tier2-fomo-title em {
+  font-style: italic;
+  color: var(--stamp);
+  font-weight: 600;
+}
+.tier2-fomo-body {
+  font-size: 15.5px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+.tier2-fomo-body p + p { margin-top: 12px; }
+.tier2-fomo-body b { color: var(--ink); font-weight: 600; }
+.tier2-fomo-body em {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  color: var(--stamp);
+  font-weight: 600;
+}
+
+/* accuracy bars */
+.tier2-fomo-accuracy {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.acc-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 56px;
+  gap: 16px;
+  align-items: center;
+}
+.acc-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 600;
+}
+.acc-bar {
+  height: 10px;
+  background: var(--bg);
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
+.acc-fill {
+  height: 100%;
+  transition: width 1.2s ease-out;
+}
+.acc-fill.t1 {
+  background: var(--sky);
+  width: 0;
+  animation: fill-t1 1.2s ease-out 0.3s forwards;
+}
+.acc-fill.t2 {
+  background: var(--caution);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent, transparent 6px,
+    rgba(255,255,255,0.30) 6px, rgba(255,255,255,0.30) 12px
+  );
+  width: 0;
+  animation: fill-t2 1.4s ease-out 0.6s forwards;
+}
+@keyframes fill-t1 { to { width: 70%; } }
+@keyframes fill-t2 { to { width: 94%; } }
+.acc-num {
+  font-family: "Bagel Fat One", serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--ink);
+  text-align: right;
+  letter-spacing: -0.01em;
+}
+
+.tier2-fomo-cta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tier2-fomo-cta .cta-time {
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-left: 4px;
+}
+
+/* legacy tier2-unlock keep-compat */
+.tier2-unlock {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  padding: 40px 48px;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+
+/* restart link */
+.restart-link {
+  text-align: center;
+  margin-top: 48px;
+}
+.restart-link a {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--highlighter);
+  padding: 4px 12px;
+  border: 1.5px solid var(--ink);
+  display: inline-block;
+  transform: rotate(-1.5deg);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.restart-link a:hover {
+  transform: rotate(0deg) translate(-1px,-1px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .app { padding: 20px 18px 60px; }
+  .nav { margin-bottom: 28px; }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    min-height: auto;
+    padding: 16px 0 40px;
+  }
+  .hero h1 { font-size: 60px; }
+  .hero h1 .delulu { -webkit-text-stroke: 1.5px var(--ink); text-shadow: 3px 3px 0 var(--ink); }
+  .hero-illus { max-width: 340px; margin: 0 auto; transform: rotate(2deg); }
+  .hero-meta { flex-wrap: wrap; gap: 18px; }
+  .hero-meta .stat { min-width: 130px; }
+
+  .q-header-row { flex-direction: column; gap: 8px; }
+  .q-num { font-size: 76px; margin-left: -2px; }
+  .q-text { font-size: 28px; }
+  .q-progress { margin-bottom: 36px; gap: 12px; }
+
+  .loading-num { font-size: 96px; }
+  .loading-text { font-size: 22px; }
+
+  .result-hero { padding: 36px 24px; }
+  .result-code { font-size: 12px; padding: 6px 10px 5px; }
+  .result-name { font-size: 42px; }
+  .result-vibe { font-size: 20px; }
+  .result-score-wrap { grid-template-columns: 1fr; gap: 20px; }
+  .result-score-num { font-size: 110px; }
+  .result-section-title { font-size: 26px; }
+  .gap-card { padding: 22px; }
+  .gap-card-row { grid-template-columns: 1fr; gap: 8px; }
+
+  .cta-section { padding: 36px 28px; }
+  .cta-title { font-size: 30px; }
+
+  .tier2-fomo-inner { padding: 32px 24px; }
+  .tier2-fomo-title { font-size: 26px; }
+  .tier2-fomo::before { font-size: 8.5px; padding: 5px 40px 4px; top: 18px; right: -42px; }
+  .acc-row { grid-template-columns: 100px 1fr 44px; gap: 10px; }
+  .acc-label { font-size: 9.5px; }
+  .tier2-fomo-cta { flex-direction: column; align-items: stretch; }
+  .tier2-fomo-cta .btn { justify-content: center; }
+
+  .share-card { width: 100%; max-width: 340px; padding: 0; }
+
+  .how-title { font-size: 30px; }
+  .how-grid { grid-template-columns: 1fr; gap: 16px; }
+  .how-section.open { padding-top: 36px; }
+  .how-foot { gap: 10px; }
+  .how-card-wide { padding: 26px 22px; }
+  .how-card-title-wide { font-size: 22px; }
+  .wide-flag { padding-left: 10px; font-size: 18px; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Persistent nav -->
+  <nav class="nav">
+    <a class="logo" href="#" onclick="restart(); return false;">
+      <span class="logo-mark"></span>
+      Vinsoo
+    </a>
+    <span class="nav-meta">The Career Delulu Test · JBTI</span>
+  </nav>
+
+  <!-- ============================================
+       SCREEN 1: LANDING
+       ============================================ -->
+  <div class="screen active" id="screen-landing">
+    <section class="hero">
+      <div>
+        <div class="memo-header">
+          <span><b>MEMO</b> · Career Strategy <span class="redact">•••••••••</span></span>
+          <span>FY26 · CIRCULATION RESTRICTED</span>
+        </div>
+        <div class="hero-eyebrow"><span class="dot"></span> A Vinsoo Original · 5 min · No signup</div>
+        <h1>How <span class="delulu">delulu</span> is your<br>career plan, <span class="really">really</span>?</h1>
+        <p class="hero-sub">
+          Your peers act like they have it figured out. AI is quietly absorbing the entry-level jobs you trained for. Companies won't tell you what they actually want. You're supposed to know what to do with your life — by next semester. <b>The question isn't just "what job do I want?" It's "what work makes me irreplaceable?"</b> JBTI finds the gap between what you want and where you'd actually thrive. Then Vinsoo positions you for the roles that still have edge.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-brat btn-lg" onclick="startTest()">
+            Start the test →
+          </button>
+          <button class="btn btn-ghost" onclick="toggleHowItWorks()">but how is this not a Buzzfeed quiz 🍹 ↓</button>
+        </div>
+        <div class="hero-meta">
+          <div class="stat">
+            <div class="stat-num">73<span style="font-size:0.55em; color:var(--ink-2);">%</span></div>
+            <div class="stat-label">find out their<br>career is delulu 💀</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">16</div>
+            <div class="stat-label">career archetypes<br>(not zodiac 🔮)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">5min</div>
+            <div class="stat-label">no signup<br>honest results ✅</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-illus">
+        <div class="stamp tilt-l" style="top:34%; right:-22px;">Confidential</div>
+        <div class="badge">sample reading ✦</div>
+        <div class="archetype-name">The Career NPC</div>
+        <div class="code">JBTI · LMSI</div>
+        <div class="vibe">Big Tech paycheck. 5pm hard stop. Quiet champion. 🧊</div>
+        <div class="score-row">
+          <div class="score-num">73</div>
+          <div class="score-label">Wildly Delulu 💀</div>
+        </div>
+
+        <!-- decorative sparkles around the polaroid -->
+        <div class="sparkle bob" style="top:-26px; right:-22px;" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L13.5 9 L20 10 L13.5 11 L12 18 L10.5 11 L4 10 L10.5 9 Z M19 4 L19.5 6 L21 6.5 L19.5 7 L19 9 L18.5 7 L17 6.5 L18.5 6 Z" fill="#F7D31E" stroke="#0E0E10" stroke-width="0.6"/></svg>
+        </div>
+        <div class="sparkle spin" style="bottom:-18px; left:-22px; width:36px; height:36px;" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L13.5 9 L20 10 L13.5 11 L12 18 L10.5 11 L4 10 L10.5 9 Z" fill="#B8E32D" stroke="#0E0E10" stroke-width="0.8"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16 ARCHETYPES TEASER — show the outputs, hide the names. The mystery is the hook. -->
+    <section class="archetypes-section">
+      <div class="archetypes-eyebrow">§2.1 · The Lineup</div>
+      <h2 class="archetypes-title">16 archetypes. <em>Which one are you?</em></h2>
+      <p class="archetypes-intro">Sixteen ways to be wrong about your career. Pick one and see. <b>Take the test to find out which one is you.</b> (The names are funnier than you think.)</p>
+
+      <div class="archetypes-grid" id="archetypes-grid">
+        <div class="arch-card"><img src="img/archetypes/GMSI.webp" alt="" loading="lazy"><div class="arch-card-code">GMSI</div></div>
+        <div class="arch-card"><img src="img/archetypes/GMSO.webp" alt="" loading="lazy"><div class="arch-card-code">GMSO</div></div>
+        <div class="arch-card"><img src="img/archetypes/GMTI.webp" alt="" loading="lazy"><div class="arch-card-code">GMTI</div></div>
+        <div class="arch-card"><img src="img/archetypes/GMTO.webp" alt="" loading="lazy"><div class="arch-card-code">GMTO</div></div>
+        <div class="arch-card"><img src="img/archetypes/GPSI.webp" alt="" loading="lazy"><div class="arch-card-code">GPSI</div></div>
+        <div class="arch-card"><img src="img/archetypes/GPSO.webp" alt="" loading="lazy"><div class="arch-card-code">GPSO</div></div>
+        <div class="arch-card"><img src="img/archetypes/GPTI.webp" alt="" loading="lazy"><div class="arch-card-code">GPTI</div></div>
+        <div class="arch-card"><img src="img/archetypes/GPTO.webp" alt="" loading="lazy"><div class="arch-card-code">GPTO</div></div>
+        <div class="arch-card"><img src="img/archetypes/LMSI.webp" alt="" loading="lazy"><div class="arch-card-code">LMSI</div></div>
+        <div class="arch-card"><img src="img/archetypes/LMSO.webp" alt="" loading="lazy"><div class="arch-card-code">LMSO</div></div>
+        <div class="arch-card"><img src="img/archetypes/LMTI.webp" alt="" loading="lazy"><div class="arch-card-code">LMTI</div></div>
+        <div class="arch-card"><img src="img/archetypes/LMTO.webp" alt="" loading="lazy"><div class="arch-card-code">LMTO</div></div>
+        <div class="arch-card"><img src="img/archetypes/LPSI.webp" alt="" loading="lazy"><div class="arch-card-code">LPSI</div></div>
+        <div class="arch-card"><img src="img/archetypes/LPSO.webp" alt="" loading="lazy"><div class="arch-card-code">LPSO</div></div>
+        <div class="arch-card"><img src="img/archetypes/LPTI.webp" alt="" loading="lazy"><div class="arch-card-code">LPTI</div></div>
+        <div class="arch-card"><img src="img/archetypes/LPTO.webp" alt="" loading="lazy"><div class="arch-card-code">LPTO</div></div>
+      </div>
+
+      <div class="archetypes-cta-row">
+        <div class="archetypes-cta-line"><span class="arrow">↳</span> guess wrong and take the test anyway</div>
+        <button class="btn btn-pink" onclick="startTest()" style="padding:16px 28px; font-size:15px;">Take the Test →</button>
+      </div>
+    </section>
+
+    <!-- How It Works expandable -->
+    <section class="how-section" id="how-section">
+      <div class="how-inner">
+        <div class="how-eyebrow">What this test is actually measuring</div>
+        <h2 class="how-title">JBTI is built on <em>four established frameworks</em> in career psychology.</h2>
+        <p class="how-intro">This isn't a Buzzfeed quiz with a piña colada at the end. (Okay, there's a piña colada at the end.) The 4-axis structure synthesizes work from four research traditions — and the Delulu Score is a measurable gap, not a vibe.</p>
+
+        <div class="compliance-bar">
+          Methodologically reviewed by 500+ Heads of HR · §4.7(a) · No piña coladas were harmed
+        </div>
+        <div style="height:36px"></div>
+
+        <div class="how-grid">
+          <div class="how-card">
+            <div class="how-card-num">01</div>
+            <div class="how-card-title">Myers-Briggs 16-type model</div>
+            <p>The same 4-axis binary structure that gave you INTJ or ENFP — adapted with four career-relevant axes: <b>Grinder/Lounger, Money/Purpose, Social/Solo, Insider/Outsider</b>. 16 archetypes, mapped to real career trajectories.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-card-num">02</div>
+            <div class="how-card-title">Hofstede's Cultural Dimensions</div>
+            <p>Geert Hofstede's IBM research across 50+ countries identified that work-orientation traits cluster along measurable axes. JBTI's <b>Insider/Outsider</b> axis maps to his findings on power-distance and uncertainty-avoidance.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-card-num">03</div>
+            <div class="how-card-title">The GLOBE Project</div>
+            <p>The Global Leadership and Organizational Behavior Effectiveness study analyzed 17,000 managers across 62 cultures. It validated that career-orientation traits stay stable across contexts. JBTI's <b>Grinder/Lounger</b> axis builds on GLOBE's performance-orientation work.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-card-num">04</div>
+            <div class="how-card-title">500,000 graduate outcomes</div>
+            <p>Our algorithm is trained on outcome data from recent graduates — mapping archetypes to actual career destinations. <b>The Delulu Score is the measurable gap</b> between your archetype and your stated dream job, not vibes.</p>
+          </div>
+        </div>
+
+        <div class="how-card-wide">
+          <div class="how-card-num">05 · <span class="wide-flag">The piece nobody else has</span></div>
+          <div class="how-card-title-wide">A live network of Heads of HR at the companies you actually want to work at.</div>
+          <p>The hardest question for any graduating senior right now isn't "how do I write a better resume" — it's <b>which roles still have edge in the AI era?</b> Which jobs are quietly being absorbed by agentic workflows? Which roles compound? Which majors are still safe and which became liabilities last quarter?</p>
+          <p>Vinsoo's team works directly with <b>500+ Heads of HR and recruiting leaders at top firms across finance, consulting, tech, and policy</b> — synthesizing live intelligence on which roles are growing, which are shrinking, and where the AI-resistant edges actually live. Your archetype tells us who you are. Our HR network tells us where you'd <em>still have an edge in 2030</em>.</p>
+        </div>
+
+        <div class="how-foot">
+          <span class="how-foot-eyebrow">Tier 1 · 10 questions · 5 minutes</span>
+          <span class="how-foot-eyebrow">Tier 2 · 25 questions · 8 minutes (sharper)</span>
+          <span class="how-foot-eyebrow">No signup · Honest results</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================
+       SCREEN 2: Q1 - DREAM JOB INTAKE
+       ============================================ -->
+  <div class="screen" id="screen-dream">
+    <div class="q-wrap">
+      <div class="q-progress">
+        <span class="q-progress-label">Question <span class="count">01</span> / 11</span>
+        <div class="q-progress-bar"><div class="fill" style="width: 9%"></div></div>
+        <span class="q-progress-label">FORM&nbsp;JBTI-1</span>
+      </div>
+
+      <div class="q-header-row">
+        <div class="q-num">01</div>
+        <div>
+          <div class="q-eyebrow">no lying ✌</div>
+          <h2 class="q-text">What's your dream job?</h2>
+        </div>
+      </div>
+      <p style="font-size:15px; color:var(--ink-2); line-height:1.6; margin-top:-24px; margin-bottom:36px; max-width:560px;">Most people taking this test lie here — they put the job their parents would want, or the one their friends are applying to. <b>You don't have to.</b> Be specific. We won't judge. The whole test only works if this part is honest.</p>
+
+      <div class="dream-input-wrap">
+        <input
+          type="text"
+          class="dream-input"
+          id="dream-input"
+          placeholder="type it. be specific. we won't tell 🤫"
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="dream-chips-label">or pick one 👇</div>
+      <div class="dream-chips" id="dream-chips">
+        <button class="dream-chip" onclick="setDream('Investment Banking Analyst at Goldman Sachs')">💼 Investment Banking Analyst, Goldman Sachs</button>
+        <button class="dream-chip" onclick="setDream('Software Engineer at Google')">💻 Software Engineer, Google</button>
+        <button class="dream-chip" onclick="setDream('Strategy Consultant at McKinsey')">📊 Strategy Consultant, McKinsey</button>
+        <button class="dream-chip" onclick="setDream('Quant Trader at Jane Street')">📈 Quant Trader, Jane Street</button>
+        <button class="dream-chip" onclick="setDream('Product Manager at Big Tech')">📱 Product Manager, Big Tech</button>
+        <button class="dream-chip" onclick="setDream('Founder of my own startup')">🚀 Founder, my own startup</button>
+        <button class="dream-chip" onclick="setDream('VC Associate at Sequoia')">💸 VC Associate, Sequoia</button>
+        <button class="dream-chip" onclick="setDream('Policy Analyst at Brookings')">🏛️ Policy Analyst, Brookings</button>
+        <button class="dream-chip" onclick="setDream('Writer at The Atlantic')">✍️ Writer, The Atlantic</button>
+        <button class="dream-chip special" onclick="setDream('__unknown__')">Honestly?? Do I look like I know. 🤷</button>
+      </div>
+
+      <div class="q-nav">
+        <button class="btn btn-ghost" onclick="showScreen('screen-landing')">← Back</button>
+        <button class="btn btn-brat" id="dream-continue" onclick="submitDream()" disabled style="opacity:0.5; cursor:not-allowed;">Continue →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       SCREEN 3: TIER 1 QUESTIONS (Q2-Q11)
+       ============================================ -->
+  <div class="screen" id="screen-question">
+    <div class="q-wrap">
+      <div class="q-progress">
+        <span class="q-progress-label"><span class="pip"></span> FORM&nbsp;JBTI-Q<span class="count" id="q-count">02</span>&nbsp;/&nbsp;11</span>
+        <div class="q-progress-bar"><div class="fill" id="q-progress-fill" style="width: 18%"></div></div>
+        <span class="q-progress-label" id="q-tier-label">§I · Behavioral</span>
+      </div>
+
+      <div class="q-header-row">
+        <div class="q-num" id="q-num">02</div>
+        <div>
+          <div class="q-eyebrow" id="q-eyebrow">Sunday Night Check</div>
+          <h2 class="q-text" id="q-text">Question text goes here</h2>
+        </div>
+      </div>
+
+      <div class="q-options" id="q-options"></div>
+
+      <div class="q-nav">
+        <button class="btn btn-ghost" id="q-back" onclick="prevQuestion()">← Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       SCREEN 4: LOADING (Tier 1)
+       ============================================ -->
+  <div class="screen" id="screen-loading">
+    <div class="loading-wrap">
+      <div class="loading-num">…</div>
+      <div class="loading-title">Auditing your forecast</div>
+      <div class="loading-text" id="loading-text">Cross-referencing 500,000 graduate outcomes…</div>
+      <div class="loading-bar"><div class="fill" id="loading-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       SCREEN 5: TIER 1 RESULT
+       ============================================ -->
+  <div class="screen" id="screen-result-tier1">
+    <div class="result-wrap">
+
+      <!-- Hero result card -->
+      <div class="result-hero">
+        <div class="stamp tilt-r" style="top:24px; right:48px;">Internal Use Only</div>
+        <div class="memo-header" style="margin-bottom:24px">
+          <span><b>FORM JBTI-1</b> · Annual Career Review</span>
+          <span>FY26 · CONFIDENTIAL</span>
+        </div>
+        <div class="result-eyebrow">
+          <span class="dot"></span>
+          <span>Tier 1 Result · Subject's Findings</span>
+        </div>
+
+        <!-- Archetype illustration — the visual moment-of-reveal -->
+        <div class="result-illus-wrap" id="r1-illus-wrap">
+          <img class="result-illus" id="r1-illus" alt="" loading="eager" decoding="async">
+          <div class="result-illus-caption">Subject's Archetype · As Filed</div>
+        </div>
+
+        <div class="result-name" id="r1-name">The Career NPC</div>
+        <div class="result-code-wrap">
+          <div class="result-code" id="r1-code">LMSI</div>
+        </div>
+        <div class="result-vibe" id="r1-vibe">Big Tech paycheck. 5pm hard stop. Quiet champion.</div>
+
+        <div class="result-divider"></div>
+
+        <div class="result-score-wrap">
+          <div class="result-score">
+            <div class="result-score-label">FY26 Delulu Projection</div>
+            <div class="result-score-sublabel">UNAUDITED · Q4 FORECAST</div>
+            <div class="result-score-num" id="r1-score">73</div>
+            <div class="result-score-flavor" id="r1-flavor">Wildly Delulu</div>
+          </div>
+          <div class="result-tension">
+            <div class="result-tension-row">
+              <span class="result-tension-label">You said</span>
+              <span class="result-tension-val dream" id="r1-dream">Investment Banking Analyst</span>
+            </div>
+            <div class="result-tension-row">
+              <span class="result-tension-label">We see</span>
+              <span class="result-tension-val archetype" id="r1-archetype">The Career NPC</span>
+            </div>
+            <div class="result-tension-quote" id="r1-tension-quote">These are not compatible. We need to talk.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- caution tape divider — corporate satire -->
+      <div class="caution-tape"><span class="label">End of Summary · Continue to Findings</span></div>
+
+      <!-- Axis breakdown · 16personalities-style decoder -->
+      <div class="result-section">
+        <div class="result-section-eyebrow">Decoder · §3.2</div>
+        <h3 class="result-section-title">What <em><span id="r1-decoder-code">your code</span></em> actually means.</h3>
+        <p class="axis-intro">Your archetype is built from <b>4 axes</b>, each a forced choice. The letter you got is highlighted — your tendencies. The other one is what you're <em>not</em>. (Knowing both is the point.)</p>
+        <div class="axis-grid" id="r1-axis-grid">
+          <!-- Axis 1: G vs L -->
+          <div class="axis-row" data-axis="0">
+            <div class="axis-side left" data-letter="G">
+              <div class="axis-letter">G</div>
+              <div class="axis-name">Grind</div>
+              <div class="axis-desc">100-hour weeks are fine if the upside is there.</div>
+            </div>
+            <div class="axis-vs">vs</div>
+            <div class="axis-side right" data-letter="L">
+              <div class="axis-letter">L</div>
+              <div class="axis-name">Lounge</div>
+              <div class="axis-desc">You want a life outside of work. Non-negotiable.</div>
+            </div>
+          </div>
+          <!-- Axis 2: M vs P -->
+          <div class="axis-row" data-axis="1">
+            <div class="axis-side left" data-letter="M">
+              <div class="axis-letter">M</div>
+              <div class="axis-name">Money</div>
+              <div class="axis-desc">Comp and prestige are the primary motivator. Be honest.</div>
+            </div>
+            <div class="axis-vs">vs</div>
+            <div class="axis-side right" data-letter="P">
+              <div class="axis-letter">P</div>
+              <div class="axis-name">Purpose</div>
+              <div class="axis-desc">Meaning, impact, or values come first. Money is secondary.</div>
+            </div>
+          </div>
+          <!-- Axis 3: S vs T -->
+          <div class="axis-row" data-axis="2">
+            <div class="axis-side left" data-letter="S">
+              <div class="axis-letter">S</div>
+              <div class="axis-name">Status</div>
+              <div class="axis-desc">You care about titles, recognition, where you rank.</div>
+            </div>
+            <div class="axis-vs">vs</div>
+            <div class="axis-side right" data-letter="T">
+              <div class="axis-letter">T</div>
+              <div class="axis-name">Thing</div>
+              <div class="axis-desc">You care about the work itself — the craft, the problem.</div>
+            </div>
+          </div>
+          <!-- Axis 4: I vs O -->
+          <div class="axis-row" data-axis="3">
+            <div class="axis-side left" data-letter="I">
+              <div class="axis-letter">I</div>
+              <div class="axis-name">Inside</div>
+              <div class="axis-desc">You want to work within established institutions.</div>
+            </div>
+            <div class="axis-vs">vs</div>
+            <div class="axis-side right" data-letter="O">
+              <div class="axis-letter">O</div>
+              <div class="axis-name">Outside</div>
+              <div class="axis-desc">You want to build your own thing. Or be a free agent.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Archetype deep read -->
+      <div class="result-section">
+        <div class="result-section-eyebrow">Subject's Archetype · §3.1</div>
+        <h3 class="result-section-title" id="r1-section-name">The Career NPC</h3>
+        <div class="result-section-body" id="r1-section-body"></div>
+
+        <div class="callings-list" id="r1-callings"></div>
+      </div>
+
+      <!-- Share card section -->
+      <div class="share-card-wrap" id="sc-card-wrapper-1">
+        <div class="result-section-eyebrow" style="justify-content:center; margin-bottom:24px;">Your shareable card</div>
+
+        <div class="share-card">
+          <!-- decorative stamps (overlapping, slightly rotated) -->
+          <div class="sc-corner-stamp">Rec'd<br>11.2026</div>
+
+          <!-- caution-tape masthead -->
+          <div class="sc-perf"></div>
+          <div class="sc-masthead">
+            <div class="sc-brand">JBTI<span class="tm">™</span></div>
+            <div class="sc-doc-meta">Form-1 · FY26</div>
+          </div>
+          <div class="sc-meta-row">
+            <span><b>File:</b>JBTI-Q11-2026</span>
+            <span><b>Subject:</b>Anonymous</span>
+          </div>
+
+          <!-- archetype block — NAME is hero, JBTI code is subordinate -->
+          <div class="sc-code-block">
+            <div class="sc-code-label">Your Archetype · §3.1</div>
+            <div class="sc-illus-wrap">
+              <img class="sc-illus" id="sc-illus" alt="" loading="eager" decoding="async">
+            </div>
+            <div class="sc-archetype-name" id="sc-name">The Career NPC</div>
+            <div class="sc-code-letters" id="sc-code">LMSI</div>
+          </div>
+
+          <!-- vibe handwritten -->
+          <div class="sc-vibe" id="sc-vibe">Big Tech paycheck. 5pm hard stop. Quiet champion. 🧊</div>
+
+          <!-- score panel — FY26 PROJECTION -->
+          <div class="sc-score-block">
+            <div class="sc-score-label">FY26 Delulu Projection</div>
+            <div class="sc-score-sublabel">Unaudited · Q4 forecast</div>
+            <div class="sc-score-num" id="sc-score">73</div>
+            <span class="sc-score-flavor" id="sc-flavor">Wildly Delulu 💀</span>
+          </div>
+
+          <!-- executive summary ledger -->
+          <div class="sc-ledger">
+            <div class="sc-ledger-title">Executive Summary</div>
+            <div class="sc-ledger-row">
+              <span class="sc-ledger-key">Dream</span>
+              <span class="sc-ledger-dots"></span>
+              <span class="sc-ledger-val" id="sc-dream">Investment Banking</span>
+            </div>
+            <div class="sc-ledger-row">
+              <span class="sc-ledger-key">Finding</span>
+              <span class="sc-ledger-dots"></span>
+              <span class="sc-ledger-val" id="sc-arch">Career NPC</span>
+            </div>
+            <div class="sc-ledger-row sc-ledger-final">
+              <span class="sc-ledger-key">Status</span>
+              <span class="sc-ledger-dots"></span>
+              <span class="sc-ledger-val" id="sc-status">Incompatible</span>
+            </div>
+          </div>
+
+          <!-- rotated red stamp on the corner -->
+          <div class="sc-approved-stamp">Approved&nbsp;For<br>External<br>Distribution</div>
+
+          <!-- footer with REAL scannable QR code -->
+          <div class="sc-foot">
+            <div class="sc-qr" id="sc-qr"><div class="sc-qr-fallback"></div></div>
+            <div class="sc-foot-right">
+              <div class="sc-foot-text">
+                <b>vinsoo.com/jbti</b>
+                <span class="sc-foot-hash">#deluluTest</span>
+              </div>
+              <div class="sc-foot-cta">↳ <b>Scan</b> to take the test</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share action bar — Save Image is primary (unlocks Instagram/WeChat/Xiaohongshu posts),
+             Share opens the OS share sheet (covers WhatsApp/iMessage/Telegram/Signal/etc.) -->
+        <div class="share-action-bar">
+          <button class="btn btn-pink" onclick="saveShareCardImage(this, 'sc-card-wrapper-1')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Save as Image
+          </button>
+          <button class="btn btn-outline" onclick="shareShareCardImage(this, 'sc-card-wrapper-1')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share
+          </button>
+        </div>
+        <div class="share-secondary-row">
+          <button class="btn btn-ghost" style="font-size:12px;" onclick="copyResultText()">📋 Copy text</button>
+          <button class="btn btn-ghost" style="font-size:12px;" onclick="copyShareLink()">🔗 Copy link</button>
+        </div>
+        <div class="share-help">
+          <b>Save → post on</b> IG · 小红书 · WeChat &nbsp;·&nbsp; <b>Share → send via</b> iMessage · WhatsApp · Telegram · Signal
+        </div>
+      </div>
+
+      <!-- Tier 2 unlock — high-FOMO version -->
+      <div class="tier2-fomo">
+        <div class="stamp" style="top:30px; left:36px; transform:rotate(-14deg);">Pending&nbsp;Review</div>
+        <div class="tier2-fomo-inner">
+          <div class="tier2-fomo-eyebrow">
+            <span class="dot"></span>
+            <span>Subject's Tier I findings are approximately right</span>
+          </div>
+          <h3 class="tier2-fomo-title">You're only <em>70% accurate</em>. Want the other 30%?</h3>
+          <div class="tier2-fomo-body">
+            <p>Tier 1 gave you the archetype and the score. Tier 2 is what <b>Vinsoo career coaches actually use</b> — it pinpoints which of <em>4 delulu sub-types</em> you're in, what specifically happens if you pursue your dream, and the exact two-path strategy that gets you there.</p>
+            <p><b>73% of users who took Tier 2 got a different recommendation</b> than Tier 1 alone would have given them. It's 3 more minutes. <em>Most people skip it. The ones who don't make sharper career decisions.</em></p>
+          </div>
+          <div class="tier2-fomo-accuracy">
+            <div class="acc-row">
+              <span class="acc-label">Tier 1 accuracy</span>
+              <div class="acc-bar"><div class="acc-fill t1"></div></div>
+              <span class="acc-num">70%</span>
+            </div>
+            <div class="acc-row">
+              <span class="acc-label">Tier 2 accuracy</span>
+              <div class="acc-bar"><div class="acc-fill t2"></div></div>
+              <span class="acc-num">94%</span>
+            </div>
+          </div>
+          <div class="tier2-fomo-cta">
+            <button class="btn btn-pink btn-lg" onclick="startTier2()">Unlock Tier 2 → <span class="cta-time">3 min</span></button>
+            <button class="btn btn-ghost" onclick="scrollToVinsooCTA()">Skip — live with the imprecision</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vinsoo soft CTA -->
+      <div class="cta-section">
+        <div class="cta-eyebrow">The real question isn't getting hired · It's staying hired</div>
+        <h3 class="cta-title">Now let Vinsoo find your <em>AI-proof edge</em>.</h3>
+        <p class="cta-body">
+          The job market changed under your feet. Entry-level white-collar roles you trained for are quietly being absorbed by AI. The students who'll still have careers in 2030 aren't the ones with the best resumes — they're the ones positioned in <b>roles that compound</b>, in fields AI can't fully replace, with the soft-signal edges that recruiters actually filter for.
+        </p>
+        <p class="cta-body" style="margin-top:16px;">
+          We work directly with <b>500+ Heads of HR at top firms</b> across finance, consulting, tech, and policy. They tell us which roles are growing, which are shrinking, and where the AI-resistant edges live. Then we use that intel — plus your archetype — to position you for jobs that <em>still have edge five years out</em>.
+        </p>
+        <ul class="cta-bullets">
+          <li>Discover your true career calling — and where it still compounds</li>
+          <li>A bespoke resume for every application — built to beat the ATS</li>
+          <li>We do the grunt work. You light up the network.</li>
+          <li>500 applications, submitted in your sleep</li>
+        </ul>
+        <div class="cta-buttons">
+          <button class="btn btn-brat btn-lg">Start with Vinsoo →</button>
+          <button class="btn btn-outline-dark btn-lg">Learn more</button>
+        </div>
+        <div class="cta-note">They use AI to reject you. We use AI to get you hired — for the long game.</div>
+      </div>
+
+
+      <!-- fake legalese footer — corporate satire -->
+      <div class="legalese">
+        <p><span class="form-id">FORM&nbsp;JBTI-1</span> <b>Notice to Subject:</b> The Career Delulu Test® and Job-Based Type Indicator™ are products of <b>Vinsoo, Inc.</b>, an unregulated private actor. Results are advisory and not actionable in any court of law, regulatory body, group chat, family dinner, or appellate-level Thanksgiving. Vinsoo makes no warranty, express or implied, as to the suitability of any career path described herein for the subject's actual life, parents, or vibe.</p>
+        <p style="margin-top:10px"><b>§ 2.7(b) — Side Effects.</b> May include: existential clarity, sudden hostility toward LinkedIn, a renewed interest in trade school, the unshakeable urge to text your therapist, a 4 a.m. epiphany re: investment banking, and/or the unprompted reorganization of your apartment. Discontinue use of test if symptoms persist beyond 14 business days.</p>
+        <p style="margin-top:10px"><b>§ 4.1 — Disclosure.</b> No piña coladas were consumed in the production of this assessment. JBTI is not affiliated with Myers-Briggs Type Indicator®, the Hofstede Centre, the GLOBE Project, your therapist, or anyone with formal psychometric credentials, although it borrows freely. Subject acknowledges that "delulu" is a registered colloquialism and not a clinical diagnosis.</p>
+        <p style="margin-top:14px; font-style: italic;">© 2026 Vinsoo, Inc. Property of subject. Do not forward. <b>This document self-destructs in your imagination only.</b></p>
+      </div>
+
+      <div class="restart-link">
+        <a onclick="restart()">↻ run it back 🔁</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================
+       SCREEN 6: TIER 2 QUESTIONS
+       ============================================ -->
+  <div class="screen" id="screen-question-tier2">
+    <div class="q-wrap">
+      <div class="q-progress">
+        <span class="q-progress-label"><span class="pip"></span> FORM&nbsp;JBTI-Q<span class="count" id="q2-count">12</span>&nbsp;/&nbsp;26</span>
+        <div class="q-progress-bar"><div class="fill" id="q2-progress-fill" style="width: 46%"></div></div>
+        <span class="q-progress-label">§II · Deep Dive</span>
+      </div>
+
+      <div class="q-header-row">
+        <div class="q-num" id="q2-num">12</div>
+        <div>
+          <div class="q-eyebrow" id="q2-eyebrow">Axis Refinement</div>
+          <h2 class="q-text" id="q2-text">Question text goes here</h2>
+        </div>
+      </div>
+
+      <div class="q-options" id="q2-options"></div>
+
+      <div class="q-nav">
+        <button class="btn btn-ghost" id="q2-back" onclick="prevQuestionTier2()">← Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       SCREEN 7: TIER 2 FINAL RESULT
+       ============================================ -->
+  <div class="screen" id="screen-result-tier2">
+    <div class="result-wrap">
+
+      <!-- Hero result card -->
+      <div class="result-hero">
+        <div class="stamp tilt-r" style="top:24px; right:48px;">Final · Reviewed</div>
+        <div class="memo-header" style="margin-bottom:24px">
+          <span><b>FORM JBTI-2</b> · Annual Career Review · Deep Dive</span>
+          <span>FY26 · CONFIDENTIAL</span>
+        </div>
+        <div class="result-eyebrow">
+          <span class="dot"></span>
+          <span>Final Result · Subject Audited · Deep Dive Complete</span>
+        </div>
+
+        <!-- Archetype illustration — Tier 2 (final/audited) version -->
+        <div class="result-illus-wrap" id="r2-illus-wrap">
+          <img class="result-illus" id="r2-illus" alt="" loading="eager" decoding="async">
+          <div class="result-illus-caption">Subject's Archetype · Final, Audited</div>
+        </div>
+
+        <div class="result-name" id="r2-name">The Career NPC</div>
+        <div class="result-code-wrap">
+          <div class="result-code" id="r2-code">LMSI</div>
+        </div>
+        <div class="result-vibe" id="r2-vibe">Big Tech paycheck. 5pm hard stop. Quiet champion.</div>
+
+        <div class="result-divider"></div>
+
+        <div class="result-score-wrap">
+          <div class="result-score">
+            <div class="result-score-label">FY26 Delulu Projection</div>
+            <div class="result-score-sublabel">UNAUDITED · Q4 FORECAST</div>
+            <div class="result-score-num" id="r2-score">73</div>
+            <div class="result-score-flavor" id="r2-flavor">Wildly Delulu</div>
+          </div>
+          <div class="result-tension">
+            <div class="result-tension-row">
+              <span class="result-tension-label">You said</span>
+              <span class="result-tension-val dream" id="r2-dream">Investment Banking</span>
+            </div>
+            <div class="result-tension-row">
+              <span class="result-tension-label">We see</span>
+              <span class="result-tension-val archetype" id="r2-archetype">The Career NPC</span>
+            </div>
+            <div class="result-tension-row">
+              <span class="result-tension-label">Delulu type</span>
+              <span class="result-tension-val" style="color:var(--ink);" id="r2-delulu-type">Field-Mismatch Delulu</span>
+            </div>
+            <div class="result-tension-quote" id="r2-tension-quote">These are not compatible. We need to talk.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- caution tape divider — corporate satire -->
+      <div class="caution-tape"><span class="label">End of Summary · Continue to Findings</span></div>
+
+      <!-- Axis breakdown · 16personalities-style decoder -->
+      <div class="result-section">
+        <div class="result-section-eyebrow">Decoder · §3.2</div>
+        <h3 class="result-section-title">What <em><span id="r2-decoder-code">your code</span></em> actually means.</h3>
+        <p class="axis-intro">Your archetype is built from <b>4 axes</b>, each a forced choice. The letter you got is highlighted — your tendencies. The other one is what you're <em>not</em>. (Knowing both is the point.)</p>
+        <div class="axis-grid" id="r2-axis-grid">
+          <!-- Axis 1: G vs L -->
+          <div class="axis-row" data-axis="0">
+            <div class="axis-side left" data-letter="G">
+              <div class="axis-letter">G</div>
+              <div class="axis-name">Grind</div>
+              <div class="axis-desc">100-hour weeks are fine if the upside is there.</div>
+            </div>
+            <div class="axis-vs">vs</div>
+            <div class="axis-side right" data-letter="L">
+              <div class="axis-letter">L</div>
+              <div class="axis-name">Lounge</div>
+              <div class="axis-desc">You want a life outside of work. Non-negotiable.</div>
+            </div>
+          </div>
+          <!-- Axis 2: M vs P -->
+          <div class="axis-row" data-axis="1">
+            <div class="axis-side left" data-letter="M">
+              <div class="axis-letter">M</div>
+              <div class="axis-name">Money</div>
+              <div class="axis-desc">Comp and prestige are the primary motivator. Be honest.</div>
+            </div>
+            <div class="axis-vs">vs</div>
+            <div class="axis-side right" data-letter="P">
+              <div class="axis-letter">P</div>
+              <div class="axis-name">Purpose</div>
+              <div class="axis-desc">Meaning, impact, or values come first. Money is secondary.</div>
+            </div>
+          </div>
+          <!-- Axis 3: S vs T -->
+          <div class="axis-row" data-axis="2">
+            <div class="axis-side left" data-letter="S">
+              <div class="axis-letter">S</div>
+              <div class="axis-name">Status</div>
+              <div class="axis-desc">You care about titles, recognition, where you rank.</div>
+            </div>
+            <div class="axis-vs">vs</div>
+            <div class="axis-side right" data-letter="T">
+              <div class="axis-letter">T</div>
+              <div class="axis-name">Thing</div>
+              <div class="axis-desc">You care about the work itself — the craft, the problem.</div>
+            </div>
+          </div>
+          <!-- Axis 4: I vs O -->
+          <div class="axis-row" data-axis="3">
+            <div class="axis-side left" data-letter="I">
+              <div class="axis-letter">I</div>
+              <div class="axis-name">Inside</div>
+              <div class="axis-desc">You want to work within established institutions.</div>
+            </div>
+            <div class="axis-vs">vs</div>
+            <div class="axis-side right" data-letter="O">
+              <div class="axis-letter">O</div>
+              <div class="axis-name">Outside</div>
+              <div class="axis-desc">You want to build your own thing. Or be a free agent.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Archetype description -->
+      <div class="result-section">
+        <div class="result-section-eyebrow">Subject's Archetype · §3.1</div>
+        <h3 class="result-section-title" id="r2-section-name">The Career NPC</h3>
+        <div class="result-section-body" id="r2-section-body"></div>
+      </div>
+
+      <!-- Gap analysis -->
+      <div class="result-section">
+        <div class="result-section-eyebrow">The delulu gap</div>
+        <h3 class="result-section-title" id="r2-gap-title">Field-Mismatch Delulu</h3>
+        <div class="result-section-body" id="r2-gap-body"></div>
+
+        <div class="gap-card">
+          <div class="gap-card-row">
+            <div class="gap-card-label">What this looks like in real life</div>
+            <div class="gap-card-val" id="r2-real-life"></div>
+          </div>
+          <div class="gap-card-row">
+            <div class="gap-card-label">What Vinsoo would do</div>
+            <div class="gap-card-val" id="r2-what-vinsoo"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Your callings -->
+      <div class="result-section">
+        <div class="result-section-eyebrow">Your possible callings</div>
+        <div class="result-section-body">
+          <p>Real jobs that match your archetype, across different industries. The ★ ones are the highest-fit roles for your specific signal.</p>
+        </div>
+        <div class="callings-list" id="r2-callings"></div>
+      </div>
+
+      <!-- Share card -->
+      <div class="share-card-wrap" id="sc-card-wrapper-2">
+        <div class="result-section-eyebrow" style="justify-content:center; margin-bottom:24px;">Your shareable card</div>
+
+        <div class="share-card">
+          <!-- decorative stamps (overlapping, slightly rotated) -->
+          <div class="sc-corner-stamp">Rec'd<br>11.2026</div>
+
+          <!-- caution-tape masthead -->
+          <div class="sc-perf"></div>
+          <div class="sc-masthead">
+            <div class="sc-brand">JBTI<span class="tm">™</span></div>
+            <div class="sc-doc-meta">Form-2 · FY26 · Deep Dive</div>
+          </div>
+          <div class="sc-meta-row">
+            <span><b>File:</b>JBTI-Q26-2026</span>
+            <span><b>Subject:</b>Anonymous</span>
+          </div>
+
+          <!-- archetype block — NAME is hero, JBTI code is subordinate -->
+          <div class="sc-code-block">
+            <div class="sc-code-label">Your Archetype · §3.1 (Final)</div>
+            <div class="sc-illus-wrap">
+              <img class="sc-illus" id="sc2-illus" alt="" loading="eager" decoding="async">
+            </div>
+            <div class="sc-archetype-name" id="sc2-name">The Career NPC</div>
+            <div class="sc-code-letters" id="sc2-code">LMSI</div>
+          </div>
+
+          <!-- vibe handwritten -->
+          <div class="sc-vibe" id="sc2-vibe">Big Tech paycheck. 5pm hard stop. Quiet champion. 🧊</div>
+
+          <!-- score panel -->
+          <div class="sc-score-block">
+            <div class="sc-score-label">FY26 Delulu Projection</div>
+            <div class="sc-score-sublabel">Audited · Final Forecast</div>
+            <div class="sc-score-num" id="sc2-score">73</div>
+            <span class="sc-score-flavor" id="sc2-flavor">Wildly Delulu 💀</span>
+          </div>
+
+          <!-- executive summary ledger -->
+          <div class="sc-ledger">
+            <div class="sc-ledger-title">Executive Summary</div>
+            <div class="sc-ledger-row">
+              <span class="sc-ledger-key">Dream</span>
+              <span class="sc-ledger-dots"></span>
+              <span class="sc-ledger-val" id="sc2-dream">Investment Banking</span>
+            </div>
+            <div class="sc-ledger-row">
+              <span class="sc-ledger-key">Finding</span>
+              <span class="sc-ledger-dots"></span>
+              <span class="sc-ledger-val" id="sc2-arch">Career NPC</span>
+            </div>
+            <div class="sc-ledger-row sc-ledger-final">
+              <span class="sc-ledger-key">Status</span>
+              <span class="sc-ledger-dots"></span>
+              <span class="sc-ledger-val" id="sc2-status">Incompatible</span>
+            </div>
+          </div>
+
+          <!-- rotated red stamp on the corner -->
+          <div class="sc-approved-stamp">Reviewed<br>Filed<br>Approved</div>
+
+          <!-- footer with REAL scannable QR code -->
+          <div class="sc-foot">
+            <div class="sc-qr" id="sc2-qr"><div class="sc-qr-fallback"></div></div>
+            <div class="sc-foot-right">
+              <div class="sc-foot-text">
+                <b>vinsoo.com/jbti</b>
+                <span class="sc-foot-hash">#deluluTest</span>
+              </div>
+              <div class="sc-foot-cta">↳ <b>Scan</b> to take the test</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share action bar — Save Image is primary (unlocks Instagram/WeChat/Xiaohongshu posts),
+             Share opens the OS share sheet (covers WhatsApp/iMessage/Telegram/Signal/etc.) -->
+        <div class="share-action-bar">
+          <button class="btn btn-pink" onclick="saveShareCardImage(this, 'sc-card-wrapper-2')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Save as Image
+          </button>
+          <button class="btn btn-outline" onclick="shareShareCardImage(this, 'sc-card-wrapper-2')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share
+          </button>
+        </div>
+        <div class="share-secondary-row">
+          <button class="btn btn-ghost" style="font-size:12px;" onclick="copyResultText()">📋 Copy text</button>
+          <button class="btn btn-ghost" style="font-size:12px;" onclick="copyShareLink()">🔗 Copy link</button>
+        </div>
+        <div class="share-help">
+          <b>Save → post on</b> IG · 小红书 · WeChat &nbsp;·&nbsp; <b>Share → send via</b> iMessage · WhatsApp · Telegram · Signal
+        </div>
+      </div>
+
+      <!-- Vinsoo CTA -->
+      <div class="cta-section">
+        <div class="cta-eyebrow">The real question isn't getting hired · It's staying hired</div>
+        <h3 class="cta-title">Now let Vinsoo find your <em>AI-proof edge</em>.</h3>
+        <p class="cta-body">
+          The job market changed under your feet. Entry-level white-collar roles you trained for are quietly being absorbed by AI. We work with <b>500+ Heads of HR at top firms</b> — they tell us which roles still compound, which AI can't replace, and where the edges live. <em>That's the intel that goes into your strategy.</em>
+        </p>
+        <p class="cta-body" id="cta-personalized" style="margin-top:16px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.12);">
+          You're a Strategic Lounger who wants Investment Banking. We know which IB groups hire your archetype and which spit them out. We'd target the right ones, line up Big Tech PM offers as parallel options, and let you choose from strength. <b>No payment until you land the offer.</b>
+        </p>
+        <ul class="cta-bullets">
+          <li>Discover your true career calling — and where it still compounds</li>
+          <li>A bespoke resume for every application — built to beat the ATS</li>
+          <li>We do the grunt work. You light up the network.</li>
+          <li>500 applications, submitted in your sleep</li>
+        </ul>
+        <div class="cta-buttons">
+          <button class="btn btn-brat btn-lg">Start with Vinsoo →</button>
+          <button class="btn btn-outline-dark btn-lg">Learn more</button>
+        </div>
+        <div class="cta-note">They use AI to reject you. We use AI to get you hired — for the long game.</div>
+      </div>
+
+
+      <!-- fake legalese footer — corporate satire -->
+      <div class="legalese">
+        <p><span class="form-id">FORM&nbsp;JBTI-1</span> <b>Notice to Subject:</b> The Career Delulu Test® and Job-Based Type Indicator™ are products of <b>Vinsoo, Inc.</b>, an unregulated private actor. Results are advisory and not actionable in any court of law, regulatory body, group chat, family dinner, or appellate-level Thanksgiving. Vinsoo makes no warranty, express or implied, as to the suitability of any career path described herein for the subject's actual life, parents, or vibe.</p>
+        <p style="margin-top:10px"><b>§ 2.7(b) — Side Effects.</b> May include: existential clarity, sudden hostility toward LinkedIn, a renewed interest in trade school, the unshakeable urge to text your therapist, a 4 a.m. epiphany re: investment banking, and/or the unprompted reorganization of your apartment. Discontinue use of test if symptoms persist beyond 14 business days.</p>
+        <p style="margin-top:10px"><b>§ 4.1 — Disclosure.</b> No piña coladas were consumed in the production of this assessment. JBTI is not affiliated with Myers-Briggs Type Indicator®, the Hofstede Centre, the GLOBE Project, your therapist, or anyone with formal psychometric credentials, although it borrows freely. Subject acknowledges that "delulu" is a registered colloquialism and not a clinical diagnosis.</p>
+        <p style="margin-top:14px; font-style: italic;">© 2026 Vinsoo, Inc. Property of subject. Do not forward. <b>This document self-destructs in your imagination only.</b></p>
+      </div>
+
+      <div class="restart-link">
+        <a onclick="restart()">↻ Take the test again</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+// =====================================================
+// THE CAREER DELULU TEST — JBTI
+// =====================================================
+
+// =====================================================
+// QUESTION BANK — TIER 1 (Q2–Q11, 10 questions)
+// =====================================================
+const TIER1 = [
+  {
+    id: 'q2',
+    eyebrow: 'Sunday Night Check 😩',
+    text: "It's Sunday at 11pm. You have a Monday morning thing.",
+    options: [
+      { letter: 'A', text: "Already done. Were you raised in a barn?", axes: { G: 2 } },
+      { letter: 'B', text: "Doing it now. Snack adjacent. Headphones in.", axes: { L: 1 } },
+      { letter: 'C', text: "Theoretical awareness. Adrenaline at 7:46am.", axes: { L: 2, O: 1 } }
+    ]
+  },
+  {
+    id: 'q3',
+    eyebrow: 'Swipe Audit 👀',
+    text: "Your friend asks why you swiped right.",
+    options: [
+      { letter: 'A', text: "Hot. 🥵", axes: {} },
+      { letter: 'B', text: "The bio was actually interesting. I love a yapper.", axes: { P: 2 } },
+      { letter: 'C', text: "Bio said McKinsey. 💼", axes: { M: 3 } }
+    ]
+  },
+  {
+    id: 'q4',
+    eyebrow: 'Birthday Energy 🎂',
+    text: "Your friend is having a birthday. 20 people. You don't know most of them.",
+    options: [
+      { letter: 'A', text: "New friends unlocked. Working the room.", axes: { S: 2 } },
+      { letter: 'B', text: "Find the birthday person, find one chill person, post up.", axes: { T: 1 } },
+      { letter: 'C', text: "Two drinks, polite goodbye, on the couch by 11.", axes: { T: 2, L: 1 } }
+    ]
+  },
+  {
+    id: 'q5',
+    eyebrow: 'Career Fair Day 🪪',
+    text: "Your school's career fair. Your dream company has a 40-person line.",
+    options: [
+      { letter: 'A', text: "Get in line. Elevator pitch ready. This is the system.", axes: { I: 2, G: 1 } },
+      { letter: 'B', text: "Skip the line. Find the recruiter at the coffee machine.", axes: { O: 3 } },
+      { letter: 'C', text: "Leave. You'll apply online like everyone else.", axes: { I: 1, L: 1 } }
+    ]
+  },
+  {
+    id: 'q6',
+    eyebrow: 'Zoom Disaster 📹',
+    text: "6 minutes into a Zoom interview. Camera off because you haven't showered. They ask you to turn it on.",
+    options: [
+      { letter: 'A', text: "Turn it on. They can deal. You're cracked anyway.", axes: { G: 1, O: 2 } },
+      { letter: 'B', text: "'Sorry, technical issues' and never turn it on. 🤥", axes: { L: 1, I: 1 } },
+      { letter: 'C', text: "Quickly: turn it on, run hand through hair, smile, commit.", axes: { G: 2, S: 1 } }
+    ]
+  },
+  {
+    id: 'q7',
+    eyebrow: 'Forced Choice 🫠',
+    text: "You can intern at one of these. Pick fast:",
+    options: [
+      { letter: 'A', text: "Goldman summer analyst. $25k for 10 weeks. You'll cry but you'll be set. 😭", axes: { M: 3, G: 1 } },
+      { letter: 'B', text: "Nonprofit climate stuff. $4k for the summer. Your parents will ask why. 🌱", axes: { P: 3 } },
+      { letter: 'C', text: "Your own thing. $0 for the summer. Maybe everything, maybe nothing. 🎲", axes: { P: 2, O: 2 } }
+    ]
+  },
+  {
+    id: 'q8',
+    eyebrow: 'Office Hours Strategy 🤓',
+    text: "Your professor is famously connected.",
+    options: [
+      { letter: 'A', text: "Show up weekly. Smart questions. Become the person they recommend.", axes: { S: 2, I: 2, G: 1 } },
+      { letter: 'B', text: "Email once with a thoughtful question. Get the rec that way.", axes: { T: 1, I: 1 } },
+      { letter: 'C', text: "Never go. Hope your grade is enough.", axes: { T: 1, L: 2 } }
+    ]
+  },
+  {
+    id: 'q9',
+    eyebrow: 'Spicy Hypothetical 🌶️',
+    text: "A friend got the dream job by exaggerating significantly on their resume.",
+    options: [
+      { letter: 'A', text: "'Are you insane. They'll find out. You'll be ruined.'", axes: { I: 3 } },
+      { letter: 'B', text: "'Honestly... iconic. Don't get caught.' 💅", axes: { O: 2 } },
+      { letter: 'C', text: "'Wait, what did you put. Specifically. Asking for me.'", axes: { O: 3, G: 1 } }
+    ]
+  },
+  {
+    id: 'q10',
+    eyebrow: 'The Vision 🔮',
+    text: "You at 35. Which is most you?",
+    options: [
+      { letter: 'A', text: "Big firm, big paycheck, two kids, mildly bored, golfs on weekends. 🏌️", axes: { M: 2, G: 1, I: 1 } },
+      { letter: 'B', text: "Doing the thing you love. Salary's fine. Parents are confused.", axes: { P: 2, O: 1 } },
+      { letter: 'C', text: "Famous in a small world. One industry knows your name.", axes: { P: 1, S: 1 } }
+    ]
+  },
+  {
+    id: 'q11',
+    eyebrow: 'Mom Defensive 🙄',
+    text: "Which makes you most defensive when your mom says it?",
+    options: [
+      { letter: 'A', text: "'Have you considered law school?' 🎓", axes: { I: 2, O: -1 } },
+      { letter: 'B', text: "'When are you going to get a real job?' 😤", axes: { O: 2, I: -1 } },
+      { letter: 'C', text: "'Your sister is doing so well.' 😐", axes: { M: 1 } }
+    ]
+  }
+];
+
+// =====================================================
+// QUESTION BANK — TIER 2 (Q12–Q26, 15 questions)
+// =====================================================
+const TIER2 = [
+  // GROUP A: Axis Refinement (Q12-Q16)
+  {
+    id: 'q12',
+    eyebrow: 'The 1am Tell 🌙',
+    text: "1am. You're tired. You realize you used the wrong word in one slide. Nobody will notice.",
+    options: [
+      { letter: 'A', text: "Open it back up. You'd know.", axes: { G: 2 } },
+      { letter: 'B', text: "Note it. Fix it tomorrow if you remember.", axes: { L: 1 } },
+      { letter: 'C', text: "The wrong word might actually be funnier. Leaving it. 😈", axes: { L: 2, O: 1 } }
+    ]
+  },
+  {
+    id: 'q13',
+    eyebrow: 'Prestige Isolation 🏛️',
+    text: "Your dream is a famous fancy place. There's a less-famous place that does the same work, pays 30% more, better hours.",
+    options: [
+      { letter: 'A', text: "Famous place only. The brand is the point.", axes: { M: 2, I: 1 } },
+      { letter: 'B', text: "Apply to both. Decide later.", axes: { M: 1 } },
+      { letter: 'C', text: "Less-famous place. Smart money.", axes: { P: 1, O: 1 } }
+    ]
+  },
+  {
+    id: 'q14',
+    eyebrow: 'Group Project 👯',
+    text: "Group project. 4 strangers. Minute 1.",
+    options: [
+      { letter: 'A', text: "Take charge. Name the doc. Assign roles. Vibes set. 🫡", axes: { S: 2, G: 1 } },
+      { letter: 'B', text: "Quiet observation. Speak up when you know who's competent.", axes: { T: 2 } },
+      { letter: 'C', text: "Pray someone else takes A.", axes: { L: 1, T: 1 } }
+    ]
+  },
+  {
+    id: 'q15',
+    eyebrow: 'Unfair Rule 🤨',
+    text: "Professor announces a grading policy that's clearly stupid.",
+    options: [
+      { letter: 'A', text: "Talk to them after class. Privately. Calmly.", axes: { I: 2 } },
+      { letter: 'B', text: "Bring it up in class. Make it everyone's problem.", axes: { O: 2 } },
+      { letter: 'C', text: "Nothing. You're getting an A anyway.", axes: { L: 2, I: 1 } }
+    ]
+  },
+  {
+    id: 'q16',
+    eyebrow: 'Unstructured Time 🛌',
+    text: "Two weeks. No deadlines. No obligations. What actually happens?",
+    options: [
+      { letter: 'A', text: "You start three new projects. 🌪️", axes: { G: 2 } },
+      { letter: 'B', text: "Rest for a week. Get restless. Start something around day 9.", axes: { G: 1, L: 1 } },
+      { letter: 'C', text: "Stay in bed. Reorganize playlists. Heaven. 🛏️", axes: { L: 2 } }
+    ]
+  },
+
+  // GROUP B: Within-Archetype Discrimination (Q17-Q21)
+  {
+    id: 'q17',
+    eyebrow: 'Sunday Hobby 🧘',
+    text: "Sunday afternoon, nothing required.",
+    options: [
+      { letter: 'A', text: "Errands, gym, prep meals for the week. Setup day.", axes: { G: 2, I: 1 } },
+      { letter: 'B', text: "Out with people. Brunch turned into 7pm somehow. 🍳", axes: { S: 2 } },
+      { letter: 'C', text: "In bed with a show. Glorious. 📺", axes: { L: 2, T: 1 } }
+    ]
+  },
+  {
+    id: 'q18',
+    eyebrow: 'Job Title vs Work 🏷️',
+    text: "Two offers. Same company. Same pay.",
+    options: [
+      { letter: 'A', text: "'VP of Strategy' — work is fine. Title slaps.", axes: { I: 2, M: 1 } },
+      { letter: 'B', text: "'Associate' — work is genuinely cool.", axes: { P: 2 } },
+      { letter: 'C', text: "'Founder's Office' — nobody knows what you do.", axes: { O: 2 } }
+    ]
+  },
+  {
+    id: 'q19',
+    eyebrow: 'Credit Stolen 😤',
+    text: "Manager publicly takes credit for your work in a meeting.",
+    options: [
+      { letter: 'A', text: "Speak up. Politely correct on the spot.", axes: { O: 2 } },
+      { letter: 'B', text: "Talk to them after, 1-on-1, diplomatically.", axes: { I: 2 } },
+      { letter: 'C', text: "Say nothing. Make the next thing undeniably yours.", axes: { I: 1, T: 1 } }
+    ]
+  },
+  {
+    id: 'q20',
+    eyebrow: 'Quiet Win 🤫',
+    text: "You did something genuinely great. Nobody noticed.",
+    options: [
+      { letter: 'A', text: "Drop it in the team channel with a humble caption.", axes: { S: 2 } },
+      { letter: 'B', text: "Mention it 1-on-1 to the one person who needs to know.", axes: { T: 1, I: 1 } },
+      { letter: 'C', text: "Just file it. The next thing matters more.", axes: { T: 2 } }
+    ]
+  },
+  {
+    id: 'q21',
+    eyebrow: '35-Year-Old You, Part 2 🪞',
+    text: "Future you, 35. Be honest about what's actually you.",
+    options: [
+      { letter: 'A', text: "Reliable. Roughly where you'd planned.", axes: { I: 2, G: 1 } },
+      { letter: 'B', text: "Somewhere unexpected. Probably better than planned.", axes: { O: 2 } },
+      { letter: 'C', text: "No idea. Starting to be okay with that.", axes: { O: 1, L: 2 } }
+    ]
+  },
+
+  // GROUP C: Flavor / Delulu Calibration (Q22-Q26)
+  {
+    id: 'q22',
+    eyebrow: 'App Audit 📱',
+    text: "Most-used app this week (not counting messages):",
+    options: [
+      { letter: 'A', text: "Instagram / TikTok / Xiaohongshu. 📱", axes: { S: 1 }, flavor: 'social' },
+      { letter: 'B', text: "Notes / Notion / a productivity thing. 📝", axes: { G: 1 }, flavor: 'planner' },
+      { letter: 'C', text: "A game or a streaming app. 🎮", axes: { L: 1 }, flavor: 'rest' }
+    ]
+  },
+  {
+    id: 'q23',
+    eyebrow: 'FYP Audit 📲',
+    text: "You unlock your phone mid-meeting. The algorithm has clocked you. What's it serving?",
+    options: [
+      { letter: 'A', text: "Productivity hacks. James Clear quotes. 'a day in my life as a 23 y/o VP at Goldman.' 🥲", axes: { G: 1, M: 1 }, flavor: 'grindset-coded' },
+      { letter: 'B', text: "Ratatouille edits. Mukbangs. Twin flame trauma. 4-hour video essays about Disney Channel. 🫠", axes: { L: 1, O: 1 }, flavor: 'feral-coded' },
+      { letter: 'C', text: "Slow mornings in Paris. Recipes you won't make. 'romanticize your life.' 🥐", axes: { L: 1, P: 1 }, flavor: 'aesthetic-coded' }
+    ]
+  },
+  {
+    id: 'q24',
+    eyebrow: 'LinkedIn DM 💼',
+    text: "A senior at your dream company DMs you.",
+    options: [
+      { letter: 'A', text: "Reply within 4 minutes. Suggest 3 time slots. ⚡", axes: { G: 1, S: 1 }, flavor: 'eager' },
+      { letter: 'B', text: "Wait 24 hours so you don't seem desperate, then reply.", axes: { I: 1 }, flavor: 'strategic' },
+      { letter: 'C', text: "Heart-rate spikes. Don't reply for 3 days. Spiral. 🌀", axes: { T: 1 }, flavor: 'spiral' }
+    ]
+  },
+  {
+    id: 'q25',
+    eyebrow: 'Secret Flex 💪',
+    text: "Which would you secretly love a friend to say about you?",
+    options: [
+      { letter: 'A', text: "'She's so locked in right now.' 🔒", axes: { G: 1 }, flavor: 'locked-in' },
+      { letter: 'B', text: "'She just gets it. I don't know how she does it.' ✨", axes: { L: 1 }, flavor: 'effortless' },
+      { letter: 'C', text: "'She's going to be famous.' 🌟", axes: { S: 1 }, flavor: 'famous' }
+    ]
+  },
+  {
+    id: 'q26',
+    eyebrow: 'Vibe Self-ID ✨',
+    text: "Pick the one that's most you, fully unserious:",
+    options: [
+      { letter: 'A', text: "'Effortlessly winning.' 🌬️", axes: { L: 1 }, flavor: 'aligned-vibe' },
+      { letter: 'B', text: "'Locked in 24/7.' 🔥", axes: { G: 1 }, flavor: 'grinder-vibe' },
+      { letter: 'C', text: "'Lost but vibing.' 🌀", axes: { O: 1, L: 1 }, flavor: 'conscious-delulu' }
+    ]
+  }
+];
+
+// =====================================================
+// ARCHETYPES — 16 types keyed by 4-letter code
+// =====================================================
+const ARCHETYPES = {
+  GMSI: {
+    code: 'GMSI',
+    name: 'The LinkedIn Warrior',
+    vibe: 'You will work 100 hours a week if it ends with a corner office. 💼',
+    description: `<p>You've known the track since freshman year. You don't ask what the job is — you ask which tier. You're the reason "case prep group" exists. You will absolutely cry in a bathroom at some point. You will also be making <em>$400k by 27</em>, so the math works out.</p><p>We support you. We're also a little worried about you.</p>`,
+    callings: [['Investment Banking',true],['MBB Consulting',true],['BigLaw',false],['MD/MBA',false],['Top medical specialty',false],['Top Big 4 advisory',false],['Aerospace & defense (prestige)',false]],
+    dominantFor: ['Investment Banking Analyst at Goldman Sachs','Strategy Consultant at McKinsey']
+  },
+  GMSO: {
+    code: 'GMSO',
+    name: 'The 30 Under 30 Manifestor',
+    vibe: 'You hate working for anyone. You love the grind. Billionaire or unemployed. No in-between. 🚀',
+    description: `<p>You have three group chats with co-founder candidates and you've never built anything. <em>Yet</em>. Your contact list is a portfolio. You've named your company twice. You will charm your way into a YC interview through a 4-degree connection on LinkedIn.</p><p>You're either the next Patrick Collison or you're moving back in with your parents. Honestly, could go either way.</p>`,
+    callings: [['Founder (any sector)',true],['Y Combinator',true],['VC Associate',false],['Chief of Staff at Series A',false],['Growth lead at early-stage',false],['First 10 hires at a rocketship',false]],
+    dominantFor: ['Founder of my own startup','VC Associate at Sequoia']
+  },
+  GMTI: {
+    code: 'GMTI',
+    name: 'The Academic Weapon',
+    vibe: "You'd rather solve one impossible problem than ten medium ones. You don't actually want to talk to anyone. 🧮",
+    description: `<p>You've never lost a coding interview and you've never made small talk that lasted longer than 90 seconds. You like math the way some people like music.</p><p>You don't want to manage people. You don't want to attend a meeting. You want a hard problem, a quiet desk, and a Bloomberg Terminal. <em>Jane Street will give you $500k a year to be exactly who you already are.</em> Iconic, honestly.</p>`,
+    callings: [['Quant trading',true],['Prop shops',true],['Hedge fund research',true],['AI research engineering',false],['Theoretical math/CS PhD',false],['Computational research at top tech',false]],
+    dominantFor: ['Quant Trader at Jane Street']
+  },
+  GMTO: {
+    code: 'GMTO',
+    name: 'The Cracked Indie Hacker',
+    vibe: 'You will code through the night, alone, and ship something nobody asked for. Big Tech is too slow. 🛠️',
+    description: `<p>You have a side project right now. You had one last year. You'll have one at 47. You don't want a manager. The phrase "agile sprint" makes you visibly tired.</p><p>You got the Google offer and you turned it down for a Series A nobody's heard of and your parents are politely confused. You'll either be employee #3 at a unicorn or you'll be on your fifth failed startup. <em>Both are valid.</em></p>`,
+    callings: [['Technical co-founder',true],['Early SWE at YC-stage startups',true],['AI research at frontier labs',false],['Indie hacking',false],['Hardware founder',false],['Robotics',false]],
+    dominantFor: []
+  },
+  GPSI: {
+    code: 'GPSI',
+    name: 'The Pre-Med Martyr',
+    vibe: 'You want to change the world, but only from inside the building. 🏛️',
+    description: `<p>You read The Atlantic. <em>Unironically.</em> You will go to grad school — Kennedy, SAIS, Yale Jackson — and come out with the credentials to do the work that matters.</p><p>You can sit in a meeting with bureaucrats and not lose your soul. You'd rather advise the people who run things than run them. Long game energy. We respect it.</p>`,
+    callings: [['Policy',true],['Government',true],['Think tanks',true],['Public health',false],['Impact investing',false],['ESG at major firms',false],['Climate finance',false],['Public-interest law',false]],
+    dominantFor: ['Policy Analyst at Brookings']
+  },
+  GPSO: {
+    code: 'GPSO',
+    name: 'The TED-Talker-in-Waiting',
+    vibe: "You're going to do good and you're going to do it on $48k a year. 🤲",
+    description: `<p>You care more than is socially acceptable. You started caring in high school and you never stopped. You will burn out at 28, come back at 30 sharper, and run something by 35.</p><p>Your consulting friends will quietly envy you in 10 years. <em>You're not delulu, you're just early.</em></p>`,
+    callings: [['Climate startups',true],['NGOs',true],['Teach for America',false],['Rhodes / Schwarzman / Marshall fellowships',false],['Community organizing at scale',false],['Advocacy',false],['Mission-driven startups (education, health, climate)',false]],
+    dominantFor: []
+  },
+  GPTI: {
+    code: 'GPTI',
+    name: 'Tenure or Die',
+    vibe: 'One problem, ten years, no notes. 🔬',
+    description: `<p>You picked the problem most people can't pronounce. You will spend a decade on it inside an institution that gives you good equipment and leaves you alone.</p><p>You don't need attention. You need <em>time</em>. The work is the reward. If recognition comes, fine. If not, also fine. Locked in for life.</p>`,
+    callings: [['Academic research (PhD track)',true],['AI research labs (Anthropic, OpenAI, DeepMind)',true],['MD/PhD',false],['Theoretical physics',false],['Materials science',false],['Computational biology',false],['Elite competitive athletics',false],['Conservatory-track musicians',false]],
+    dominantFor: []
+  },
+  GPTO: {
+    code: 'GPTO',
+    name: 'The Side Project Martyr',
+    vibe: "You're building something nobody asked for. You'll keep building it. 🔨",
+    description: `<p>You don't want investors. You don't want a co-founder. You want to make a <em>thing</em>. It could be a piece of software, a book, a craft, a tiny company that stays tiny on purpose.</p><p>You'll work on it for years and most of your friends will quietly worry. In a decade, either nobody remembers you or everybody does. There's no podium for your kind of life and you're fine with that.</p>`,
+    callings: [['Indie creator',true],['Solo founder',true],['Niche craft at scale',false],['Frontier-tech solo work',false],['Writer/artist with a sustaining practice',false],['Rare IC role at a place that lets you be alone',false]],
+    dominantFor: []
+  },
+  LMSI: {
+    code: 'LMSI',
+    name: 'The Career NPC',
+    vibe: 'Big Tech paycheck. 5pm hard stop. Quiet champion. 🧊',
+    description: `<p>You figured out the cheat code. You picked the industry that pays well, attracts smart people, and <em>doesn't require you to be a martyr</em>.</p><p>Your friends at the bank are jealous of your weekends. Your friends at the startup are jealous of your equity. You're winning in athleisure. People underestimate you. <em>That's part of the strategy.</em></p>`,
+    callings: [['Big Tech PM',true],['BD at FAANG',true],['Strategy at established firms',false],['Corporate development',false],['Growth at scaled startups',false],['Comfortable mid-management at any well-run company',false]],
+    dominantFor: ['Product Manager at Big Tech','Software Engineer at Google']
+  },
+  LMSO: {
+    code: 'LMSO',
+    name: 'Trust Fund Coded',
+    vibe: "You don't want to work hard. You want to get rich. And you have charisma. 💎",
+    description: `<p>You're a deal person. You have a <em>lot</em> of unread DMs. Your contact list is a portfolio.</p><p>You will end up in sales, real estate, recruiting, partnerships, the creator economy, or a career invented next year for people exactly like you. You'll be either very rich by 30 or very broke by 30. <em>There is no middle. That's the thrill.</em></p>`,
+    callings: [['Enterprise/tech sales',true],['Real estate',true],['Talent recruiting',false],['Creator economy management',false],['Brand partnerships',false],['BD at consumer companies',false],['Social-first founder',false]],
+    dominantFor: []
+  },
+  LMTI: {
+    code: 'LMTI',
+    name: 'Quiet Money',
+    vibe: 'Picked the job that pays well, no politics, home by 6. Very rich. Coworkers won\'t know your last name. 🛡️',
+    description: `<p>You don't want to manage people. You don't want to play office politics. You want to be <em>good at your craft</em>, paid fairly, and home for dinner.</p><p>You will retire wealthier than half the people who looked down on your career choices. <em>The IC track was right there the whole time.</em> Iconic move.</p>`,
+    callings: [['Big Tech SWE (IC track)',true],['Actuarial science',false],['Corporate engineering',false],['Back-office finance',false],['Infrastructure roles',false],['Specialized technical work at established firms',false],['Accounting/audit',false]],
+    dominantFor: []
+  },
+  LMTO: {
+    code: 'LMTO',
+    name: 'The Side Quest Maxxer',
+    vibe: '9-to-5 by day. Building an empire by night. One of them will win. 🌗',
+    description: `<p>You don't believe in single-track careers. You believe in <em>optionality</em>. The corporate job pays for the real project.</p><p>Your real project is the Shopify store, the trading account, the content channel, the rental property, the crypto position, the freelance gig that's growing. Your goal is to make yourself <em>financially uninteresting to your employer</em>. We support this.</p>`,
+    callings: [['Stable corporate role + side business',true],['Back-office finance + investing',false],['Tech IC + indie SaaS',false],['Any 9-to-5 that genuinely ends at 5',false]],
+    dominantFor: []
+  },
+  LPSI: {
+    code: 'LPSI',
+    name: 'The Group Chat Mom',
+    vibe: 'You are the glue. 🫂',
+    description: `<p>Every team you've ever been on was better because of you. You read rooms. You make others feel seen.</p><p>You're going to end up in HR, comms, partnerships, community management, internal events — and you'll be incredible at it. The pay is fine. The work is meaningful in a <em>real</em> way, not a TED-talk way. You're going to have a much better life than most of your peers and they won't realize until the 10-year reunion.</p>`,
+    callings: [['HR / People Ops',true],['Internal communications',true],['Partnerships at major firms',false],['Community management',false],['Talent development',false],['Internal events',false],['ESG / sustainability at corporates',false]],
+    dominantFor: []
+  },
+  LPSO: {
+    code: 'LPSO',
+    name: 'The Piña Colada',
+    vibe: 'You have a Substack. Of course you have a Substack. 🌷',
+    description: `<p>You have <em>taste</em>. It's been there since you were 14. Your apartment is a Pinterest board, your feed is curated, your friends are <em>the</em> friends.</p><p>You'll end up in content, brand, creative direction, fashion, or as a creator in your own right. You won't be the richest at the reunion. <em>You'll be the coolest. You'll take it.</em></p>`,
+    callings: [['Brand strategy',true],['Creative direction',true],['Content / Substack / newsletter',true],['Fashion industry',false],['Design-adjacent product roles',false],['Lifestyle entrepreneurship',false],['Agency creative',false]],
+    dominantFor: ['Writer at The Atlantic']
+  },
+  LPTI: {
+    code: 'LPTI',
+    name: 'The Antisocial Idealist',
+    vibe: "You want a small, meaningful job inside a stable institution. You're making the right call. 📚",
+    description: `<p>You don't want to be a star. You don't want to grind. You want a <em>life</em> — real work, real hours, a desk you can decorate, an institution that's been around for a while.</p><p>Teacher, librarian, museum curator, editor, civil servant, federal track. Your finance friends will eventually envy your sleep schedule. <em>You'll be sleeping too well to notice.</em></p>`,
+    callings: [['K-12 teaching',true],['Librarian / archivist / museum curator',false],['Editor at a literary publisher',false],['Federal civil service (foreign service, agencies)',false],['Mission-aligned roles at long-established institutions',false],['University administration',false]],
+    dominantFor: []
+  },
+  LPTO: {
+    code: 'LPTO',
+    name: 'The Existentialist',
+    vibe: 'Your resume is a mess. Honestly, respect. 🌀',
+    description: `<p>You don't believe in the linear career and you never have. You'll freelance, consult, take long stretches off, do gig work, travel, come back, try something else.</p><p>Your LinkedIn is sparse. Your friends sometimes worry about you. <em>You find it cute.</em> You're going to be fine. You're going to be the friend everyone calls when they need something interesting done.</p>`,
+    callings: [['Freelance creative (writing, design, video)',true],['Traveling consultant',false],['Digital nomad work',false],['Gig-stack income',false],['Alternative-path careers',false],['Returning-to-school-at-30 trajectories',false]],
+    dominantFor: []
+  }
+};
+
+// =====================================================
+// DREAM JOB → NATURAL ARCHETYPE MAPPING
+// Used to compute Delulu score (gap between dream and actual archetype)
+// =====================================================
+const DREAM_TO_ARCHETYPE = {
+  'Investment Banking Analyst at Goldman Sachs': 'GMSI',
+  'Software Engineer at Google': 'LMTI',
+  'Strategy Consultant at McKinsey': 'GMSI',
+  'Quant Trader at Jane Street': 'GMTI',
+  'Product Manager at Big Tech': 'LMSI',
+  'Founder of my own startup': 'GMSO',
+  'VC Associate at Sequoia': 'GMSO',
+  'Policy Analyst at Brookings': 'GPSI',
+  'Writer at The Atlantic': 'LPSO'
+};
+
+// =====================================================
+// STATE
+// =====================================================
+const state = {
+  dreamJob: null,
+  dreamJobLabel: null,
+  tier1Answers: {}, // { q2: {letter, axes}, ... }
+  tier1QuestionIndex: 0,
+  tier2Answers: {},
+  tier2QuestionIndex: 0,
+  archetype: null, // 4-letter code, e.g. 'LMSI'
+  deluluScore: null,
+  deluluFlavor: null,
+  deluluType: null, // 'Aligned' | 'Conscious' | 'Field-Mismatch' | 'Unconscious'
+};
+
+// =====================================================
+// SCREEN MANAGEMENT
+// =====================================================
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// =====================================================
+// LANDING → DREAM JOB
+// =====================================================
+function toggleHowItWorks() {
+  const section = document.getElementById('how-section');
+  const isOpen = section.classList.toggle('open');
+  if (isOpen) {
+    setTimeout(() => {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+}
+
+function scrollToVinsooCTA() {
+  // On the tier1 result, scroll past the tier2 unlock to the dark Vinsoo CTA
+  const cta = document.querySelector('#screen-result-tier1 .cta-section');
+  if (cta) cta.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function startTest() {
+  showScreen('screen-dream');
+}
+
+function setDream(value) {
+  state.dreamJob = value;
+  if (value === '__unknown__') {
+    state.dreamJobLabel = 'No idea yet';
+  } else {
+    state.dreamJobLabel = value;
+  }
+  document.getElementById('dream-input').value = (value === '__unknown__' ? '' : value);
+  enableDreamContinue();
+}
+
+function enableDreamContinue() {
+  const btn = document.getElementById('dream-continue');
+  btn.disabled = false;
+  btn.style.opacity = '1';
+  btn.style.cursor = 'pointer';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('dream-input');
+  input.addEventListener('input', () => {
+    if (input.value.trim().length > 0) {
+      state.dreamJob = input.value.trim();
+      state.dreamJobLabel = input.value.trim();
+      enableDreamContinue();
+    } else if (state.dreamJob !== '__unknown__') {
+      state.dreamJob = null;
+      state.dreamJobLabel = null;
+      const btn = document.getElementById('dream-continue');
+      btn.disabled = true;
+      btn.style.opacity = '0.5';
+      btn.style.cursor = 'not-allowed';
+    }
+  });
+
+  // Randomize per-card tilt on the archetypes grid — gives the page that
+  // "polaroids pinned to a corkboard" feel instead of a sterile Excel grid.
+  // Deterministic-ish: each card gets a small rotation in the -2.5° to +2.5° range,
+  // skipping near-zero so every card has a visible lean.
+  const archCards = document.querySelectorAll('#archetypes-grid .arch-card');
+  archCards.forEach((card, i) => {
+    // pseudo-random based on index so it's stable across reloads (no jarring re-shuffle)
+    const seed = (i * 7919 + 31) % 1000 / 1000; // 0–1
+    const tilt = (seed - 0.5) * 4.6;            // -2.3 to +2.3
+    const sign = tilt >= 0 ? 1 : -1;
+    const finalTilt = Math.abs(tilt) < 0.5 ? sign * 1.2 : tilt; // avoid near-zero
+    card.style.transform = `rotate(${finalTilt.toFixed(2)}deg)`;
+  });
+});
+
+function submitDream() {
+  if (!state.dreamJob) return;
+  state.tier1QuestionIndex = 0;
+  renderTier1Question();
+  showScreen('screen-question');
+}
+
+// =====================================================
+// TIER 1 QUESTION RENDERING
+// =====================================================
+function renderTier1Question() {
+  const idx = state.tier1QuestionIndex;
+  if (idx >= TIER1.length) {
+    runLoading('tier1');
+    return;
+  }
+  const q = TIER1[idx];
+  const qNum = idx + 2; // Q2-Q11
+
+  document.getElementById('q-count').textContent = String(qNum).padStart(2, '0');
+  document.getElementById('q-num').textContent = String(qNum).padStart(2, '0');
+  document.getElementById('q-eyebrow').textContent = q.eyebrow;
+  document.getElementById('q-text').textContent = q.text;
+  document.getElementById('q-progress-fill').style.width = `${((qNum) / 11) * 100}%`;
+
+  const optsContainer = document.getElementById('q-options');
+  optsContainer.innerHTML = '';
+  const saved = state.tier1Answers[q.id];
+  q.options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'q-option' + (saved && saved.letter === opt.letter ? ' selected' : '');
+    btn.innerHTML = `<span class="q-option-letter">${opt.letter}</span><span>${opt.text}</span>`;
+    btn.onclick = () => {
+      state.tier1Answers[q.id] = { letter: opt.letter, axes: opt.axes };
+      // small delay so the user sees the selection
+      document.querySelectorAll('#q-options .q-option').forEach(el => el.classList.remove('selected'));
+      btn.classList.add('selected');
+      setTimeout(() => {
+        state.tier1QuestionIndex++;
+        renderTier1Question();
+      }, 280);
+    };
+    optsContainer.appendChild(btn);
+  });
+
+  document.getElementById('q-back').style.visibility = (idx === 0 ? 'hidden' : 'visible');
+}
+
+function prevQuestion() {
+  if (state.tier1QuestionIndex > 0) {
+    state.tier1QuestionIndex--;
+    renderTier1Question();
+  } else {
+    showScreen('screen-dream');
+  }
+}
+
+// =====================================================
+// ARCHETYPE COMPUTATION
+// =====================================================
+function computeArchetype(answers) {
+  const scores = { G: 0, L: 0, M: 0, P: 0, S: 0, T: 0, I: 0, O: 0 };
+  for (const ans of Object.values(answers)) {
+    if (!ans.axes) continue;
+    for (const [axis, val] of Object.entries(ans.axes)) {
+      scores[axis] = (scores[axis] || 0) + val;
+    }
+  }
+  // Compute the 4-letter code; ties go to the first listed letter
+  const code =
+    (scores.G >= scores.L ? 'G' : 'L') +
+    (scores.M >= scores.P ? 'M' : 'P') +
+    (scores.S >= scores.T ? 'S' : 'T') +
+    (scores.I >= scores.O ? 'I' : 'O');
+  return { code, scores };
+}
+
+// =====================================================
+// DELULU SCORE COMPUTATION
+// =====================================================
+function computeDelulu(archetype, dreamJob) {
+  // If unknown dream, score is moderate-with-flavor
+  if (!dreamJob || dreamJob === '__unknown__') {
+    return { score: 50 + Math.floor(Math.random() * 11), type: 'Honest Lost', flavor: 'Honestly Lost 🌀' };
+  }
+
+  // Find the natural archetype for this dream job
+  const dreamArchetype = DREAM_TO_ARCHETYPE[dreamJob];
+
+  // If no mapping (custom dream job typed in), score based on archetype's plausibility — moderate
+  if (!dreamArchetype) {
+    const score = 45 + Math.floor(Math.random() * 25);
+    return { score, type: classifyByScore(score), flavor: flavorForScore(score) };
+  }
+
+  // Count axis differences
+  let diff = 0;
+  for (let i = 0; i < 4; i++) {
+    if (archetype[i] !== dreamArchetype[i]) diff++;
+  }
+
+  let baseScore, type;
+  if (diff === 0) {
+    baseScore = 18 + Math.floor(Math.random() * 14); // 18-31
+    type = 'Aligned';
+  } else if (diff === 1) {
+    baseScore = 42 + Math.floor(Math.random() * 14); // 42-55
+    type = 'Conscious Delulu';
+  } else if (diff === 2) {
+    baseScore = 64 + Math.floor(Math.random() * 16); // 64-79
+    type = 'Field-Mismatch Delulu';
+  } else {
+    baseScore = 82 + Math.floor(Math.random() * 13); // 82-94
+    type = 'Field-Mismatch Delulu';
+  }
+
+  return { score: baseScore, type, flavor: flavorForScore(baseScore) };
+}
+
+function classifyByScore(score) {
+  if (score < 35) return 'Aligned';
+  if (score < 60) return 'Conscious Delulu';
+  if (score < 80) return 'Field-Mismatch Delulu';
+  return 'Field-Mismatch Delulu';
+}
+
+function flavorForScore(score) {
+  if (score >= 90) return 'Maximum Delulu 🔥';
+  if (score >= 75) return 'Wildly Delulu 💀';
+  if (score >= 60) return 'Healthily Delulu 🌶️';
+  if (score >= 40) return 'Mildly Delulu 😅';
+  if (score >= 25) return 'Suspiciously Self-Aware 🧠';
+  return 'No Delulu Detected ✅';
+}
+
+function tensionQuoteFor(type, score) {
+  if (type === 'Aligned') {
+    return 'These are the same thing. You skipped the existential crisis. Lock in. ✨';
+  }
+  if (type === 'Conscious Delulu') {
+    return "You're aware. You're choosing this anyway. Iconic, actually. 💅";
+  }
+  if (type === 'Field-Mismatch Delulu') {
+    return 'These are not compatible. We need to talk. 🚨';
+  }
+  if (type === 'Honest Lost') {
+    return "You don't have a dream yet. That's the most delulu thing of all — most people just lie. Respect. 🌀";
+  }
+  return 'You said one thing. The data says another. Stay with us. 🤔';
+}
+
+// =====================================================
+// LOADING TRANSITION
+// =====================================================
+const LOADING_LINES = [
+  'Reading your answers… 👀',
+  'AI is on your side for once… 🤖',
+  'Cross-referencing 500,000 graduate outcomes… 📊',
+  'Filtering out the jobs your parents would suggest… 🙅',
+  'Locking in your archetype… 🔒'
+];
+
+function runLoading(tier) {
+  showScreen('screen-loading');
+  const textEl = document.getElementById('loading-text');
+  const fillEl = document.getElementById('loading-fill');
+
+  // Compute results during loading
+  const result = computeArchetype(state.tier1Answers);
+  state.archetype = result.code;
+
+  const delulu = computeDelulu(state.archetype, state.dreamJob);
+  state.deluluScore = delulu.score;
+  state.deluluType = delulu.type;
+  state.deluluFlavor = delulu.flavor;
+
+  let i = 0;
+  textEl.textContent = LOADING_LINES[0];
+  fillEl.style.width = '15%';
+  const interval = setInterval(() => {
+    i++;
+    if (i >= LOADING_LINES.length) {
+      clearInterval(interval);
+      fillEl.style.width = '100%';
+      setTimeout(() => {
+        if (tier === 'tier1') {
+          renderTier1Result();
+          showScreen('screen-result-tier1');
+        } else {
+          renderTier2Result();
+          showScreen('screen-result-tier2');
+        }
+      }, 400);
+      return;
+    }
+    textEl.style.opacity = '0';
+    setTimeout(() => {
+      textEl.textContent = LOADING_LINES[i];
+      textEl.style.opacity = '1';
+      fillEl.style.width = `${15 + (i + 1) * 17}%`;
+    }, 200);
+  }, 900);
+}
+
+// =====================================================
+// TIER 1 RESULT
+// =====================================================
+function renderTier1Result() {
+  const arch = ARCHETYPES[state.archetype];
+  document.getElementById('r1-code').textContent = arch.code;
+  document.getElementById('r1-name').textContent = arch.name;
+  document.getElementById('r1-vibe').textContent = arch.vibe;
+  document.getElementById('r1-score').textContent = state.deluluScore;
+  document.getElementById('r1-flavor').textContent = state.deluluFlavor;
+  document.getElementById('r1-dream').textContent = state.dreamJobLabel;
+  document.getElementById('r1-archetype').textContent = arch.name;
+  document.getElementById('r1-tension-quote').textContent = tensionQuoteFor(state.deluluType, state.deluluScore);
+
+  document.getElementById('r1-section-name').textContent = arch.name;
+  document.getElementById('r1-section-body').innerHTML = arch.description;
+
+  const callingsEl = document.getElementById('r1-callings');
+  callingsEl.innerHTML = '';
+  arch.callings.forEach(([label, isStar]) => {
+    const pill = document.createElement('span');
+    pill.className = 'calling-pill';
+    pill.innerHTML = label + (isStar ? '<span class="star">★</span>' : '');
+    callingsEl.appendChild(pill);
+  });
+
+  // Share card mirror
+  document.getElementById('sc-code').textContent = arch.code;
+  document.getElementById('sc-name').textContent = arch.name;
+  document.getElementById('sc-vibe').textContent = arch.vibe;
+  document.getElementById('sc-score').textContent = state.deluluScore;
+  document.getElementById('sc-flavor').textContent = state.deluluFlavor;
+  document.getElementById('sc-dream').textContent = shortDreamLabel(state.dreamJobLabel);
+  document.getElementById('sc-arch').textContent = arch.name.replace(/^The /, '');
+  const sc_status = document.getElementById('sc-status');
+  if (sc_status) sc_status.textContent = mapStatusFromType(state.deluluType);
+  renderAxisBreakdown('r1-axis-grid', 'r1-decoder-code', arch.code);
+  generateQR('sc-qr', buildShareUrl(arch.code));
+  setArchetypeIllustration(['r1-illus', 'sc-illus'], arch.code, arch.name);
+}
+
+// Path where the archetype illustrations live, relative to the HTML file.
+// Swap this if you host the images on a CDN or elsewhere.
+const ILLUS_BASE_PATH = 'img/archetypes/';
+const ILLUS_EXT = '.webp';
+
+function setArchetypeIllustration(imgIds, archCode, archName) {
+  // archCode is the 4-letter JBTI code like 'LMSI' — used as filename.
+  // archName is for the alt text, e.g. "The Career NPC".
+  // imgIds is an array of element IDs to set (we keep result hero + share card in sync).
+  const src = ILLUS_BASE_PATH + archCode + ILLUS_EXT;
+  const alt = `Illustration of ${archName}`;
+  imgIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.alt = alt;
+    el.src = src;
+    el.hidden = false;
+    // Graceful fallback if the image fails to load — hide the wrapper entirely
+    // so the layout doesn't show a broken-image icon to the user.
+    el.onerror = () => {
+      el.hidden = true;
+      const wrap = el.closest('.result-illus-wrap, .sc-illus-wrap');
+      if (wrap) wrap.style.display = 'none';
+    };
+  });
+}
+
+function renderAxisBreakdown(gridId, decoderId, code) {
+  // Highlight the user's letters on each axis row (16personalities-style decoder)
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+  const decoder = document.getElementById(decoderId);
+  if (decoder) decoder.textContent = code;
+  const userLetters = code.split('');  // ['L','M','S','I']
+  const rows = grid.querySelectorAll('.axis-row');
+  rows.forEach((row, i) => {
+    const userLetter = userLetters[i];
+    row.querySelectorAll('.axis-side').forEach(side => {
+      const sideLetter = side.dataset.letter;
+      if (sideLetter === userLetter) side.classList.add('is-you');
+      else side.classList.remove('is-you');
+    });
+  });
+}
+
+function mapStatusFromType(type) {
+  if (type === 'Aligned') return 'Aligned';
+  if (type === 'Conscious Delulu') return 'Conscious';
+  if (type === 'Unconscious Delulu') return 'Unconscious';
+  if (type === 'Field-Mismatch Delulu') return 'Incompatible';
+  if (type === 'Honest Lost') return 'No Dream Filed';
+  return 'Pending';
+}
+
+function shortDreamLabel(label) {
+  if (!label) return '—';
+  if (label === 'No idea yet') return 'TBD';
+  // Take first 3 words for share card brevity
+  const words = label.split(' ');
+  if (words.length <= 3) return label;
+  return words.slice(0, 3).join(' ');
+}
+
+// =====================================================
+// TIER 2 (DEEP DIVE)
+// =====================================================
+function startTier2() {
+  state.tier2QuestionIndex = 0;
+  renderTier2Question();
+  showScreen('screen-question-tier2');
+}
+
+function renderTier2Question() {
+  const idx = state.tier2QuestionIndex;
+  if (idx >= TIER2.length) {
+    runLoading('tier2');
+    return;
+  }
+  const q = TIER2[idx];
+  const qNum = idx + 12;
+
+  document.getElementById('q2-count').textContent = String(qNum).padStart(2, '0');
+  document.getElementById('q2-num').textContent = String(qNum).padStart(2, '0');
+  document.getElementById('q2-eyebrow').textContent = q.eyebrow;
+  document.getElementById('q2-text').textContent = q.text;
+  document.getElementById('q2-progress-fill').style.width = `${(qNum / 26) * 100}%`;
+
+  const optsContainer = document.getElementById('q2-options');
+  optsContainer.innerHTML = '';
+  const saved = state.tier2Answers[q.id];
+  q.options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'q-option' + (saved && saved.letter === opt.letter ? ' selected' : '');
+    btn.innerHTML = `<span class="q-option-letter">${opt.letter}</span><span>${opt.text}</span>`;
+    btn.onclick = () => {
+      state.tier2Answers[q.id] = { letter: opt.letter, axes: opt.axes, flavor: opt.flavor };
+      document.querySelectorAll('#q2-options .q-option').forEach(el => el.classList.remove('selected'));
+      btn.classList.add('selected');
+      setTimeout(() => {
+        state.tier2QuestionIndex++;
+        renderTier2Question();
+      }, 280);
+    };
+    optsContainer.appendChild(btn);
+  });
+
+  document.getElementById('q2-back').style.visibility = (idx === 0 ? 'hidden' : 'visible');
+}
+
+function prevQuestionTier2() {
+  if (state.tier2QuestionIndex > 0) {
+    state.tier2QuestionIndex--;
+    renderTier2Question();
+  } else {
+    showScreen('screen-result-tier1');
+  }
+}
+
+// =====================================================
+// TIER 2 RESULT (refines archetype + adds depth)
+// =====================================================
+function renderTier2Result() {
+  // Recompute archetype with all answers (tier 1 + tier 2)
+  const combined = { ...state.tier1Answers, ...state.tier2Answers };
+  const result = computeArchetype(combined);
+  state.archetype = result.code;
+
+  // Recompute delulu — but if it's the same archetype, slight refinement
+  // Look at Q26 specifically for "delulu vibe self-id"
+  const q26 = state.tier2Answers.q26;
+  let refinedType = state.deluluType;
+  if (q26) {
+    if (q26.flavor === 'conscious-delulu') refinedType = 'Conscious Delulu';
+    else if (q26.flavor === 'grinder-vibe' && state.deluluScore > 60) refinedType = 'Unconscious Delulu';
+    else if (q26.flavor === 'aligned-vibe' && state.deluluScore < 40) refinedType = 'Aligned';
+  }
+
+  // Recompute delulu score with refinement
+  const delulu = computeDelulu(state.archetype, state.dreamJob);
+  state.deluluScore = delulu.score;
+  state.deluluType = refinedType;
+  state.deluluFlavor = flavorForScore(delulu.score);
+
+  const arch = ARCHETYPES[state.archetype];
+
+  document.getElementById('r2-code').textContent = arch.code;
+  document.getElementById('r2-name').textContent = arch.name;
+  document.getElementById('r2-vibe').textContent = arch.vibe;
+  document.getElementById('r2-score').textContent = state.deluluScore;
+  document.getElementById('r2-flavor').textContent = state.deluluFlavor;
+  document.getElementById('r2-dream').textContent = state.dreamJobLabel;
+  document.getElementById('r2-archetype').textContent = arch.name;
+  document.getElementById('r2-delulu-type').textContent = state.deluluType;
+  document.getElementById('r2-tension-quote').textContent = tensionQuoteFor(state.deluluType, state.deluluScore);
+
+  document.getElementById('r2-section-name').textContent = arch.name;
+  document.getElementById('r2-section-body').innerHTML = arch.description;
+
+  // Gap section
+  const gapContent = gapContentFor(state.deluluType, state.dreamJobLabel, arch);
+  document.getElementById('r2-gap-title').textContent = state.deluluType;
+  document.getElementById('r2-gap-body').innerHTML = gapContent.body;
+  document.getElementById('r2-real-life').innerHTML = gapContent.realLife;
+  document.getElementById('r2-what-vinsoo').innerHTML = gapContent.whatVinsoo;
+
+  // Personalized CTA
+  document.getElementById('cta-personalized').innerHTML = gapContent.cta;
+
+  // Callings
+  const callingsEl = document.getElementById('r2-callings');
+  callingsEl.innerHTML = '';
+  arch.callings.forEach(([label, isStar]) => {
+    const pill = document.createElement('span');
+    pill.className = 'calling-pill';
+    pill.innerHTML = label + (isStar ? '<span class="star">★</span>' : '');
+    callingsEl.appendChild(pill);
+  });
+
+  // Share card mirror
+  document.getElementById('sc2-code').textContent = arch.code;
+  document.getElementById('sc2-name').textContent = arch.name;
+  document.getElementById('sc2-vibe').textContent = arch.vibe;
+  document.getElementById('sc2-score').textContent = state.deluluScore;
+  document.getElementById('sc2-flavor').textContent = state.deluluFlavor;
+  document.getElementById('sc2-dream').textContent = shortDreamLabel(state.dreamJobLabel);
+  document.getElementById('sc2-arch').textContent = arch.name.replace(/^The /, '');
+  const sc2_status = document.getElementById('sc2-status');
+  if (sc2_status) sc2_status.textContent = mapStatusFromType(state.deluluType);
+  renderAxisBreakdown('r2-axis-grid', 'r2-decoder-code', arch.code);
+  generateQR('sc2-qr', buildShareUrl(arch.code));
+  setArchetypeIllustration(['r2-illus', 'sc2-illus'], arch.code, arch.name);
+}
+
+function gapContentFor(type, dream, arch) {
+  if (type === 'Aligned') {
+    return {
+      body: `<p>Translation: <b>you know yourself</b>. Most people taking this test discover they've been lying to themselves about what they want. You haven't. The archetype and the dream are the same thing. You skipped the existential crisis. <em>Lock in.</em></p>`,
+      realLife: `You apply to roles, you get one, you take it, and you have a good career. Your peers from college will eventually realize you've been quietly winning the whole time. You don't need a pivot, you don't need a reframe — <b>you need execution</b>.`,
+      whatVinsoo: `You don't need us to figure out <em>what</em> you want. You need us to make sure you actually get it. We'd line up 20 best-fit roles at your tier, submit you to all of them with a resume tailored to each, send the networking emails to the people who'd recognize you, and book the coffee chats that turn into referrals. <b>Three months from now, you have offers. Possibly multiple.</b>`,
+      cta: `You're a ${arch.name} who knows exactly what they want. Vinsoo's job is execution: 20 best-fit applications, networking emails, interview prep, all running in parallel. <b>No payment until you land the offer.</b>`
+    };
+  }
+  if (type === 'Conscious Delulu') {
+    return {
+      body: `<p>Translation: <b>you know yourself</b>. You answered the test honestly. Your archetype isn't an obvious match for the dream — and you said it anyway. You meant it. Either you're about to surprise yourself, or you're going through a phase. <em>We're going to support you either way.</em></p>`,
+      realLife: `60% of the time: you take the safer archetype-matched job first, you learn how things actually work for 2-3 years, and at 27 you leave to do the thing for real with the right experience and network. The other 40%: you go straight after the dream, you have a hard 18 months, and you either learn the muscle or you come back with stories. <b>Both outcomes are valid.</b>`,
+      whatVinsoo: `Two parallel tracks. Track A: we line up offers in your <em>archetype's natural habitat</em> — your safety net. Track B: we find you the role closest to your dream, plus the cold intros to the right people. You get both. You choose. We don't tell you which to take — <b>we just make sure neither path is closed when you have to decide</b>.`,
+      cta: `You said the dream out loud. We respect it. Vinsoo runs <b>two parallel tracks</b> — your archetype's safe path AND your dream's stretch path — so you choose from strength. <em>No payment until you land the offer.</em>`
+    };
+  }
+  if (type === 'Unconscious Delulu') {
+    return {
+      body: `<p>Translation: you said the dream. You answered some questions in <em>aspirational mode</em>. The <b>behavioral</b> questions — the unstructured-time question, the Sunday afternoon question, the actual-life questions — those came back with a different signal.</p><p>Friend: you might be heading toward a job you're going to struggle with. And that's fine — <em>you have other strengths</em> — but the dream will require you to become a different person than you currently are.</p>`,
+      realLife: `You take the role. The first 3 months are exciting. Month 4 hits. The work stops being fun. You realize the day-to-day doesn't match who you actually are. You either (a) push through and become a different version of yourself (rare but real, 18-24 months), or (b) quietly pivot at month 9 to the role your archetype was telling you about the whole time. <b>80% of users in this category end up at (b)</b>.`,
+      whatVinsoo: `We'd suggest a <em>test</em> before you commit. Take a role adjacent to your dream so you can see what the day-to-day actually feels like. Six months in, you'll know. If you find yourself energized, great — we'll help you go deeper. If you find yourself looking at archetype-fit roles by month 4, we'll have those ready too. <b>The data tells us first, not your ego.</b>`,
+      cta: `You're aiming at something the data says might not fit. That doesn't mean you can't get there — it means you should <b>test it carefully</b>. Vinsoo lines up the adjacent roles that prove the hypothesis without burning the runway. <em>No payment until you land the offer.</em>`
+    };
+  }
+  if (type === 'Field-Mismatch Delulu') {
+    return {
+      body: `<p>Translation: <b>${dream}</b> is a different category from your archetype. Not unfixable, but the kind of mismatch that ends careers at year 2 — unless we plan for it.</p><p>The good news: many of the most interesting career paths start with exactly this kind of mismatch. <em>The bad news: most of them don't.</em></p>`,
+      realLife: `You take the dream job. You make it through training. You make it through six months. You hate parts of it but tell yourself it's the first year. At month 14 you have your first breakdown. At year 2 you either pivot to what your archetype was telling you, or you stay another year and burn out spectacularly. <b>The pivot is fine and respected — if you survive the two years.</b>`,
+      whatVinsoo: `Two paths, both real. Path A: yes, we can land you the dream offer. We know which firms/groups in your dream's category hire your archetype and which spit them out — we'd target the right ones. Path B: in parallel, we'd quietly line up offers in your archetype's natural habitat. <b>You walk into decision time with both. You choose from strength, not desperation.</b>`,
+      cta: `You're a ${arch.name} aiming at ${dream}. We know exactly which firms in that space hire your archetype and which ones spit them out. We'd target the right ones AND line up your archetype's natural-fit roles in parallel. <b>No payment until you land the offer.</b>`
+    };
+  }
+  // Honest Lost fallback
+  return {
+    body: `<p>Translation: you don't have a dream job yet. <em>Most people taking this test just made one up.</em> You didn't. That honesty is actually rare — and it's the most useful starting point we could ask for.</p>`,
+    realLife: `You'll spend a few months thinking the lack of direction is the problem. It isn't. The problem is most career advice assumes you already know what you want and just need help getting it. <b>You need the opposite</b>: someone to help you discover what to even aim at.`,
+    whatVinsoo: `This is exactly what Vinsoo does. We use your archetype to surface <em>three career callings</em> that match your actual psychology — not what your parents suggested, not what LinkedIn pushed. Then we test-drive those callings with informational interviews and shadow days, so you find out what fits before you commit.`,
+    cta: `You don't know what you want yet. <b>That's the right starting point.</b> Vinsoo surfaces three callings based on your archetype, sets up informational interviews to test them, and lands you in the right field. <em>No payment until you land the offer.</em>`
+  };
+}
+
+// =====================================================
+// SHARE FUNCTIONS — QR, save-as-image, native share
+// =====================================================
+
+// Configurable: the URL the QR points to (and the copy-link button copies).
+// In production, swap this for your real domain. Including the archetype code
+// as a query param lets you track which archetype gets shared most.
+const SHARE_BASE_URL = 'https://vinsoo.com/jbti';
+
+function buildShareUrl(archCode) {
+  // ?from=LMSI lets you attribute viral traffic to specific archetypes.
+  return `${SHARE_BASE_URL}?from=${encodeURIComponent(archCode || '')}`;
+}
+
+function buildShareText() {
+  const arch = ARCHETYPES[state.archetype];
+  return `I'm ${arch.name} on the Career Delulu Test.\nDelulu Score: ${state.deluluScore}/100 · ${state.deluluFlavor}\nJBTI · ${arch.code}\n\nTake it: ${buildShareUrl(arch.code)}`;
+}
+
+// Generate the QR code into the given element. Uses qrcode-generator (lib loaded in <head>).
+function generateQR(elementId, url) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  if (typeof qrcode === 'undefined') {
+    // Library hasn't loaded yet — retry after a short delay
+    setTimeout(() => generateQR(elementId, url), 200);
+    return;
+  }
+  try {
+    // typeNumber 0 = auto-size, errorCorrectionLevel 'M' = ~15% recovery
+    // M gives a reasonably dense code; works well for URLs ~30-60 chars
+    const qr = qrcode(0, 'M');
+    qr.addData(url);
+    qr.make();
+    el.innerHTML = qr.createSvgTag({ scalable: true, margin: 0 });
+  } catch (err) {
+    console.warn('QR generation failed:', err);
+  }
+}
+
+// Convert a DOM node to a PNG blob. Handles font-loading + image-loading + the
+// mix-blend-mode stamps that html2canvas doesn't render correctly.
+async function captureCardAsBlob(wrapperEl) {
+  if (typeof html2canvas === 'undefined') {
+    throw new Error('html2canvas not loaded');
+  }
+  // Wait for any pending font loads — otherwise the screenshot can render in fallback fonts
+  if (document.fonts && document.fonts.ready) {
+    await document.fonts.ready;
+  }
+
+  // Find the actual .share-card inside the wrapper (we want the card, not the outer label tab)
+  const cardEl = wrapperEl.querySelector('.share-card') || wrapperEl;
+
+  // Wait for all images inside the card to finish loading — otherwise the
+  // illustration might be missing from the screenshot if the user is fast.
+  const imgs = Array.from(cardEl.querySelectorAll('img'));
+  await Promise.all(imgs.map(img => {
+    if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+    return new Promise(resolve => {
+      // Resolve on either load or error — don't block forever on a missing image.
+      img.addEventListener('load', resolve, { once: true });
+      img.addEventListener('error', resolve, { once: true });
+      // Safety timeout in case the events never fire
+      setTimeout(resolve, 3000);
+    });
+  }));
+
+  const canvas = await html2canvas(cardEl, {
+    scale: 3,                  // 3x for high-DPI / retina-quality output
+    backgroundColor: null,     // preserve transparency around rounded corners
+    useCORS: true,
+    logging: false,
+    // The clone callback runs in a hidden iframe before render — we use it to
+    // normalize CSS features html2canvas can't handle (mix-blend-mode, etc.)
+    onclone: (clonedDoc) => {
+      // Neutralize mix-blend-mode on the stamps — html2canvas renders them as solid otherwise
+      const stamps = clonedDoc.querySelectorAll('.sc-approved-stamp, .sc-corner-stamp');
+      stamps.forEach(s => {
+        s.style.mixBlendMode = 'normal';
+        s.style.opacity = '0.85';
+      });
+      // Force-flatten any rotated transform on the outer card so the screenshot crops cleanly
+      const card = clonedDoc.querySelector('.share-card');
+      if (card) card.style.transform = 'none';
+    }
+  });
+  return new Promise(resolve => canvas.toBlob(resolve, 'image/png', 1.0));
+}
+
+async function saveShareCardImage(buttonEl, wrapperId) {
+  const wrapper = document.getElementById(wrapperId);
+  if (!wrapper) return;
+  const arch = ARCHETYPES[state.archetype];
+  const filename = `career-delulu-test-${arch.code}-${state.deluluScore}.png`;
+
+  buttonEl.dataset.loading = 'true';
+  buttonEl.dataset.label = buttonEl.innerHTML;
+
+  try {
+    const blob = await captureCardAsBlob(wrapper);
+    if (!blob) throw new Error('Failed to render image');
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    // brief success indicator
+    buttonEl.innerHTML = '✓ Saved';
+    setTimeout(() => {
+      buttonEl.innerHTML = buttonEl.dataset.label;
+      delete buttonEl.dataset.loading;
+    }, 1400);
+  } catch (err) {
+    console.error('saveShareCardImage failed:', err);
+    buttonEl.innerHTML = buttonEl.dataset.label;
+    delete buttonEl.dataset.loading;
+    alert("Couldn't save the image. Try a screenshot instead.");
+  }
+}
+
+async function shareShareCardImage(buttonEl, wrapperId) {
+  const wrapper = document.getElementById(wrapperId);
+  if (!wrapper) return;
+  const arch = ARCHETYPES[state.archetype];
+  const filename = `career-delulu-test-${arch.code}.png`;
+
+  buttonEl.dataset.loading = 'true';
+  buttonEl.dataset.label = buttonEl.innerHTML;
+
+  try {
+    const blob = await captureCardAsBlob(wrapper);
+    const file = new File([blob], filename, { type: 'image/png' });
+    const text = `I'm ${arch.name} on the Career Delulu Test 💀`;
+    const url = buildShareUrl(arch.code);
+
+    // Prefer the file-share path — opens OS share sheet with the image attached
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        files: [file],
+        title: 'The Career Delulu Test',
+        text: `${text}\nTake it: ${url}`
+      });
+    } else if (navigator.share) {
+      // Browser supports share but not files (some desktop browsers)
+      await navigator.share({ title: 'The Career Delulu Test', text, url });
+    } else {
+      // No share API at all — fall back to download
+      await saveShareCardImage(buttonEl, wrapperId);
+      return;
+    }
+
+    buttonEl.innerHTML = buttonEl.dataset.label;
+    delete buttonEl.dataset.loading;
+  } catch (err) {
+    // User-canceled share is normal and not an error — only alert on real failures
+    if (err && err.name !== 'AbortError') {
+      console.warn('shareShareCardImage:', err);
+    }
+    buttonEl.innerHTML = buttonEl.dataset.label;
+    delete buttonEl.dataset.loading;
+  }
+}
+
+function copyResultText() {
+  navigator.clipboard.writeText(buildShareText()).then(() => {
+    showToast('Copied to clipboard ✓');
+  }).catch(() => {
+    showToast("Couldn't copy — try selecting and copying manually");
+  });
+}
+
+function copyShareLink() {
+  const arch = ARCHETYPES[state.archetype];
+  navigator.clipboard.writeText(buildShareUrl(arch.code)).then(() => {
+    showToast('Link copied ✓');
+  });
+}
+
+// Keep `shareNative()` for backwards compat — but route it through the image share path
+function shareNative() {
+  // No button context — try to use the first share card we find
+  const wrap = document.querySelector('.share-card-wrap');
+  if (!wrap) return;
+  const fakeBtn = { dataset: {}, innerHTML: '' };
+  shareShareCardImage(fakeBtn, wrap.id || 'sc-card-wrapper-1');
+}
+
+// Lightweight toast — appears at bottom of screen briefly
+function showToast(message) {
+  let toast = document.getElementById('toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.style.cssText = `
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      background: var(--ink); color: var(--paper); padding: 12px 22px;
+      border-radius: 100px; font-family: "Geist Mono", monospace;
+      font-size: 12px; letter-spacing: 0.1em; font-weight: 600;
+      box-shadow: 0 12px 32px -8px rgba(14,14,16,0.4);
+      z-index: 9999; opacity: 0; transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+    `;
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  requestAnimationFrame(() => {
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(-4px)';
+  });
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+  }, 2000);
+}
+
+// =====================================================
+// RESTART
+// =====================================================
+function restart() {
+  state.dreamJob = null;
+  state.dreamJobLabel = null;
+  state.tier1Answers = {};
+  state.tier1QuestionIndex = 0;
+  state.tier2Answers = {};
+  state.tier2QuestionIndex = 0;
+  state.archetype = null;
+  state.deluluScore = null;
+  state.deluluFlavor = null;
+  state.deluluType = null;
+  document.getElementById('dream-input').value = '';
+  const btn = document.getElementById('dream-continue');
+  btn.disabled = true;
+  btn.style.opacity = '0.5';
+  btn.style.cursor = 'not-allowed';
+  showScreen('screen-landing');
+}
+</script>
+</body>
+</html>
