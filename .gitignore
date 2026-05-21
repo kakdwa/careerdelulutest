@@ -1,0 +1,2 @@
+.DS_Store
+img/.DS_Store # not strictly needed since the pattern matches recursively
