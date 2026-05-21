@@ -1,0 +1,90 @@
+Career Delulu Test — License
+============================
+
+Copyright (c) 2026 Kewen Kong (kakdwa). All rights reserved.
+
+This project uses a split license: the creative content and the source
+code are licensed separately. Please read both sections before using,
+copying, modifying, or redistributing any part of this project.
+
+
+─────────────────────────────────────────────────────────────────────
+1. CONTENT LICENSE — Creative Commons Attribution-NonCommercial 4.0
+─────────────────────────────────────────────────────────────────────
+
+The following materials in this repository (collectively, the "Content")
+are licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License (CC BY-NC 4.0):
+
+  • Quiz questions, answer choices, and scoring logic copy
+  • Archetype names, descriptions, and accompanying written content
+  • All images in the /img directory, including the archetype artwork
+  • Any other written copy, illustrations, or visual assets
+
+You are free to:
+
+  • Share — copy and redistribute the Content in any medium or format
+  • Adapt — remix, transform, and build upon the Content
+
+Under the following terms:
+
+  • Attribution — You must give appropriate credit to Kewen Kong
+    (kakdwa), provide a link to this repository, and indicate if
+    changes were made. You may do so in any reasonable manner, but
+    not in any way that suggests the licensor endorses you or your use.
+
+  • NonCommercial — You may not use the Content for commercial
+    purposes. Commercial use includes, but is not limited to: selling
+    the Content, including it in paid products, using it in
+    advertising, or using it to generate revenue directly or indirectly.
+
+  • No additional restrictions — You may not apply legal terms or
+    technological measures that legally restrict others from doing
+    anything the license permits.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-nc/4.0/
+
+
+─────────────────────────────────────────────────────────────────────
+2. CODE LICENSE — All Rights Reserved
+─────────────────────────────────────────────────────────────────────
+
+The source code in this repository (collectively, the "Code"),
+including but not limited to:
+
+  • All HTML, CSS, and JavaScript files
+  • All configuration files and project structure
+  • Any build scripts, utilities, or supporting code
+
+is provided as "All Rights Reserved."
+
+This means:
+
+  • You MAY view the Code on GitHub.
+  • You MAY clone the repository for personal, non-distributed study.
+  • You MAY NOT copy, modify, merge, publish, distribute, sublicense,
+    or sell any portion of the Code without prior written permission
+    from the copyright holder.
+  • You MAY NOT use the Code, in whole or in part, in any other
+    project — personal, open-source, or commercial — without prior
+    written permission.
+
+If you would like to license the Code for a specific use, please
+contact: kevinkong.hkkchina@gmail.com
+
+
+─────────────────────────────────────────────────────────────────────
+3. DISCLAIMER
+─────────────────────────────────────────────────────────────────────
+
+THE CONTENT AND CODE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE
+LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE CONTENT, THE CODE, OR THE USE OR OTHER DEALINGS
+IN THEM.
+
+─────────────────────────────────────────────────────────────────────
