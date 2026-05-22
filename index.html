@@ -21,7 +21,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700&family=Bagel+Fat+One&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700&family=Bagel+Fat+One&family=Caveat:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;500;700;900&family=ZCOOL+KuaiLe&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 
 <!-- QR generator (tiny, SVG output) — for the scannable code on the share card -->
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js" defer></script>
@@ -100,7 +100,7 @@
 html, body {
   background: var(--bg);
   color: var(--ink);
-  font-family: "Geist", system-ui, sans-serif;
+  font-family: "Geist", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", system-ui, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
@@ -113,11 +113,11 @@ html, body {
 }
 
 /* type utilities */
-.serif    { font-family: "Fraunces", serif; letter-spacing: -0.01em; }
+.serif    { font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif; letter-spacing: -0.01em; }
 .italic   { font-style: italic; }
-.mono     { font-family: "Geist Mono", monospace; letter-spacing: 0; }
-.fat      { font-family: "Bagel Fat One", "Fraunces", serif; font-weight: 400; letter-spacing: -0.01em; }
-.scrawl   { font-family: "Caveat", cursive; font-weight: 600; letter-spacing: 0; }
+.mono     { font-family: "Geist Mono", "Noto Sans SC", monospace; letter-spacing: 0; }
+.fat      { font-family: "Bagel Fat One", "ZCOOL KuaiLe", "Fraunces", "Noto Serif SC", serif; font-weight: 400; letter-spacing: -0.01em; }
+.scrawl   { font-family: "Caveat", "Ma Shan Zheng", cursive; font-weight: 600; letter-spacing: 0; }
 
 /* ============================================
    GLOBAL LAYOUT
@@ -143,7 +143,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.02em;
@@ -165,7 +165,7 @@ html, body {
 }
 
 .nav-meta {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -194,7 +194,7 @@ html, body {
   box-shadow: 2px 2px 0 var(--ink);
 }
 .lang-switch button {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -324,7 +324,7 @@ html, body {
    ============================================ */
 .sticker {
   position: absolute;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -353,7 +353,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -383,7 +383,7 @@ html, body {
    ============================================ */
 .stamp {
   position: absolute;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-weight: 700;
   font-size: 12.5px;
   letter-spacing: 0.18em;
@@ -415,7 +415,7 @@ html, body {
 .stamp.flat   { transform: rotate(-3deg); }
 
 .memo-header {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -444,7 +444,7 @@ html, body {
   border: 1.5px solid var(--ink);
   border-radius: 4px;
   padding: 10px 14px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -499,7 +499,7 @@ html, body {
   background: var(--paper);
   border: 1.5px solid var(--ink);
   padding: 4px 14px 3px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -510,7 +510,7 @@ html, body {
 
 /* form-label — for question screens, ".FORM JBTI-Q02 · INTERNAL" */
 .form-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -536,7 +536,7 @@ html, body {
 
 /* fake-legalese footer */
 .legalese {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   line-height: 1.65;
   letter-spacing: 0.04em;
@@ -569,7 +569,7 @@ html, body {
   border: 1.5px solid var(--ink);
   border-radius: 4px;
   padding: 12px 14px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -649,7 +649,7 @@ html, body {
 }
 
 .hero-eyebrow {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -676,7 +676,7 @@ html, body {
 }
 
 .hero h1 {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-size: 96px;
   line-height: 0.92;
   font-weight: 600;
@@ -686,7 +686,7 @@ html, body {
   position: relative;
 }
 .hero h1 .delulu {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-style: normal;
   color: var(--caution);
@@ -701,7 +701,13 @@ html, body {
 .hero h1 .really {
   font-style: italic;
   font-weight: 400;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
+}
+/* Chinese hero h1 — slightly smaller so "到底有多大？" fits comfortably on one line.
+   Falls back to the English size on other languages. */
+html[lang="zh-CN"] .hero h1 {
+  font-size: 78px;
+  letter-spacing: -0.03em;
 }
 
 .hero-sub {
@@ -770,7 +776,7 @@ html, body {
   color: white;
   border: 1.5px solid var(--ink);
   padding: 3px 8px 2px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.18em;
   font-weight: 700;
@@ -780,7 +786,7 @@ html, body {
   flex: 1;
 }
 .hero-meta .stat-num {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-size: 30px;
   line-height: 1;
   color: var(--ink);
@@ -788,7 +794,7 @@ html, body {
   letter-spacing: -0.01em;
 }
 .hero-meta .stat-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -851,7 +857,7 @@ html, body {
   color: var(--ink);
   padding: 6px 12px;
   border-radius: 100px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -861,7 +867,7 @@ html, body {
   box-shadow: 2px 2px 0 var(--ink);
 }
 .hero-illus .archetype-name {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 38px;
   line-height: 0.95;
@@ -872,7 +878,7 @@ html, body {
   text-transform: uppercase;
 }
 .hero-illus .code {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 13px;
   letter-spacing: 0.28em;
   color: var(--ink);
@@ -893,7 +899,7 @@ html, body {
   color: var(--ink-2);
   text-align: center;
   line-height: 1.4;
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-weight: 500;
   margin-bottom: 28px;
 }
@@ -906,7 +912,7 @@ html, body {
   border-top: 1.5px dashed var(--ink);
 }
 .hero-illus .score-num {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 82px;
   line-height: 1;
@@ -915,7 +921,7 @@ html, body {
   text-shadow: 4px 4px 0 var(--ink);
 }
 .hero-illus .score-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -925,6 +931,134 @@ html, body {
   padding: 5px 10px;
   border: 1.5px solid var(--ink);
   transform: rotate(-2deg);
+}
+
+/* ============================================
+   ARCHETYPE GRID — "16 archetypes, which one are you?"
+   Anonymous teaser on the landing page. No names shown
+   (those are the punchline reserved for the result page).
+   Just illustrations + small mono JBTI codes.
+   ============================================ */
+.archetypes-section {
+  max-width: 1100px;
+  margin: 56px auto 0;
+  padding: 56px 24px 24px;
+  border-top: 2px solid var(--ink);
+  position: relative;
+}
+.archetypes-eyebrow {
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-weight: 700;
+  display: inline-block;
+  background: var(--brat);
+  padding: 7px 14px 6px;
+  border: 1.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(-0.8deg);
+  margin-bottom: 22px;
+}
+.archetypes-title {
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  max-width: 800px;
+}
+.archetypes-title em {
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
+  font-style: italic;
+  font-weight: 800;
+  text-transform: none;
+  color: var(--stamp);
+}
+.archetypes-intro {
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  max-width: 640px;
+  margin: 0 0 40px;
+}
+.archetypes-intro b {
+  font-weight: 700;
+  color: var(--ink);
+  font-style: normal;
+}
+.archetypes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.arch-card {
+  background: var(--paper);
+  padding: 6px 6px 8px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 var(--ink);
+  position: relative;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.arch-card:hover {
+  transform: translate(-2px, -2px) rotate(0deg) !important;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.arch-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 3px;
+}
+.arch-card-code {
+  text-align: center;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 7px;
+  padding-bottom: 2px;
+}
+.archetypes-cta-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+  padding-top: 24px;
+  border-top: 1.5px dashed var(--ink);
+}
+.archetypes-cta-line {
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.2;
+  transform: rotate(-1deg);
+}
+.archetypes-cta-line .arrow { color: var(--stamp); }
+@media (max-width: 900px) {
+  .archetypes-section { padding: 40px 18px 16px; margin-top: 40px; }
+  .archetypes-title { font-size: 40px; }
+  .archetypes-intro { font-size: 16px; }
+  .archetypes-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .arch-card { padding: 5px 5px 6px; }
+  .arch-card-code { font-size: 10px; margin-top: 5px; }
+}
+@media (max-width: 480px) {
+  .archetypes-title { font-size: 32px; }
 }
 
 /* ============================================
@@ -951,7 +1085,7 @@ html, body {
   position: relative;
 }
 .how-eyebrow {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -966,7 +1100,7 @@ html, body {
   transform: rotate(-0.8deg);
 }
 .how-title {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-weight: 600;
   font-size: 46px;
   line-height: 1.05;
@@ -1008,7 +1142,7 @@ html, body {
 .how-card:hover { transform: rotate(0) translateY(-2px); }
 
 .how-card-num {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-size: 36px;
   color: var(--brat);
   -webkit-text-stroke: 1.5px var(--ink);
@@ -1016,7 +1150,7 @@ html, body {
   line-height: 1;
 }
 .how-card-title {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 600;
   font-size: 22px;
@@ -1054,7 +1188,7 @@ html, body {
   background: var(--ink);
   color: var(--paper);
   padding: 5px 10px 4px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1069,7 +1203,7 @@ html, body {
   font-size: 32px;
 }
 .wide-flag {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-weight: 700;
   font-size: 22px;
   color: var(--ink);
@@ -1080,7 +1214,7 @@ html, body {
   -webkit-text-stroke: 0;
 }
 .how-card-title-wide {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 600;
   font-size: 28px;
@@ -1099,7 +1233,7 @@ html, body {
 .how-card-wide p + p { margin-top: 12px; }
 .how-card-wide p b { color: var(--ink); font-weight: 600; }
 .how-card-wide p em {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 600;
   color: var(--stamp);
@@ -1113,7 +1247,7 @@ html, body {
   flex-wrap: wrap;
 }
 .how-foot-eyebrow {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1142,7 +1276,7 @@ html, body {
   gap: 18px;
 }
 .q-progress-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1154,7 +1288,7 @@ html, body {
   /* color: var(--brat); */
   font-weight: 900;
   font-size: 15px;
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
 }
 .q-progress-bar {
   flex: 1;
@@ -1202,7 +1336,7 @@ html, body {
 }
 
 .q-num {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 120px;
   line-height: 0.88;
@@ -1215,7 +1349,7 @@ html, body {
 }
 
 .q-eyebrow {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-size: 24px;
   font-weight: 600;
   color: var(--ink);
@@ -1228,7 +1362,7 @@ html, body {
 }
 
 .q-text {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-weight: 600;
   font-size: 38px;
   line-height: 1.15;
@@ -1286,7 +1420,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-size: 16px;
   color: var(--ink);
   flex-shrink: 0;
@@ -1322,7 +1456,7 @@ html, body {
   background: var(--paper);
   border: 2px solid var(--ink);
   border-radius: 10px;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-size: 24px;
   font-style: italic;
   font-weight: 500;
@@ -1341,7 +1475,7 @@ html, body {
 }
 
 .dream-chips-label {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-size: 22px;
   font-weight: 600;
   color: var(--ink);
@@ -1378,7 +1512,7 @@ html, body {
   border-color: var(--ink);
   color: var(--paper);
   font-style: italic;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-size: 13.5px;
   font-weight: 600;
 }
@@ -1421,7 +1555,7 @@ html, body {
   position: relative;
 }
 .loading-num {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 140px;
   line-height: 0.9;
@@ -1436,7 +1570,7 @@ html, body {
   50%     { transform: rotate(3deg); }
 }
 .loading-title {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -1449,7 +1583,7 @@ html, body {
   box-shadow: 2px 2px 0 var(--ink);
 }
 .loading-text {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-weight: 600;
   font-size: 30px;
   color: var(--ink);
@@ -1519,7 +1653,7 @@ html, body {
   box-shadow: 0 2px 4px rgba(14,14,16,0.08);
 }
 .result-eyebrow {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1552,7 +1686,7 @@ html, body {
 }
 /* JBTI code — DEMOTED from 124px chunky letters to a small mono-coded stamp */
 .result-code {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.32em;
@@ -1618,7 +1752,7 @@ html, body {
 .result-illus[hidden] { display: none; }
 .result-illus-caption {
   text-align: center;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -1631,7 +1765,7 @@ html, body {
 
 /* archetype NAME — now the visual hero on the in-page result */
 .result-name {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 64px;
   color: var(--ink);
@@ -1643,7 +1777,7 @@ html, body {
   padding: 0 8px;
 }
 .result-vibe {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-weight: 600;
   font-size: 26px;
   color: var(--ink-2);
@@ -1676,7 +1810,7 @@ html, body {
   position: relative;
 }
 .result-score-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1685,7 +1819,7 @@ html, body {
   font-weight: 700;
 }
 .result-score-sublabel {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1695,7 +1829,7 @@ html, body {
   opacity: 0.75;
 }
 .result-score-num {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 144px;
   line-height: 0.9;
@@ -1706,7 +1840,7 @@ html, body {
   text-shadow: 4px 4px 0 var(--ink);
 }
 .result-score-flavor {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 700;
   font-size: 22px;
@@ -1738,7 +1872,7 @@ html, body {
   background: var(--sky);
   color: var(--paper);
   padding: 4px 10px 3px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1754,7 +1888,7 @@ html, body {
 }
 .result-tension-row:last-of-type { margin-bottom: 0; }
 .result-tension-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1764,7 +1898,7 @@ html, body {
   min-width: 76px;
 }
 .result-tension-val {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 600;
   font-size: 18px;
@@ -1774,7 +1908,7 @@ html, body {
 .result-tension-val.dream      { color: var(--ink); }
 .result-tension-val.archetype  { color: var(--stamp); }
 .result-tension-quote {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-weight: 600;
   font-size: 22px;
   color: var(--ink);
@@ -1827,7 +1961,7 @@ html, body {
 .axis-side.right { text-align: left; }
 
 .axis-letter {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 0.9;
@@ -1836,7 +1970,7 @@ html, body {
   transition: color 0.2s;
 }
 .axis-name {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1847,7 +1981,7 @@ html, body {
   font-size: 13px;
   color: var(--ink-2);
   line-height: 1.45;
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 500;
   margin-top: 2px;
@@ -1878,7 +2012,7 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-weight: 700;
   font-size: 22px;
   color: var(--muted);
@@ -1907,7 +2041,7 @@ html, body {
 .axis-intro b { color: var(--ink); font-weight: 600; }
 
 .result-section-eyebrow {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1922,7 +2056,7 @@ html, body {
   transform: rotate(-0.6deg);
 }
 .result-section-title {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-weight: 600;
   font-size: 36px;
   color: var(--ink);
@@ -1943,7 +2077,7 @@ html, body {
 .result-section-body p + p { margin-top: 14px; }
 .result-section-body b { color: var(--ink); font-weight: 600; }
 .result-section-body em {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   color: var(--stamp);
   font-weight: 600;
@@ -1993,7 +2127,7 @@ html, body {
 .gap-card-row:last-of-type { border-bottom: none; padding-bottom: 0; }
 .gap-card-row:first-of-type { padding-top: 0; }
 .gap-card-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2008,7 +2142,7 @@ html, body {
 }
 .gap-card-val b { font-weight: 600; color: var(--ink); }
 .gap-card-val em {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 600;
   color: var(--stamp);
@@ -2036,7 +2170,7 @@ html, body {
   background: var(--stamp);
   color: white;
   padding: 5px 12px 4px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2066,7 +2200,7 @@ html, body {
   text-align: left;
   color: var(--ink);
   overflow: visible;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   transform: rotate(-0.5deg);
 }
 
@@ -2092,7 +2226,7 @@ html, body {
   background: var(--paper);
 }
 .sc-brand {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 700;
   font-size: 17px;
@@ -2101,7 +2235,7 @@ html, body {
   line-height: 1;
 }
 .sc-brand .tm {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-style: normal;
   font-size: 8px;
   vertical-align: super;
@@ -2109,7 +2243,7 @@ html, body {
   font-weight: 700;
 }
 .sc-doc-meta {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 8.5px;
   letter-spacing: 0.18em;
   color: var(--ink-2);
@@ -2124,7 +2258,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   padding: 7px 18px 7px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 8.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2146,7 +2280,7 @@ html, body {
   position: relative;
 }
 .sc-code-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 8.5px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -2176,7 +2310,7 @@ html, body {
 .sc-illus[hidden] { display: none; }
 /* THE HERO — archetype name in chunky display */
 .sc-archetype-name {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 0.95;
@@ -2190,7 +2324,7 @@ html, body {
 }
 /* The JBTI code — demoted to a small mono indicator like an article code */
 .sc-code-letters {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.32em;
@@ -2213,7 +2347,7 @@ html, body {
 
 /* vibe — handwritten */
 .sc-vibe {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-weight: 600;
   font-size: 19px;
   line-height: 1.3;
@@ -2232,7 +2366,7 @@ html, body {
   background: var(--bg);
 }
 .sc-score-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -2241,7 +2375,7 @@ html, body {
   margin-bottom: 2px;
 }
 .sc-score-sublabel {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 7.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -2250,7 +2384,7 @@ html, body {
   margin-bottom: 8px;
 }
 .sc-score-num {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 92px;
   line-height: 0.9;
@@ -2262,7 +2396,7 @@ html, body {
   margin-bottom: 2px;
 }
 .sc-score-flavor {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   font-weight: 700;
   font-size: 16px;
@@ -2282,7 +2416,7 @@ html, body {
   border-bottom: 1px dashed var(--ink);
 }
 .sc-ledger-title {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 8.5px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -2307,7 +2441,7 @@ html, body {
 }
 .sc-ledger-row:last-child { margin-bottom: 0; }
 .sc-ledger-key {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   color: var(--ink-2);
   text-transform: uppercase;
   font-weight: 700;
@@ -2323,7 +2457,7 @@ html, body {
   top: -2px;
 }
 .sc-ledger-val {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   color: var(--ink);
   font-weight: 600;
@@ -2337,7 +2471,7 @@ html, body {
   background: var(--stamp);
   color: var(--paper);
   padding: 3px 8px 2px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-style: normal;
   font-size: 9.5px;
   letter-spacing: 0.16em;
@@ -2352,7 +2486,7 @@ html, body {
   top: 56%;
   right: 14px;
   transform: rotate(-12deg) translateY(-50%);
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 8.5px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -2383,7 +2517,7 @@ html, body {
   top: 56px;
   right: -8px;
   transform: rotate(8deg);
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 8px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -2458,7 +2592,7 @@ html, body {
   display: flex;
   align-items: baseline;
   gap: 6px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2472,7 +2606,7 @@ html, body {
   font-size: 10px;
 }
 .sc-foot-hash {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-size: 18px;
   font-weight: 700;
   color: var(--stamp);
@@ -2484,7 +2618,7 @@ html, body {
   margin-top: 2px;
 }
 .sc-foot-cta {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 8px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2551,7 +2685,7 @@ html, body {
 }
 .share-help {
   text-align: center;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 9.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2600,7 +2734,7 @@ html, body {
   background: var(--brat);
   color: var(--ink);
   padding: 5px 12px 4px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2609,7 +2743,7 @@ html, body {
   border-radius: 3px;
 }
 .cta-eyebrow {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -2618,7 +2752,7 @@ html, body {
   font-weight: 600;
 }
 .cta-title {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-weight: 800;
   font-size: 42px;
   letter-spacing: -0.025em;
@@ -2646,7 +2780,7 @@ html, body {
 }
 .cta-body b      { color: var(--paper); font-weight: 600; }
 .cta-body em     {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   color: var(--brat);
   font-weight: 600;
@@ -2691,7 +2825,7 @@ html, body {
   box-shadow: 4px 4px 0 rgba(255,255,255,0.3);
 }
 .cta-note {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2727,7 +2861,7 @@ html, body {
   background: var(--stamp);
   color: var(--paper);
   padding: 6px 50px 5px;
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -2739,7 +2873,7 @@ html, body {
   z-index: 5;
 }
 .tier2-fomo-eyebrow {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -2762,7 +2896,7 @@ html, body {
   animation: pulse 1.4s ease-in-out infinite;
 }
 .tier2-fomo-title {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-weight: 600;
   font-size: 40px;
   letter-spacing: -0.025em;
@@ -2786,7 +2920,7 @@ html, body {
 .tier2-fomo-body p + p { margin-top: 12px; }
 .tier2-fomo-body b { color: var(--ink); font-weight: 600; }
 .tier2-fomo-body em {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", serif;
   font-style: italic;
   color: var(--stamp);
   font-weight: 600;
@@ -2811,7 +2945,7 @@ html, body {
   align-items: center;
 }
 .acc-label {
-  font-family: "Geist Mono", monospace;
+  font-family: "Geist Mono", "Noto Sans SC", monospace;
   font-size: 10.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -2848,7 +2982,7 @@ html, body {
 @keyframes fill-t1 { to { width: 70%; } }
 @keyframes fill-t2 { to { width: 94%; } }
 .acc-num {
-  font-family: "Bagel Fat One", serif;
+  font-family: "Bagel Fat One", "ZCOOL KuaiLe", serif;
   font-weight: 400;
   font-size: 20px;
   color: var(--ink);
@@ -2863,7 +2997,7 @@ html, body {
   flex-wrap: wrap;
 }
 .tier2-fomo-cta .cta-time {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-size: 20px;
   font-weight: 600;
   color: var(--ink);
@@ -2889,7 +3023,7 @@ html, body {
   margin-top: 48px;
 }
 .restart-link a {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", "Ma Shan Zheng", cursive;
   font-weight: 600;
   font-size: 22px;
   color: var(--ink);
@@ -2921,6 +3055,7 @@ html, body {
     padding: 16px 0 40px;
   }
   .hero h1 { font-size: 60px; }
+  html[lang="zh-CN"] .hero h1 { font-size: 48px; }
   .hero h1 .delulu { -webkit-text-stroke: 1.5px var(--ink); text-shadow: 3px 3px 0 var(--ink); }
   .hero-illus { max-width: 340px; margin: 0 auto; transform: rotate(2deg); }
   .hero-meta { flex-wrap: wrap; gap: 18px; }
@@ -3029,7 +3164,7 @@ html, body {
 
       <div class="hero-illus-stack">
         <div class="hero-illus">
-          <div class="stamp tilt-l" style="top:34%; right:-22px;" data-i18n="landing.illus.confidential">Confidential</div>
+          <div class="stamp tilt-l" style="top:50%; right:12px;" data-i18n="landing.illus.confidential">Confidential</div>
           <div class="badge" data-i18n="landing.illus.sample1">sample file 1 ✦</div>
           <div class="archetype-name" data-i18n="landing.illus.arch1">The Side Quest Maxxer</div>
           <div class="code">JBTI · LMTO</div>
@@ -3046,7 +3181,7 @@ html, body {
         </div>
 
         <div class="hero-illus flipped">
-          <div class="stamp tilt-r" style="top:34%; left:-22px;" data-i18n="landing.illus.confidential">Confidential</div>
+          <div class="stamp tilt-l" style="top:54%; right:12px;" data-i18n="landing.illus.confidential">Confidential</div>
           <div class="badge" data-i18n="landing.illus.sample2">sample file 2 ✦</div>
           <div class="archetype-name" data-i18n="landing.illus.arch2">The Pre-Med Martyr</div>
           <div class="code">JBTI · GPSI</div>
@@ -3061,6 +3196,37 @@ html, body {
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L13.5 9 L20 10 L13.5 11 L12 18 L10.5 11 L4 10 L10.5 9 Z" fill="#B8E32D" stroke="#0E0E10" stroke-width="0.8"/></svg>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 16 ARCHETYPES TEASER — show the outputs, hide the names. The mystery is the hook. -->
+    <section class="archetypes-section">
+      <div class="archetypes-eyebrow" data-i18n="arch.eyebrow">§2.1 · The Lineup</div>
+      <h2 class="archetypes-title" data-i18n-html="arch.title">16 archetypes. <em>Which one are you?</em></h2>
+      <p class="archetypes-intro" data-i18n-html="arch.intro">Sixteen ways to be wrong about your career. Pick one and see. <b>Take the test to find out which one is you.</b> (The names are funnier than you think.)</p>
+
+      <div class="archetypes-grid" id="archetypes-grid">
+        <div class="arch-card"><img src="img/archetypes/GMSI.webp" alt="" loading="lazy"><div class="arch-card-code">GMSI</div></div>
+        <div class="arch-card"><img src="img/archetypes/GMSO.webp" alt="" loading="lazy"><div class="arch-card-code">GMSO</div></div>
+        <div class="arch-card"><img src="img/archetypes/GMTI.webp" alt="" loading="lazy"><div class="arch-card-code">GMTI</div></div>
+        <div class="arch-card"><img src="img/archetypes/GMTO.webp" alt="" loading="lazy"><div class="arch-card-code">GMTO</div></div>
+        <div class="arch-card"><img src="img/archetypes/GPSI.webp" alt="" loading="lazy"><div class="arch-card-code">GPSI</div></div>
+        <div class="arch-card"><img src="img/archetypes/GPSO.webp" alt="" loading="lazy"><div class="arch-card-code">GPSO</div></div>
+        <div class="arch-card"><img src="img/archetypes/GPTI.webp" alt="" loading="lazy"><div class="arch-card-code">GPTI</div></div>
+        <div class="arch-card"><img src="img/archetypes/GPTO.webp" alt="" loading="lazy"><div class="arch-card-code">GPTO</div></div>
+        <div class="arch-card"><img src="img/archetypes/LMSI.webp" alt="" loading="lazy"><div class="arch-card-code">LMSI</div></div>
+        <div class="arch-card"><img src="img/archetypes/LMSO.webp" alt="" loading="lazy"><div class="arch-card-code">LMSO</div></div>
+        <div class="arch-card"><img src="img/archetypes/LMTI.webp" alt="" loading="lazy"><div class="arch-card-code">LMTI</div></div>
+        <div class="arch-card"><img src="img/archetypes/LMTO.webp" alt="" loading="lazy"><div class="arch-card-code">LMTO</div></div>
+        <div class="arch-card"><img src="img/archetypes/LPSI.webp" alt="" loading="lazy"><div class="arch-card-code">LPSI</div></div>
+        <div class="arch-card"><img src="img/archetypes/LPSO.webp" alt="" loading="lazy"><div class="arch-card-code">LPSO</div></div>
+        <div class="arch-card"><img src="img/archetypes/LPTI.webp" alt="" loading="lazy"><div class="arch-card-code">LPTI</div></div>
+        <div class="arch-card"><img src="img/archetypes/LPTO.webp" alt="" loading="lazy"><div class="arch-card-code">LPTO</div></div>
+      </div>
+
+      <div class="archetypes-cta-row">
+        <div class="archetypes-cta-line" data-i18n-html="arch.ctaLine"><span class="arrow">↳</span> guess wrong and take the test anyway</div>
+        <button class="btn btn-pink" onclick="startTest()" style="padding:16px 28px; font-size:15px;" data-i18n="arch.ctaBtn">Take the Test →</button>
       </div>
     </section>
 
@@ -3477,14 +3643,13 @@ html, body {
           We work directly with <b>500+ Heads of HR at top firms</b> across finance, consulting, tech, and policy. They tell us which roles are growing, which are shrinking, and where the AI-resistant edges live. We turn that intel — plus your archetype — into a plan for jobs that <em>still have edge five years out</em>.
         </p>
         <ul class="cta-bullets">
-          <li data-i18n="cta.bullet1">We help you discover your true career calling</li>
-          <li data-i18n="cta.bullet2">We watch the market for you 24/7 — and act the second the right role opens</li>
-          <li data-i18n="cta.bullet3">We build your professional network effortlessly</li>
-          <li data-i18n="cta.bullet4">We offer you a career partner for life, not just for your first job</li>
+          <li data-i18n-html="cta.bullet1"><b>True calling</b> — Find the real direction, matched to your archetype</li>
+          <li data-i18n-html="cta.bullet2"><b>Market radar</b> — Watching 24/7; we act the second the right role opens</li>
+          <li data-i18n-html="cta.bullet3"><b>Network, effortlessly</b> — We build your professional network for you</li>
         </ul>
         <div class="cta-buttons">
-          <button class="btn btn-brat btn-lg" data-i18n="cta.startBtn">Start with Vinsoo →</button>
-          <button class="btn btn-outline-dark btn-lg" data-i18n="cta.learnBtn">Learn more</button>
+          <a class="btn btn-brat btn-lg" href="https://www.vinsoo.com/" target="_blank" rel="noopener noreferrer" data-i18n="cta.startBtn">Start with Vinsoo →</a>
+          <!-- <button class="btn btn-outline-dark btn-lg" data-i18n="cta.learnBtn">Learn more</button> -->
         </div>
         <div class="cta-note" data-i18n="cta.note">They use AI to reject you. We use AI to get you hired — for the long game.</div>
       </div>
@@ -3789,25 +3954,24 @@ html, body {
         </div>
       </div>
 
-      <!-- Vinsoo CTA -->
+      <!-- Vinsoo CTA — kept identical to Tier 1 version -->
       <div class="cta-section">
         <div class="cta-eyebrow" data-i18n="cta1.eyebrow">The real question isn't getting hired · It's staying hired</div>
         <h3 class="cta-title" data-i18n-html="cta1.title">Now let <img class="cta-title-logo" src="img/logo2.png" alt="Vinsoo"> find your <em>AI-proof edge</em>.</h3>
-        <p class="cta-body" data-i18n-html="cta2.body1">
-          The job market changed under your feet. Entry-level white-collar roles you trained for are quietly being absorbed by AI. We work with <b>500+ Heads of HR at top firms</b> — they tell us which roles still compound, which AI can't replace, and where the edges live. <em>That's the intel that goes into your strategy.</em>
+        <p class="cta-body" data-i18n-html="cta1.body1">
+          <b>Vinsoo is a career partner built for the AI era</b> — we land you in work that still compounds five years out. The entry-level white-collar jobs you trained for are being quietly absorbed by AI.
         </p>
-        <p class="cta-body" id="cta-personalized" style="margin-top:16px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.12);">
-          You're a Strategic Lounger who wants Investment Banking. We know which IB groups hire your archetype and which spit them out. We'd target the right ones, line up Big Tech PM offers as parallel options, and let you choose from strength. <b>No payment until you land the offer.</b>
+        <p class="cta-body" style="margin-top:16px;" data-i18n-html="cta1.body2">
+          We work directly with <b>500+ Heads of HR at top firms</b> across finance, consulting, tech, and policy. They tell us which roles still have edge — and which AI can't replace. We turn that intel, plus your archetype, into your strategy.
         </p>
         <ul class="cta-bullets">
-          <li data-i18n="cta.bullet1">We help you discover your true career calling</li>
-          <li data-i18n="cta.bullet2">We watch the market for you 24/7 — and act the second the right role opens</li>
-          <li data-i18n="cta.bullet3">We build your professional network effortlessly</li>
-          <li data-i18n="cta.bullet4">We offer you a career partner for life, not just for your first job</li>
+          <li data-i18n-html="cta.bullet1"><b>True calling</b> — Find the real direction, matched to your archetype</li>
+          <li data-i18n-html="cta.bullet2"><b>Market radar</b> — Watching 24/7; we act the second the right role opens</li>
+          <li data-i18n-html="cta.bullet3"><b>Network, effortlessly</b> — We build your professional network for you</li>
         </ul>
         <div class="cta-buttons">
-          <button class="btn btn-brat btn-lg" data-i18n="cta.startBtn">Start with Vinsoo →</button>
-          <button class="btn btn-outline-dark btn-lg" data-i18n="cta.learnBtn">Learn more</button>
+          <a class="btn btn-brat btn-lg" href="https://www.vinsoo.com/" target="_blank" rel="noopener noreferrer" data-i18n="cta.startBtn">Start with Vinsoo →</a>
+          <!-- <button class="btn btn-outline-dark btn-lg" data-i18n="cta.learnBtn">Learn more</button> -->
         </div>
         <div class="cta-note" data-i18n="cta.note">They use AI to reject you. We use AI to get you hired — for the long game.</div>
       </div>
@@ -3867,7 +4031,7 @@ const UI_TEXT = {
   // ----- LANDING -----
   'landing.memoLeft': { en: '<b>MEMO</b> · Career Strategy <span class="redact">•••••••••</span>', zh: '<b>备忘录</b> · 职业战略 <span class="redact">•••••••••</span>' },
   'landing.memoRight': { en: 'FY26 · CIRCULATION RESTRICTED', zh: 'FY26 · 限内部传阅' },
-  'landing.h1': { en: 'How <span class="delulu">delulu</span> is your<br>career plan, <span class="really">really</span>?', zh: '你的职业规划，<br><span class="delulu">到底</span>有多<span class="really">画饼</span>？' },
+  'landing.h1': { en: 'How <span class="delulu">delulu</span> is your<br>career plan, <span class="really">really</span>?', zh: '你给自己<br>画的<span class="delulu">饼</span>，<br>到底有多<span style="white-space:nowrap"><span class="delulu">大</span></span>？' },
   'landing.heroEyebrow': { en: 'A Vinsoo Original · 5 min · No signup', zh: 'Vinsoo 出品 · 5分钟 · 无需注册' },
   'landing.subList1': { en: '😎 Your peers act like they have it figured out.', zh: '😎 同龄人个个都装得像自己想清楚了。' },
   'landing.subList2': { en: '🤖 AI is quietly absorbing the entry-level jobs you trained for.', zh: '🤖 AI 正在悄悄吃掉你专业对口的入门岗位。' },
@@ -3875,7 +4039,7 @@ const UI_TEXT = {
   'landing.subList4': { en: "⏳ You're supposed to know what to do with your life — by next semester.", zh: '⏳ 你得在下个学期开始前——想清楚这辈子干啥。' },
   'landing.heroSub': { en: '<b>The question isn\'t just "what job do I want?" It\'s "what work makes me irreplaceable?"</b> <span class="brand-jbti">JBTI</span> finds the gap between what you want and where you\'d actually thrive. Then <span class="brand-vinsoo">Vinsoo</span> positions you for the roles that still have edge.', zh: '<b>真正的问题不是"我想做什么工作？"，而是"什么样的工作能让我无可替代？"</b> <span class="brand-jbti">JBTI</span> 找出你的梦想和你真正能发光的地方之间的差距。然后 <span class="brand-vinsoo">Vinsoo</span> 把你送进那些还有上升空间的岗位。' },
   'landing.startBtn': { en: 'Start the test →', zh: '开始测试 →' },
-  'landing.howBtn': { en: 'but how is this not a Buzzfeed quiz ?? ↓', zh: '所以这跟网上那些娱乐测试有啥区别？？ ↓' },
+  'landing.howBtn': { en: 'but how is this not a Buzzfeed quiz ?? ↓', zh: '所以这跟网上那些娱乐测试有啥区别??? ↓' },
   'landing.stat1': { en: 'find out their<br>career is delulu 💀', zh: '发现自己的<br>职业规划在画饼 💀' },
   'landing.stat2': { en: 'career archetypes<br>(not zodiac 🔮)', zh: '职业人设<br>（不是星座 🔮）' },
   'landing.stat3': { en: 'no signup<br>honest results ✅', zh: '不用注册<br>结果保真 ✅' },
@@ -3889,11 +4053,18 @@ const UI_TEXT = {
   'landing.illus.flavor1': { en: 'Wildly Delulu 💀', zh: '疯狂画饼中 💀' },
   'landing.illus.flavor2': { en: 'Mildly Delulu 🥲', zh: '轻度画饼 🥲' },
 
+  // ----- 16 ARCHETYPES TEASER -----
+  'arch.eyebrow': { en: '§2.1 · The Lineup', zh: '§2.1 · 16种人设' },
+  'arch.title': { en: '16 archetypes. <em>Which one are you?</em>', zh: '16种职业人设。<em>你是哪一种？</em>' },
+  'arch.intro': { en: 'Sixteen ways to be wrong about your career. Pick one and see. <b>Take the test to find out which one is you.</b> (The names are funnier than you think.)', zh: '16种自欺欺人的方式，<b>直接测，看看哪个是你。</b>（结果通常比较扎心。）' },
+  'arch.ctaLine': { en: '<span class="arrow">↳</span> guess wrong and take the test anyway', zh: '<span class="arrow">↳</span> 猜不出来也没关系，测了就知道' },
+  'arch.ctaBtn': { en: 'Take the Test →', zh: '开始测试 →' },
+
   // ----- HOW IT WORKS -----
   'how.eyebrow': { en: 'What this test is actually measuring', zh: '这个测试到底在测什么' },
   'how.title': { en: 'JBTI is built on <em>four established frameworks</em> in career psychology.', zh: 'JBTI 建立在职业心理学的<em>四个成熟框架</em>之上。' },
-  'how.intro': { en: "This isn't a Buzzfeed quiz with a piña colada at the end. (Okay, there's a piña colada at the end.) The 4-axis structure synthesizes work from four research traditions — and the Delulu Score is a measurable gap, not a vibe.", zh: '这不是网上那种结尾给你一杯椰林飘香的娱乐测试。（好吧，最后确实有一杯。）4 个维度的结构综合了四个研究传统的成果——画饼指数是可量化的差距，不是凭感觉。' },
-  'how.compliance': { en: 'Methodologically reviewed by 500+ Heads of HR · §4.7(a) · No piña coladas were harmed', zh: '由 500+ HR 总监审阅 · §4.7(a) · 测试过程中无椰林飘香受到伤害' },
+  'how.intro': { en: "This isn't a Buzzfeed quiz with a piña colada at the end. (Okay, there's a piña colada at the end.) The 4-axis structure synthesizes work from four research traditions — and the Delulu Score is a measurable gap, not a vibe.", zh: '这不是网上那种结尾给你一杯piña colada的娱乐测试。（好吧，最后确实有一杯。）4 个维度的结构综合了四个研究传统的成果——画饼指数是可量化的差距，不是凭感觉。' },
+  'how.compliance': { en: 'Methodologically reviewed by 500+ Heads of HR · §4.7(a) · No piña coladas were harmed', zh: '由 500+ HR 总监审阅 · §4.7(a) · 测试过程中无piña colada受到伤害' },
   'how.card1.title': { en: 'Myers-Briggs 16-type model', zh: 'MBTI 16型人格模型' },
   'how.card1.body': { en: 'The same 4-axis binary structure that gave you INTJ or ENFP — adapted with four career-relevant axes: <b>Grinder/Lounger, Money/Purpose, Social/Solo, Insider/Outsider</b>. 16 archetypes, mapped to real career trajectories.', zh: '就是当年给你测出 INTJ、ENFP 的那个 4 维二元结构——重新搭成了 4 个跟职业更相关的维度：<b>卷王/躺平、搞钱/搞事业、社交咖/独行侠、体制内/体制外</b>。16 种人设，对应真实的职业轨迹。' },
   'how.card2.title': { en: "Hofstede's Cultural Dimensions", zh: '霍夫斯泰德文化维度' },
@@ -3916,17 +4087,17 @@ const UI_TEXT = {
   'dream.eyebrow': { en: 'no lying ✌', zh: '不许说谎 ✌' },
   'dream.title': { en: "What's your dream job?", zh: '你的梦中情司是什么？' },
   'dream.subhead': { en: "Most people lie here — they put the job their parents would want, or the one their friends are applying to. <b>You don't have to.</b> Be specific. We won't judge. The whole test only works if this part is honest.", zh: '大部分人在这一题会说谎——写一个爸妈想要的、或者朋友都在投的。<b>你不用。</b>写具体一点，我们不评判。这一题诚实，整个测试才有用。' },
-  'dream.placeholder': { en: "Type it. We won't tell. 🤫", zh: '直接打出来，我们不告诉别人。🤫' },
+  'dream.placeholder': { en: "Type it. We won't tell. 🤫", zh: '直接打出来，具体点，我们不会告诉你妈🤫' },
   'dream.orPick': { en: 'or pick one 👇', zh: '或者选一个 👇' },
   'dream.chip.google': { en: '💻 Software Engineer, Google', zh: '💻 字节/腾讯/阿里大厂程序员' },
-  'dream.chip.mck': { en: '📊 Strategy Consultant, McKinsey', zh: '📊 麦肯锡/BCG战略咨询' },
+  'dream.chip.mck': { en: '📊 Strategy Consultant, McKinsey', zh: '📊 麦肯锡/BCG战略咨询顾问' },
   'dream.chip.jane': { en: '📈 Quant Trader, Jane Street', zh: '📈 量化基金研究员' },
   'dream.chip.gs': { en: '💼 Investment Banking Analyst, Goldman Sachs', zh: '💼 中金/高盛投行分析师' },
   'dream.chip.atlantic': { en: '✍️ Writer, The Atlantic', zh: '✍️ 小红书博主/自媒体' },
-  'dream.chip.vc': { en: '💸 VC Associate, Sequoia', zh: '💸 红杉/高瓴 VC投资' },
+  'dream.chip.vc': { en: '💸 VC Associate, Sequoia', zh: '💸 红杉/高瓴 VC投资经理' },
   'dream.chip.pm': { en: '📱 Product Manager, Anthropic', zh: '📱 大厂产品经理' },
   'dream.chip.founder': { en: '🚀 Founder, my own startup', zh: '🚀 自己创业当老板' },
-  'dream.chip.idk': { en: 'Honestly?? Do I look like I know. 🤷', zh: '说实话？？我哪知道。🤷' },
+  'dream.chip.idk': { en: 'Honestly?? Do I look like I know. 🤷', zh: '说实在的…我哪知道🤷' },
 
   // ----- QUESTION SCREEN -----
   'q.progLeft': { en: 'JBTI · <span class="count" id="q-count">02</span> / 11', zh: 'JBTI · <span class="count" id="q-count">02</span> / 11' },
@@ -4025,13 +4196,12 @@ const UI_TEXT = {
   // ----- CTA -----
   'cta1.eyebrow': { en: "The real question isn't getting hired · It's staying hired", zh: '真正的问题不是被录用 · 而是能不能一直被需要' },
   'cta1.title': { en: 'Now let <img class="cta-title-logo" src="img/logo2.png" alt="Vinsoo"> find your <em>AI-proof edge</em>.', zh: '现在让 <img class="cta-title-logo" src="img/logo2.png" alt="Vinsoo"> 帮你找到 <em>AI 替代不了</em> 的优势。' },
-  'cta1.body1': { en: "<b>Vinsoo is a career partner built for the AI era</b> — we help you find, land, and grow into work that still compounds five years out. The entry-level white-collar jobs you trained for are being quietly absorbed by AI. The students who'll still have careers in 2030 aren't the ones with the best resumes — they're the ones positioned in <b>roles that compound</b>, in fields AI can't fully replace.", zh: '<b>Vinsoo 是为 AI 时代打造的职业合伙人</b>——我们帮你找到、拿到、并成长进那些 5 年后还能复利的工作。你专业对口的入门白领岗位正在被 AI 悄悄吃掉。2030 年还在职业生涯里的那批毕业生，靠的不是简历漂亮——而是早早卡进了 <b>能复利的岗位</b>，在 AI 没法完全替代的领域。' },
-  'cta1.body2': { en: "We work directly with <b>500+ Heads of HR at top firms</b> across finance, consulting, tech, and policy. They tell us which roles are growing, which are shrinking, and where the AI-resistant edges live. We turn that intel — plus your archetype — into a plan for jobs that <em>still have edge five years out</em>.", zh: '我们直接对接<b>金融、咨询、科技、政策领域 500+ 顶级公司的 HR 总监</b>。他们告诉我们哪些岗位在涨、哪些在缩、AI 替代不了的优势点在哪。我们把这些情报——加上你的人设——变成一份 <em>5 年后还有优势</em> 的职业规划。' },
+  'cta1.body1': { en: "<b>Vinsoo is a career partner built for the AI era</b> — we land you in work that still compounds five years out. The entry-level white-collar jobs you trained for are being quietly absorbed by AI.", zh: '<b>Vinsoo 是为 AI 时代打造的职业合伙人</b>——我们把你送进 5 年后还能复利的工作。你专业对口的入门白领岗位正在被 AI 悄悄吃掉。' },
+  'cta1.body2': { en: "We work directly with <b>500+ Heads of HR at top firms</b> across finance, consulting, tech, and policy. They tell us which roles still have edge — and which AI can't replace. We turn that intel, plus your archetype, into your strategy.", zh: '我们直接对接<b>金融、咨询、科技、政策领域 500+ 顶级公司的 HR 总监</b>——他们告诉我们哪些岗位还有上升空间、AI 替代不了。我们把这些情报加上你的人设，写进你的职业策略。' },
   'cta2.body1': { en: "The job market changed under your feet. Entry-level white-collar roles you trained for are quietly being absorbed by AI. We work with <b>500+ Heads of HR at top firms</b> — they tell us which roles still compound, which AI can't replace, and where the edges live. <em>That's the intel that goes into your strategy.</em>", zh: '就业市场在你脚下悄悄变了。你专业对口的入门白领岗位正在被 AI 慢慢吞掉。我们对接<b> 500+ 顶级公司 HR 总监</b>——他们告诉我们哪些岗位还能复利、AI 替代不了哪些、优势点在哪。<em>这些情报会进入你的策略里。</em>' },
-  'cta.bullet1': { en: 'We help you discover your true career calling', zh: '我们帮你找到真正的职业方向' },
-  'cta.bullet2': { en: 'We watch the market for you 24/7 — and act the second the right role opens', zh: '我们 24/7 帮你盯着市场——对的岗位一开放就出手' },
-  'cta.bullet3': { en: 'We build your professional network effortlessly', zh: '我们帮你轻松积累职业人脉' },
-  'cta.bullet4': { en: 'We offer you a career partner for life, not just for your first job', zh: '我们做你一辈子的职业合伙人，不只是你第一份工作' },
+  'cta.bullet1': { en: '<b>True calling</b> — Find the real direction, matched to your archetype', zh: '<b>找方向</b>：根据你的人设锁定真正对口的岗位' },
+  'cta.bullet2': { en: '<b>Market radar</b> — Watching 24/7; we act the second the right role opens', zh: '<b>市场雷达</b>：24/7 帮你盯着，对的岗位一开放就出手' },
+  'cta.bullet3': { en: '<b>Network, effortlessly</b> — We build your professional network for you', zh: '<b>人脉外包</b>：让你不用社牛也能建起职业网络' },
   'cta.startBtn': { en: 'Start with Vinsoo →', zh: '开始用 Vinsoo →' },
   'cta.learnBtn': { en: 'Learn more', zh: '了解更多' },
   'cta.note': { en: 'They use AI to reject you. We use AI to get you hired — for the long game.', zh: '别人用 AI 拒绝你，我们用 AI 帮你被录取——而且是长期的。' },
@@ -4039,7 +4209,7 @@ const UI_TEXT = {
   // ----- LEGAL -----
   'legal.p1': { en: '<span class="form-id">FORM&nbsp;JBTI-1</span> <b>Notice to Subject:</b> The Career Delulu Test® and Job-Based Type Indicator™ are products of <b>Vinsoo, Inc.</b>, an unregulated private actor. Results are advisory and not actionable in any court of law, regulatory body, group chat, family dinner, or appellate-level Thanksgiving. Vinsoo makes no warranty, express or implied, as to the suitability of any career path described herein for the subject\'s actual life, parents, or vibe.', zh: '<span class="form-id">表格&nbsp;JBTI-1</span> <b>致被测者：</b>职业画饼指数测试® 和 JBTI™ 是 <b>Vinsoo, Inc.</b> 的产品，本机构未经任何监管。结果仅供参考，在任何法庭、监管机构、群聊、家宴或上诉级别的春节饭局上均不具备法律效力。Vinsoo 不对本测试描述的任何职业路径与被测者真实人生、家长或 vibe 的契合度作出任何明示或暗示的保证。' },
   'legal.p2': { en: '<b>§ 2.7(b) — Side Effects.</b> May include: existential clarity, sudden hostility toward LinkedIn, a renewed interest in trade school, the unshakeable urge to text your therapist, a 4 a.m. epiphany re: investment banking, and/or the unprompted reorganization of your apartment. Discontinue use of test if symptoms persist beyond 14 business days.', zh: '<b>§ 2.7(b) — 副作用。</b>可能包括：存在主义清醒、对脉脉的突然敌意、对技校的重新兴趣、想给心理咨询师发消息的冲动、凌晨 4 点对投行的顿悟、和/或临时起意收拾自己出租屋。如症状持续超过 14 个工作日，请停止使用本测试。' },
-  'legal.p3': { en: '<b>§ 4.1 — Disclosure.</b> No piña coladas were consumed in the production of this assessment. JBTI is not affiliated with Myers-Briggs Type Indicator®, the Hofstede Centre, the GLOBE Project, your therapist, or anyone with formal psychometric credentials, although it borrows freely. Subject acknowledges that "delulu" is a registered colloquialism and not a clinical diagnosis.', zh: '<b>§ 4.1 — 披露。</b>本测试制作过程中无椰林飘香被消费。JBTI 与 MBTI®、霍夫斯泰德研究中心、GLOBE 项目、你的心理咨询师，或任何具备正规心理测量资质的人士均无关联，尽管我们大胆借鉴。被测者承认"画饼"是一个网络用语，不是临床诊断。' },
+  'legal.p3': { en: '<b>§ 4.1 — Disclosure.</b> No piña coladas were consumed in the production of this assessment. JBTI is not affiliated with Myers-Briggs Type Indicator®, the Hofstede Centre, the GLOBE Project, your therapist, or anyone with formal psychometric credentials, although it borrows freely. Subject acknowledges that "delulu" is a registered colloquialism and not a clinical diagnosis.', zh: '<b>§ 4.1 — 披露。</b>本测试制作过程中无piña colada被消费。JBTI 与 MBTI®、霍夫斯泰德研究中心、GLOBE 项目、你的心理咨询师，或任何具备正规心理测量资质的人士均无关联，尽管我们大胆借鉴。被测者承认"画饼"是一个网络用语，不是临床诊断。' },
   'legal.p4': { en: '© 2026 Vinsoo, Inc. Property of subject. Do not forward. <b>This document self-destructs in your imagination only.</b>', zh: '© 2026 Vinsoo, Inc. 属被测者所有。请勿转发。<b>本文件仅在你的想象里自毁。</b>' },
 
   // ----- RESTART -----
@@ -4107,102 +4277,102 @@ function setLanguage(lang) {
 const TIER1 = [
   {
     id: 'q2',
-    eyebrow: { en: 'Sunday Night Check 😩', zh: '周日夜审 😩' },
-    text: { en: "It's Sunday at 11pm. You have a Monday morning thing.", zh: '周日深夜11点。突然想起明早还有事。' },
+    eyebrow: { en: 'Sunday Night Check 😩', zh: '周日噩耗 😩' },
+    text: { en: "It's Sunday at 11pm. You have a Monday morning thing.", zh: '现在是周日深夜11点，你突然想起明天上午有个东西要交。' },
     options: [
       { letter: 'A', text: { en: "Already done. Were you raised in a barn?", zh: '早就搞完了，这还用问？' }, axes: { G: 2 } },
-      { letter: 'B', text: { en: "Doing it now. Headphones in.", zh: '正在搞。耳机里放着歌。' }, axes: { L: 1 } },
-      { letter: 'C', text: { en: "Vaguely aware. Will do it tomorrow at 7am.", zh: '记着呢。明早7点准时开冲。' }, axes: { L: 2, O: 1 } }
+      { letter: 'B', text: { en: "Doing it now. Headphones in.", zh: '正在搞。手边一袋薯片，耳机里放着歌。' }, axes: { L: 1 } },
+      { letter: 'C', text: { en: "Vaguely aware. Will do it tomorrow at 7am.", zh: '记着呢，明天早上七点再说。' }, axes: { L: 2, O: 1 } }
     ]
   },
   {
     id: 'q3',
-    eyebrow: { en: 'Swipe Audit 👀', zh: '相亲审视 👀' },
+    eyebrow: { en: 'Swipe Audit 👀', zh: '相亲局 👀' },
     text: { en: "Your friend asks why you swiped right.", zh: '朋友问你为啥愿意见这个相亲对象。' },
     options: [
       { letter: 'A', text: { en: "Hot. 🥵", zh: '好看。🥵' }, axes: {} },
-      { letter: 'B', text: { en: "Interesting bio. I love a yapper.", zh: '聊得来。我就喜欢话痨型的。' }, axes: { P: 2 } },
+      { letter: 'B', text: { en: "Interesting bio. I love a yapper.", zh: '聊得来，我就喜欢话痨型的。' }, axes: { P: 2 } },
       { letter: 'C', text: { en: "Bio said McKinsey. 💼", zh: '体制内 / 海归 / 家里有矿。💼' }, axes: { M: 3 } }
     ]
   },
   {
     id: 'q4',
-    eyebrow: { en: 'Birthday Energy 🎂', zh: '生日局能量 🎂' },
-    text: { en: "Your friend is throwing a birthday party. 20 people. You don't know any of them.", zh: '朋友办生日局。20个人。一个都不认识。' },
+    eyebrow: { en: 'Birthday Energy 🎂', zh: '生日局 🎂' },
+    text: { en: "Your friend is throwing a birthday party. 20 people. You don't know any of them.", zh: '你受邀来到朋友生日局。现场有二十多个人，一大半你都不认识。' },
     options: [
-      { letter: 'A', text: { en: "Yes please. 20 new friends unlocked.", zh: '冲。20个新朋友这就解锁。' }, axes: { S: 2 } },
-      { letter: 'B', text: { en: "Find the birthday person, find one chill person, stick with them.", zh: '找寿星打个招呼，再找一个聊得来的，就蹲那儿。' }, axes: { T: 1 } },
-      { letter: 'C', text: { en: "Two drinks, polite goodbye, back at home by 11.", zh: '喝两杯，礼貌告辞。11点已经躺床上了。' }, axes: { T: 2, L: 1 } }
+      { letter: 'A', text: { en: "Yes please. 20 new friends unlocked.", zh: '加微信加到手抽筋，social王上线！' }, axes: { S: 2 } },
+      { letter: 'B', text: { en: "Find the birthday person, find one chill person, stick with them.", zh: '找寿星打个招呼，再找一个聊得来的，就蹲那儿了。' }, axes: { T: 1 } },
+      { letter: 'C', text: { en: "Two drinks, polite goodbye, back at home by 11.", zh: '喝两杯，礼貌告辞，11点已经躺床上了。' }, axes: { T: 2, L: 1 } }
     ]
   },
   {
     id: 'q5',
     eyebrow: { en: 'Career Fair Day 🪪', zh: '校招宣讲会 🪪' },
-    text: { en: "You're at your school's career fair. Your dream company has a 40-person line.", zh: '校招宣讲会。梦中情司展位前排了40个人。' },
+    text: { en: "You're at your school's career fair. Your dream company has a 40-person line.", zh: '校招宣讲会上，你的梦中情司展位前排了40个人。' },
     options: [
-      { letter: 'A', text: { en: "Get in line. Elevator pitch ready. This is how things work.", zh: '排呗。自我介绍早背得滚瓜烂熟。规则就是规则。' }, axes: { I: 2, G: 1 } },
-      { letter: 'B', text: { en: "Skip the line. Find the recruiter at the coffee machine.", zh: '不排。咖啡机旁边堵HR聊。' }, axes: { O: 3 } },
-      { letter: 'C', text: { en: "Leave. You'll apply online like everyone else.", zh: '走人。网申跟大家一样就完事。' }, axes: { I: 1, L: 1 } }
+      { letter: 'A', text: { en: "Get in line. Elevator pitch ready. This is how things work.", zh: '排就排呗。自我介绍早背得滚瓜烂熟了，当面留下深刻印象才是正道。' }, axes: { I: 2, G: 1 } },
+      { letter: 'B', text: { en: "Skip the line. Find the recruiter at the coffee machine.", zh: '当然不排。咖啡机旁边再堵HR聊。' }, axes: { O: 3 } },
+      { letter: 'C', text: { en: "Leave. You'll apply online like everyone else.", zh: '直接走人。跟大家一样网上申请就完事。' }, axes: { I: 1, L: 1 } }
     ]
   },
   {
     id: 'q6',
     eyebrow: { en: 'Zoom Disaster 📹', zh: '腾讯会议翻车 📹' },
-    text: { en: "Your camera is off because you haven't showered. Your interviewer asks you to turn it on.", zh: '今天没洗头没开摄像头。面试官让你开。' },
+    text: { en: "Your camera is off because you haven't showered. Your interviewer asks you to turn it on.", zh: '网络面试，没洗头所以没开摄像头，但面试官突然让你开。' },
     options: [
-      { letter: 'A', text: { en: "Turn it on. Don't really care how I look. They'll hire me anyway.", zh: '开就开。真牛的人不在乎这种细节。反正我能拿offer。' }, axes: { G: 1, O: 2 } },
-      { letter: 'B', text: { en: "'Sorry, my camera isn't working.' and never turn it on. 🤥", zh: '「不好意思，我摄像头坏了。」装死到底。🤥' }, axes: { L: 1, I: 1 } },
-      { letter: 'C', text: { en: "Turn it on fast. Quick hair fix, big smile, sell it.", zh: '秒开摄像头。撩头发、大笑、直接拿捏。' }, axes: { G: 2, S: 1 } }
+      { letter: 'A', text: { en: "Turn it on. Don't really care how I look. They'll hire me anyway.", zh: '开就开，真牛的人不在乎这种细节。' }, axes: { G: 1, O: 2 } },
+      { letter: 'B', text: { en: "'Sorry, my camera isn't working.' and never turn it on. 🤥", zh: '「我网络好像有点问题」然后装死到底。🤥' }, axes: { L: 1, I: 1 } },
+      { letter: 'C', text: { en: "Turn it on fast. Quick hair fix, big smile, sell it.", zh: '秒开摄像头，撩头发，微笑，直接拿捏。' }, axes: { G: 2, S: 1 } }
     ]
   },
   {
     id: 'q7',
-    eyebrow: { en: 'Forced Choice 🫠', zh: '暑期实习三选一 🫠' },
-    text: { en: "You get to intern at one of these. Pick fast:", zh: '三个实习挑一个。快选：' },
+    eyebrow: { en: 'Forced Choice 🫠', zh: '实习三选一 🫠' },
+    text: { en: "You get to intern at one of these. Pick fast:", zh: '三个offer挑一个。快速选择：' },
     options: [
-      { letter: 'A', text: { en: "Goldman summer analyst. $25k for 10 weeks. You'll cry but you'll be rich. 😭", zh: '中金投行实习。月薪过万，10周哭到脱水，但最后能搞到钱。😭' }, axes: { M: 3, G: 1 } },
-      { letter: 'B', text: { en: "Nonprofit climate stuff. $4k for the summer. Your parents will ask why. 🌱", zh: '公益机构。整个暑假4千块，爸妈会问你是不是脑子进水了。🌱' }, axes: { P: 3 } },
-      { letter: 'C', text: { en: "Your own thing. $0 for the summer. Maybe everything, maybe nothing. 🎲", zh: '自己搞个项目。整个暑假0收入。可能改变世界，也可能什么都不是。🎲' }, axes: { P: 2, O: 2 } }
+      { letter: 'A', text: { en: "Goldman summer analyst. $25k for 10 weeks. You'll cry but you'll be rich. 😭", zh: '中金投行实习。月薪过万，10周累到脱水，但简历金光闪闪。😭' }, axes: { M: 3, G: 1 } },
+      { letter: 'B', text: { en: "Nonprofit climate stuff. $4k for the summer. Your parents will ask why. 🌱", zh: '小众公益机构。月薪两千，爸妈会问你是不是脑子进水了。🌱' }, axes: { P: 3 } },
+      { letter: 'C', text: { en: "Your own thing. $0 for the summer. Maybe everything, maybe nothing. 🎲", zh: '自己搞个项目。月薪为0，可能啥都不是，也可能改变世界。🎲' }, axes: { P: 2, O: 2 } }
     ]
   },
   {
     id: 'q8',
     eyebrow: { en: 'Office Hours Strategy 🤓', zh: '教授办公室 🤓' },
-    text: { en: "Your professor is famous and knows a lot of important people.", zh: '这门课的教授特别有名，人脉极广。' },
+    text: { en: "Your professor is famous and knows a lot of important people.", zh: '你有一门课的教授人脉极广。' },
     options: [
-      { letter: 'A', text: { en: "Show up weekly with smart questions. Become THE person they recommend.", zh: '每周必去，问题问得有水平。混成他会亲自推荐的那种学生。' }, axes: { S: 2, I: 2, G: 1 } },
-      { letter: 'B', text: { en: "Email once with a thoughtful question. Get the rec that way.", zh: '发一封走心的邮件。把推荐信搞到手就完事。' }, axes: { T: 1, I: 1 } },
-      { letter: 'C', text: { en: "Never go. Hope your grade is enough.", zh: '从来没去过。GPA够就行了。' }, axes: { T: 1, L: 2 } }
+      { letter: 'A', text: { en: "Show up weekly with smart questions. Become THE person they recommend.", zh: '每周必去办公室，带着不重样的有水平的问题，混成他会亲自推荐的那种学生。' }, axes: { S: 2, I: 2, G: 1 } },
+      { letter: 'B', text: { en: "Email once with a thoughtful question. Get the rec that way.", zh: '发一封走心的邮件，把推荐信搞到手就完事。' }, axes: { T: 1, I: 1 } },
+      { letter: 'C', text: { en: "Never go. Hope your grade is enough.", zh: '从来不跟教授讲话，我GPA够就行了。' }, axes: { T: 1, L: 2 } }
     ]
   },
   {
     id: 'q9',
     eyebrow: { en: 'Spicy Hypothetical 🌶️', zh: '简历美化 🌶️' },
-    text: { en: "A friend got their dream job by exaggerating significantly on their resume.", zh: '朋友简历严重注水，拿到了梦中情司offer。' },
+    text: { en: "A friend got their dream job by exaggerating significantly on their resume.", zh: '朋友简历严重注水，结果拿到了梦中情司offer。' },
     options: [
-      { letter: 'A', text: { en: "'Are you insane?! They'll find out and you'll be ruined!'", zh: '「你疯了吧？早晚露馅，这辈子就完了！」' }, axes: { I: 3 } },
-      { letter: 'B', text: { en: "'Honestly... iconic. Don't get caught.' 💅", zh: '「说实话挺牛的。别被抓到就行。」💅' }, axes: { O: 2 } },
-      { letter: 'C', text: { en: "'Wait, what did you put. Specifically. Asking for me.'", zh: '「等下，具体怎么写的？详细说说，我替朋友问的。」' }, axes: { O: 3, G: 1 } }
+      { letter: 'A', text: { en: "'Are you insane?! They'll find out and you'll be ruined!'", zh: '「你疯了吧？早晚露馅，这辈子就完了。」' }, axes: { I: 3 } },
+      { letter: 'B', text: { en: "'Honestly... iconic. Don't get caught.' 💅", zh: '「说实话…挺牛的，别被抓到就行。」💅' }, axes: { O: 2 } },
+      { letter: 'C', text: { en: "'Wait, what did you put. Specifically. Asking for me.'", zh: '「等等，你具体怎么写的？详细说说，我替我一个朋友问的。」' }, axes: { O: 3, G: 1 } }
     ]
   },
   {
     id: 'q10',
     eyebrow: { en: 'The Vision 🔮', zh: '35岁愿景 🔮' },
-    text: { en: "You're 35. Which is most you?", zh: '35岁的你。哪个最像？' },
+    text: { en: "You're 35. Which is most you?", zh: '哪个最像35岁的你？' },
     options: [
-      { letter: 'A', text: { en: "Big firm, big paycheck, two kids, mildly bored, golfs on weekends. 🏌️", zh: '大厂高管，月入5万，两个娃，有点无聊，周末打高尔夫。🏌️' }, axes: { M: 2, G: 1, I: 1 } },
-      { letter: 'B', text: { en: "Doing the thing you love. Salary's fine. Your parents are confused.", zh: '做着自己喜欢的事。工资够花，爸妈不太懂。' }, axes: { P: 2, O: 1 } },
-      { letter: 'C', text: { en: "Famous in a small world. One whole industry knows your name.", zh: '圈内有名气。一个行业的人都认识你。' }, axes: { P: 1, S: 1 } }
+      { letter: 'A', text: { en: "Big firm, big paycheck, two kids, mildly bored, golfs on weekends. 🏌️", zh: '大厂高管，月入5万，一猫俩娃，周末打打高尔夫。🏌️' }, axes: { M: 2, G: 1, I: 1 } },
+      { letter: 'B', text: { en: "Doing the thing you love. Salary's fine. Your parents are confused.", zh: '做着自己热爱的事，工资够花，就是爸妈不太理解。' }, axes: { P: 2, O: 1 } },
+      { letter: 'C', text: { en: "Famous in a small world. One whole industry knows your name.", zh: '在一个小圈子内很有名气，一整个行业的人都认识你。' }, axes: { P: 1, S: 1 } }
     ]
   },
   {
     id: 'q11',
-    eyebrow: { en: 'Mom Defensive 🙄', zh: '你妈破防瞬间 🙄' },
+    eyebrow: { en: 'Mom Defensive 🙄', zh: '破防瞬间 🙄' },
     text: { en: "Which makes you most defensive when your mom says it?", zh: '你妈说哪句话你最破防？' },
     options: [
       { letter: 'A', text: { en: "'Have you considered law school?' 🎓", zh: '「要不你考个公算了？」🎓' }, axes: { I: 2, O: -1 } },
       { letter: 'B', text: { en: "'When are you going to get a real job?' 😤", zh: '「啥时候找个稳定工作啊？」😤' }, axes: { O: 2, I: -1 } },
-      { letter: 'C', text: { en: "'Your sister is doing so well.' 😐", zh: '「你看人家XX，都已经...」😐' }, axes: { M: 1 } }
+      { letter: 'C', text: { en: "'Your sister is doing so well.' 😐", zh: '「你看人家XX，都已经…」😐' }, axes: { M: 1 } }
     ]
   }
 ];
@@ -4214,52 +4384,52 @@ const TIER2 = [
   // GROUP A: Axis Refinement (Q12-Q16)
   {
     id: 'q12',
-    eyebrow: { en: 'The 1am Tell 🌙', zh: '凌晨1点的小细节 🌙' },
-    text: { en: "It's 1am and you realize you used the wrong word in one slide. Nobody will ever notice except you.", zh: '凌晨1点。你发现PPT里有个错别字，除了你不会有人注意到。' },
+    eyebrow: { en: 'The 1am Tell 🌙', zh: '凌晨1点 🌙' },
+    text: { en: "It's 1am and you realize you used the wrong word in one slide. Nobody will ever notice except you.", zh: '凌晨1点。困到不行。你发现PPT里有个错别字，根本没人会注意到。' },
     options: [
-      { letter: 'A', text: { en: "Open it back up and correct it. You'd know.", zh: '打开改掉。自己看到就忍不了。' }, axes: { G: 2 } },
-      { letter: 'B', text: { en: "Note it. Fix it tomorrow if you remember.", zh: '记一笔。明天想起来再改。' }, axes: { L: 1 } },
-      { letter: 'C', text: { en: "The wrong word might actually be funnier. Leaving it. 😈", zh: '这个错字其实更有梗。不改了。😈' }, axes: { L: 2, O: 1 } }
+      { letter: 'A', text: { en: "Open it back up and correct it. You'd know.", zh: '立刻打开改掉，天知我知，我忍不了。' }, axes: { G: 2 } },
+      { letter: 'B', text: { en: "Note it. Fix it tomorrow if you remember.", zh: '记下来，明天起床再改。' }, axes: { L: 1 } },
+      { letter: 'C', text: { en: "The wrong word might actually be funnier. Leaving it. 😈", zh: '这个错字其实更搞笑，不改了。😈' }, axes: { L: 2, O: 1 } }
     ]
   },
   {
     id: 'q13',
     eyebrow: { en: 'Prestige Isolation 🏛️', zh: '名气 vs 性价比 🏛️' },
-    text: { en: "Your dream companyis a famous, fancy place, but there's a less-famous place that does the same work, pays 30% more, with better hours.", zh: '梦中情司名气大。另一家做的事差不多，工资多30%，下班更早，名气小一些。' },
+    text: { en: "Your dream companyis a famous, fancy place, but there's a less-famous place that does the same work, pays 30% more, with better hours.", zh: '你梦中情司名气大。另一家公司做的事差不多，工资多30%，下班更早，只是名气小一些。' },
     options: [
       { letter: 'A', text: { en: "Famous place only. The brand is the point.", zh: '只投名气大的，牌子就是一切。' }, axes: { M: 2, I: 1 } },
-      { letter: 'B', text: { en: "Apply to both. Decide later.", zh: '两家都投。到时候再说。' }, axes: { M: 1 } },
+      { letter: 'B', text: { en: "Apply to both. Decide later.", zh: '两家都投，到时候再说。' }, axes: { M: 1 } },
       { letter: 'C', text: { en: "Less-famous place. Smart money.", zh: '投名气小的，性价比之王。' }, axes: { P: 1, O: 1 } }
     ]
   },
   {
     id: 'q14',
     eyebrow: { en: 'Group Project 👯', zh: '小组作业 👯' },
-    text: { en: "Group project. 4 strangers. Minute 1.", zh: '小组作业。4个陌生人。刚开始的那一分钟。' },
+    text: { en: "Group project. 4 strangers. Minute 1.", zh: '小组作业和4个新同学分到一组，讨论刚刚开始，你会…' },
     options: [
-      { letter: 'A', text: { en: "Take charge. Name the doc. Assign roles. Vibes set. 🫡", zh: '我来当组长。建群、分工、定基调。🫡' }, axes: { S: 2, G: 1 } },
-      { letter: 'B', text: { en: "Quiet observation. Speak up when you know who's competent.", zh: '先观察。看出谁靠谱再开口说话。' }, axes: { T: 2 } },
-      { letter: 'C', text: { en: "Pray someone else takes A.", zh: '求求别人当组长。' }, axes: { L: 1, T: 1 } }
+      { letter: 'A', text: { en: "Take charge. Name the doc. Assign roles. Vibes set. 🫡", zh: '毛遂自荐当组长。建群、分工、秒定基调。🫡' }, axes: { S: 2, G: 1 } },
+      { letter: 'B', text: { en: "Quiet observation. Speak up when you know who's competent.", zh: '先观察，看出谁靠谱再开口说话。' }, axes: { T: 2 } },
+      { letter: 'C', text: { en: "Pray someone else takes A.", zh: '在心里哀求有人选A。' }, axes: { L: 1, T: 1 } }
     ]
   },
   {
     id: 'q15',
     eyebrow: { en: 'Unfair Rule 🤨', zh: '不合理的规则 🤨' },
-    text: { en: "Professor announces a grading policy that's clearly stupid.", zh: '老师宣布了一条明显不合理的评分规则。' },
+    text: { en: "Professor announces a grading policy that's clearly stupid.", zh: '老师宣布了一条明显不合理的课程规则。' },
     options: [
-      { letter: 'A', text: { en: "Talk to them after class. Privately. Calmly.", zh: '下课后私下找老师沟通。冷静、客气。' }, axes: { I: 2 } },
-      { letter: 'B', text: { en: "Bring it up in class. Make it everyone's problem.", zh: '课上当场提。让所有人都讨论一下。' }, axes: { O: 2 } },
-      { letter: 'C', text: { en: "Nothing. You're getting an A anyway.", zh: '无所谓。反正我又不会挂。' }, axes: { L: 2, I: 1 } }
+      { letter: 'A', text: { en: "Talk to them after class. Privately. Calmly.", zh: '下课后私下冷静客气地找老师沟通。' }, axes: { I: 2 } },
+      { letter: 'B', text: { en: "Bring it up in class. Make it everyone's problem.", zh: '课上当场提，让所有人都讨论一下。' }, axes: { O: 2 } },
+      { letter: 'C', text: { en: "Nothing. You're getting an A anyway.", zh: '无所谓，反正我又不会挂科。' }, axes: { L: 2, I: 1 } }
     ]
   },
   {
     id: 'q16',
     eyebrow: { en: 'Unstructured Time 🛌', zh: '完全空闲两周 🛌' },
-    text: { en: "Two weeks. No deadlines. No obligations. What actually happens?", zh: '整整两周。没DDL，没安排。你实际上会做什么？' },
+    text: { en: "Two weeks. No deadlines. No obligations. What actually happens?", zh: '整整两周，没DDL，没安排，你实际上会做什么？' },
     options: [
       { letter: 'A', text: { en: "You start three new projects. 🌪️", zh: '同时开三个新项目。🌪️' }, axes: { G: 2 } },
-      { letter: 'B', text: { en: "Rest for a week. Get restless. Start something around day 9.", zh: '先躺一周。开始坐不住。第9天整点活。' }, axes: { G: 1, L: 1 } },
-      { letter: 'C', text: { en: "Stay in bed. Reorganize playlists. Heaven. 😇", zh: '床上躺到天荒地老。整理歌单。人间天堂。😇' }, axes: { L: 2 } }
+      { letter: 'B', text: { en: "Rest for a week. Get restless. Start something around day 9.", zh: '先躺一周，逐渐坐不住，第9天开始整点活。' }, axes: { G: 1, L: 1 } },
+      { letter: 'C', text: { en: "Stay in bed. Reorganize playlists. Heaven. 😇", zh: '床上躺到天荒地老，重新整理所有歌单。😇' }, axes: { L: 2 } }
     ]
   },
 
@@ -4267,51 +4437,51 @@ const TIER2 = [
   {
     id: 'q17',
     eyebrow: { en: 'Sunday Hobby 🧘', zh: '周日下午 🧘' },
-    text: { en: "Sunday afternoon, completely free.", zh: '周日下午。完全自由。' },
+    text: { en: "Sunday afternoon, completely free.", zh: '完全自由的周日下午，你大概率会做什么？' },
     options: [
-      { letter: 'A', text: { en: "Groceries, gym, prep meals for the week. Setup day.", zh: '采购、健身、备餐。提前整顿好一周。' }, axes: { G: 2, I: 1 } },
-      { letter: 'B', text: { en: "Out with people. Brunch turned into 7pm somehow. 🍳", zh: '约人brunch。一不小心吃到晚上7点。🍳' }, axes: { S: 2 } },
-      { letter: 'C', text: { en: "In bed with a show. Glorious. 📺", zh: '床上追剧。爽到。📺' }, axes: { L: 2, T: 1 } }
+      { letter: 'A', text: { en: "Groceries, gym, prep meals for the week. Setup day.", zh: '采购、健身、备餐，提前为下一周做好准备。' }, axes: { G: 2, I: 1 } },
+      { letter: 'B', text: { en: "Out with people. Brunch turned into 7pm somehow. 🍳", zh: '约人吃brunch，一不小心吃到晚上7点。🍳' }, axes: { S: 2 } },
+      { letter: 'C', text: { en: "In bed with a show. Glorious. 📺", zh: '床上追剧，爽到飞起。📺' }, axes: { L: 2, T: 1 } }
     ]
   },
   {
     id: 'q18',
     eyebrow: { en: 'Job Title vs Work 🏷️', zh: 'Title vs 工作 🏷️' },
-    text: { en: "Two offers. Same company. Same pay.", zh: '同一家公司，两个offer，工资一样。' },
+    text: { en: "Two offers. Same company. Same pay.", zh: '同一家公司，两个不同岗位的offer，工资一样，你选哪个？' },
     options: [
-      { letter: 'A', text: { en: "'VP of Strategy' — work is fine. Title slaps.", zh: '「战略副总裁」——工作一般，但title拉满。' }, axes: { I: 2, M: 1 } },
-      { letter: 'B', text: { en: "'Associate' — work is genuinely cool.", zh: '「专员」——但工作是真的有意思。' }, axes: { P: 2 } },
-      { letter: 'C', text: { en: "'Founder's Office' — nobody knows what you do.", zh: '「CEO办公室」——没人知道你具体干啥。' }, axes: { O: 2 } }
+      { letter: 'A', text: { en: "'VP of Strategy' — work is fine. Title slaps.", zh: '「战略副总裁」工作一般好玩但title拉满。' }, axes: { I: 2, M: 1 } },
+      { letter: 'B', text: { en: "'Associate' — work is genuinely cool.", zh: '「项目专员」工作是真的有意思。' }, axes: { P: 2 } },
+      { letter: 'C', text: { en: "'Founder's Office' — nobody knows what you do.", zh: '「CEO办公室」没人知道你具体干啥。' }, axes: { O: 2 } }
     ]
   },
   {
     id: 'q19',
     eyebrow: { en: 'Credit Stolen 😤', zh: '抢功 😤' },
-    text: { en: "Your manager publicly takes credit for your work in a meeting.", zh: '开会，老板当众把你的功劳算到了他自己头上。' },
+    text: { en: "Your manager publicly takes credit for your work in a meeting.", zh: '开会时，老板当众把你的功劳算到了他自己头上。' },
     options: [
       { letter: 'A', text: { en: "Speak up. Politely correct on the spot.", zh: '当场友善地纠正。' }, axes: { O: 2 } },
-      { letter: 'B', text: { en: "Talk to them after, 1-on-1, diplomatically.", zh: '私下找他1对1聊，外交手段处理。' }, axes: { I: 2 } },
-      { letter: 'C', text: { en: "Say nothing, bake the next thing undeniably yours.", zh: '啥也不说。下一件事让所有人都看到是你做的。' }, axes: { I: 1, T: 1 } }
+      { letter: 'B', text: { en: "Talk to them after, 1-on-1, diplomatically.", zh: '私下找他1对1聊，以外交手段妥善处理。' }, axes: { I: 2 } },
+      { letter: 'C', text: { en: "Say nothing. Make the next thing undeniably yours.", zh: '啥也不说，但下一件事让所有人都能看出来功劳在你。' }, axes: { I: 1, T: 1 } }
     ]
   },
   {
     id: 'q20',
     eyebrow: { en: 'Quiet Win 🤫', zh: '沉默的胜利 🤫' },
-    text: { en: "You did something genuinely great, but nobody noticed.", zh: '你做了件真的很牛的事。但没人注意到。' },
+    text: { en: "You did something genuinely great, but nobody noticed.", zh: '你做了件真的很牛的事，但没人注意到。' },
     options: [
-      { letter: 'A', text: { en: "Drop it in the team channel with a humble caption.", zh: '群里发一下，配一段谦虚的文案。' }, axes: { S: 2 } },
+      { letter: 'A', text: { en: "Drop it in the team channel with a humble caption.", zh: '写一段谦虚的文案往大群里发一下。' }, axes: { S: 2 } },
       { letter: 'B', text: { en: "Mention it 1-on-1 to the one person who needs to know.", zh: '私下跟最该知道的那个人提一句。' }, axes: { T: 1, I: 1 } },
-      { letter: 'C', text: { en: "Just file it. The next thing matters more.", zh: '归档。下一件事更重要。' }, axes: { T: 2 } }
+      { letter: 'C', text: { en: "Just file it. The next thing matters more.", zh: '归档，更重要的永远是下一件事。' }, axes: { T: 2 } }
     ]
   },
   {
     id: 'q21',
     eyebrow: { en: '35-Year-Old You, Part 2 🪞', zh: '35岁的你 Part 2 🪞' },
-    text: { en: "Future you, 35. Be honest about what's actually you.", zh: '未来35岁的你。说实话，哪个最像？' },
+    text: { en: "Future you, 35. Be honest about what's actually you.", zh: '说实话，哪个最像未来35岁的你？' },
     options: [
-      { letter: 'A', text: { en: "Reliable. Roughly where you'd planned.", zh: '挺稳的。基本是按计划在走。' }, axes: { I: 2, G: 1 } },
-      { letter: 'B', text: { en: "Somewhere unexpected. Probably better than planned.", zh: '在一个完全没预料到的地方。可能比当年规划的还要好。' }, axes: { O: 2 } },
-      { letter: 'C', text: { en: "No idea. Starting to be okay with that.", zh: '不知道。但开始能接受这件事了。' }, axes: { O: 1, L: 2 } }
+      { letter: 'A', text: { en: "Reliable. Roughly where you'd planned.", zh: '挺稳的，基本是按计划在走。' }, axes: { I: 2, G: 1 } },
+      { letter: 'B', text: { en: "Somewhere unexpected. Probably better than planned.", zh: '来到了一个完全没预料到的地方，可能比当年规划的还要好。' }, axes: { O: 2 } },
+      { letter: 'C', text: { en: "No idea. Starting to be okay with that.", zh: '毫无头绪，但逐渐开始能接受这一点了。' }, axes: { O: 1, L: 2 } }
     ]
   },
 
@@ -4321,29 +4491,29 @@ const TIER2 = [
     eyebrow: { en: 'App Audit 📱', zh: 'APP使用 📱' },
     text: { en: "Most-used app this week (not counting messages):", zh: '这周用得最多的APP（微信、QQ不算）：' },
     options: [
-      { letter: 'A', text: { en: "Instagram / TikTok / RedNote. 📱", zh: '小红书 / 抖音 / Instagram。📱' }, axes: { S: 1 }, flavor: 'social' },
+      { letter: 'A', text: { en: "Instagram / TikTok / RedNote. 📱", zh: '小红书 / 抖音 / B站。📱' }, axes: { S: 1 }, flavor: 'social' },
       { letter: 'B', text: { en: "Notes / Notion / a productivity thing. 📝", zh: 'Notion / 番茄ToDo / flomo。📝' }, axes: { G: 1 }, flavor: 'planner' },
-      { letter: 'C', text: { en: "A game or a video platform. 🎮", zh: '游戏 / B站 / 爱奇艺。🎮' }, axes: { L: 1 }, flavor: 'rest' }
+      { letter: 'C', text: { en: "A game or a streaming platform. 🎮", zh: '游戏 / 爱奇艺 / 网易云。🎮' }, axes: { L: 1 }, flavor: 'rest' }
     ]
   },
   {
     id: 'q23',
     eyebrow: { en: 'FYP Audit 📲', zh: '摸鱼算法 📲' },
-    text: { en: "You unlock your phone mid-meeting. The algorithm has clocked you. What's it serving?", zh: '开会偷瞄手机。算法早把你看透了，它现在在给你推什么？' },
+    text: { en: "You unlock your phone mid-meeting. The algorithm has clocked you. What's it serving?", zh: '开会偷瞄一眼手机。算法早把你摸透了，它会给你推什么？' },
     options: [
-      { letter: 'A', text: { en: "Productivity hacks. Atomic Habits quotes. 'a day in my life as a 23-year-old VP at Goldman.' 🥲", zh: '成长方法论。《原子习惯》金句。「22岁年薪百万的我，分享一下我的故事」。🥲' }, axes: { G: 1, M: 1 }, flavor: 'grindset-coded' },
-      { letter: 'B', text: { en: "Astrology toxic-ex takes. Niche movie edits. 4-hour video essays about Disney movies. 🫠", zh: '星座毒舌前任。冷门电影剪辑。4小时甄嬛传解说。🫠' }, axes: { L: 1, O: 1 }, flavor: 'feral-coded' },
-      { letter: 'C', text: { en: "Slow mornings in Paris. Recipes you'll never cook. 'romanticize your life.' 🥐", zh: '巴黎慢生活。你永远不会做的菜谱。「把生活过成诗」。🥐' }, axes: { L: 1, P: 1 }, flavor: 'aesthetic-coded' }
+      { letter: 'A', text: { en: "Productivity hacks. Atomic Habits quotes. 'a day in my life as a 23-year-old VP at Goldman.' 🥲", zh: '成长方法论。「22岁年薪百万的我，分享一下我的故事」。「自律改变命运」。🥲' }, axes: { G: 1, M: 1 }, flavor: 'grindset-coded' },
+      { letter: 'B', text: { en: "Astrology toxic-ex takes. Niche movie edits. 4-hour video essays about Disney movies. 🫠", zh: '沙雕表情包。猫猫狗狗。4小时甄嬛传解说。「上班如上坟」。🫠' }, axes: { L: 1, O: 1 }, flavor: 'feral-coded' },
+      { letter: 'C', text: { en: "Slow mornings in Paris. Recipes you'll never cook. 'romanticize your life.' 🥐", zh: '「30岁前我想拥有的100件单品」。巴黎vlog。慢生活美学。🥐' }, axes: { L: 1, P: 1 }, flavor: 'aesthetic-coded' }
     ]
   },
   {
     id: 'q24',
-    eyebrow: { en: 'LinkedIn DM 💼', zh: '微信DM 💼' },
-    text: { en: "A senior employee at your dream company sends you a message in LinkedIn.", zh: '梦中情司的前辈主动在领英上加了你。' },
+    eyebrow: { en: 'LinkedIn DM 💼', zh: '微信好友申请 💼' },
+    text: { en: "A senior employee at your dream company sends you a message in LinkedIn.", zh: '梦中情司的前辈主动加了你微信。' },
     options: [
-      { letter: 'A', text: { en: "Reply within 5 minutes. Suggest 3 time slots. ⚡", zh: '5分钟内秒回，主动甩出3个可约的时间段。⚡' }, axes: { G: 1, S: 1 }, flavor: 'eager' },
-      { letter: 'B', text: { en: "Wait 24 hours so you don't seem desperate, then reply.", zh: '压24小时再回。不能显得太急。' }, axes: { I: 1 }, flavor: 'strategic' },
-      { letter: 'C', text: { en: "Panic. Stare at the message for 3 days, replaying every possible reply in your head.", zh: '心跳飙到200。3天不敢回。在脑子里把每种回法演练一遍。' }, axes: { T: 1 }, flavor: 'spiral' }
+      { letter: 'A', text: { en: "Reply within 5 minutes. Suggest 3 time slots. ⚡", zh: '五分钟内秒回，主动甩出三个可约的时间段。⚡' }, axes: { G: 1, S: 1 }, flavor: 'eager' },
+      { letter: 'B', text: { en: "Wait 24 hours so you don't seem desperate, then reply.", zh: '忍24小时再回，不能显得太急。' }, axes: { I: 1 }, flavor: 'strategic' },
+      { letter: 'C', text: { en: "Panic. Stare at the message for 3 days, replaying every possible reply in your head.", zh: '心跳飙到200，三天不敢通过好友申请，疯狂内耗。🌀' }, axes: { T: 1 }, flavor: 'spiral' }
     ]
   },
   {
@@ -4359,11 +4529,11 @@ const TIER2 = [
   {
     id: 'q26',
     eyebrow: { en: 'Vibe Self-ID ✨', zh: 'Vibe自我ID ✨' },
-    text: { en: "Pick the one that's most you, fully unserious:", zh: '选一个最像你的，别太当真：' },
+    text: { en: "Pick the one that's most you, fully unserious:", zh: '选一个最像你的（别太当真）：' },
     options: [
-      { letter: 'A', text: { en: "'Effortlessly winning.' 🌬️", zh: '「毫不费力就赢麻了。」🌬️' }, axes: { L: 1 }, flavor: 'aligned-vibe' },
-      { letter: 'B', text: { en: "'Locked in 24/7.' 🔥", zh: '「7×24小时卷王。」🔥' }, axes: { G: 1 }, flavor: 'grinder-vibe' },
-      { letter: 'C', text: { en: "'Lost but vibing.' 🌀", zh: '「虽然迷路但很开心。」🌀' }, axes: { O: 1, L: 1 }, flavor: 'conscious-delulu' }
+      { letter: 'A', text: { en: "'Effortlessly winning.' 🌬️", zh: '「天选打工人，毫不费力就赢麻了。」🌬️' }, axes: { L: 1 }, flavor: 'aligned-vibe' },
+      { letter: 'B', text: { en: "'Locked in 24/7.' 🔥", zh: '「7×24小时卷王，不卷难受。」🔥' }, axes: { G: 1 }, flavor: 'grinder-vibe' },
+      { letter: 'C', text: { en: "'Lost but vibing.' 🌀", zh: '「虽然微微迷路但很开心。」🌀' }, axes: { O: 1, L: 1 }, flavor: 'conscious-delulu' }
     ]
   }
 ];
@@ -4376,7 +4546,7 @@ const ARCHETYPES = {
     code: 'GMSI',
     name: { en: 'The LinkedIn Warrior', zh: '金融卷王' },
     vibe: { en: 'You will work 100 hours a week if it ends with a corner office. 💼', zh: '一周100个小时也能扛，只要最后能进Corner Office。💼' },
-    description: { en: `<p>You've known the track since freshman year. You don't ask what the job is — you ask which tier. You're the reason "case prep group" exists. You will absolutely cry in a bathroom at some point. You will also be making <em>$400k by 27</em>, so the math works out.</p><p>We support you. We're also a little worried about you.</p>`, zh: `<p>大一你就知道路怎么走了。你不问这个岗位是干啥的——你问的是这家是不是第一梯队。"案例面试小组"之所以存在就是因为有你这种人。早晚有一天你会在公司厕所偷偷掉眼泪，但<em>27岁年薪百万</em>，这账划得来。</p><p>我们尊重，也替你心疼一下。</p>` },
+    description: { en: `<p>You've known the track since freshman year. You don't ask what the job is — you ask which tier. You're the reason "case prep group" exists. You will absolutely cry in a bathroom at some point. You will also be making <em>$400k by 27</em>, so the math works out.</p><p>We support you. We're also a little worried about you.</p>`, zh: `<p>大一就上岸了——精神上的。别人还在搞清楚岗位是干啥的时候，你已经在比哪家投行奖金更猛。模拟面试群里你是资深，进了投行以后，难免有在公司厕所偷偷掉眼泪的时候。但<em>27岁年薪百万</em>，这账划得来。</p><p>我们尊重。也替你心疼。</p>` },
     callings: [[{ en: 'Investment Banking', zh: '中金/中信/华泰投行' }, true], [{ en: 'MBB Consulting', zh: '麦肯锡/BCG/贝恩' }, true], [{ en: 'BigLaw', zh: '红圈律所' }, false], [{ en: 'MD/MBA', zh: 'MBB+海外名校MBA' }, false], [{ en: 'Top medical specialty', zh: '顶级三甲专科' }, false], [{ en: 'Top Big 4 advisory', zh: '四大顶级咨询' }, false], [{ en: 'Aerospace & defense (prestige)', zh: '航天/军工（牌子型）' }, false]],
     dominantFor: ['Investment Banking Analyst at Goldman Sachs','Strategy Consultant at McKinsey']
   },
@@ -4619,6 +4789,19 @@ function enableDreamContinue() {
 document.addEventListener('DOMContentLoaded', () => {
   // Apply initial language to all static tagged elements
   applyStaticI18n();
+
+  // Randomize per-card tilt on the archetypes grid — gives the page that
+  // "polaroids pinned to a corkboard" feel instead of a sterile Excel grid.
+  // Deterministic-ish: each card gets a small rotation in the -2.5° to +2.5° range,
+  // skipping near-zero so every card has a visible lean.
+  const archCards = document.querySelectorAll('#archetypes-grid .arch-card');
+  archCards.forEach((card, i) => {
+    const seed = (i * 7919 + 31) % 1000 / 1000; // 0–1
+    const tilt = (seed - 0.5) * 4.6;            // -2.3 to +2.3
+    const sign = tilt >= 0 ? 1 : -1;
+    const finalTilt = Math.abs(tilt) < 0.5 ? sign * 1.2 : tilt; // avoid near-zero
+    card.style.transform = `rotate(${finalTilt.toFixed(2)}deg)`;
+  });
 
   const input = document.getElementById('dream-input');
   input.addEventListener('input', () => {
@@ -4916,7 +5099,7 @@ function renderTier1Result() {
 
 // Path where the archetype illustrations live, relative to the HTML file.
 // Swap this if you host the images on a CDN or elsewhere.
-const ILLUS_BASE_PATH = '';
+const ILLUS_BASE_PATH = 'img/archetypes/';
 const ILLUS_EXT = '.webp';
 
 function setArchetypeIllustration(imgIds, archCode, archName) {
@@ -5101,8 +5284,8 @@ function renderTier2Result() {
   document.getElementById('r2-real-life').innerHTML = gapContent.realLife;
   document.getElementById('r2-what-vinsoo').innerHTML = gapContent.whatVinsoo;
 
-  // Personalized CTA
-  document.getElementById('cta-personalized').innerHTML = gapContent.cta;
+  // Personalized CTA removed — Tier 2 CTA block is now identical to Tier 1.
+  // (gapContent.cta is no longer rendered; left in gapContentFor() for compat.)
 
   // Callings
   const callingsEl = document.getElementById('r2-callings');
@@ -5381,7 +5564,7 @@ function showToast(message) {
     toast.style.cssText = `
       position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
       background: var(--ink); color: var(--paper); padding: 12px 22px;
-      border-radius: 100px; font-family: "Geist Mono", monospace;
+      border-radius: 100px; font-family: "Geist Mono", "Noto Sans SC", monospace;
       font-size: 12px; letter-spacing: 0.1em; font-weight: 600;
       box-shadow: 0 12px 32px -8px rgba(14,14,16,0.4);
       z-index: 9999; opacity: 0; transition: opacity 0.25s, transform 0.25s;
